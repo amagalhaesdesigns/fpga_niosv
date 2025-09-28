@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main (void)
+{
+	printf("Hello Nios V - Magal. \r\n")
+
+	return 0;
+}

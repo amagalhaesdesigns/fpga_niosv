@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Sep 28 08:29:23 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Standard Edition
+Revision Name : fpga_niosv
+Top-level Entity Name : fpga_niosv
+Family : Cyclone V
+Device : 5CSXFC6D6F31C8ES
+Timing Models : Preliminary
+Logic utilization (in ALMs) : 4,297 / 41,910 ( 10 % )
+Total registers : 5193
+Total pins : 4 / 499 ( < 1 % )
+Total virtual pins : 0
+Total block memory bits : 2,171,776 / 5,662,720 ( 38 % )
+Total RAM Blocks : 271 / 553 ( 49 % )
+Total DSP Blocks : 3 / 112 ( 3 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 0 / 15 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

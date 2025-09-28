@@ -1,0 +1,26 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst niosv.key -pg 1 -lvl 3 -y 350
+preplace inst niosv.onchip_memory2 -pg 1 -lvl 2 -y 50
+preplace inst niosv.niosv.dbg_mod -pg 1
+preplace inst niosv.niosv.timer_module -pg 1
+preplace inst niosv.niosv.clock_bridge -pg 1
+preplace inst niosv.led -pg 1 -lvl 3 -y 250
+preplace inst niosv.sys_clk -pg 1 -lvl 3 -y 450
+preplace inst niosv -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst niosv.niosv.debug_reset_bridge -pg 1
+preplace inst niosv.niosv.reset_bridge -pg 1
+preplace inst niosv.niosv -pg 1 -lvl 1 -y 70
+preplace inst niosv.niosv.hart -pg 1
+preplace inst niosv.jtag_uart -pg 1 -lvl 2 -y 130
+preplace inst niosv.clk_50m -pg 1 -lvl 2 -y 360
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.led,(SLAVE)led.external_connection) 1 0 3 NJ 280 NJ 280 NJ
+preplace netloc INTERCONNECT<net_container>niosv</net_container>(SLAVE)niosv.ndm_reset_in,(SLAVE)jtag_uart.reset,(SLAVE)led.reset,(SLAVE)sys_clk.reset,(MASTER)clk_50m.clk_reset,(SLAVE)niosv.reset,(MASTER)niosv.dbg_reset_out,(SLAVE)key.reset,(SLAVE)onchip_memory2.reset1) 1 0 3 140 230 510 300 780
+preplace netloc FAN_OUT<net_container>niosv</net_container>(SLAVE)led.clk,(SLAVE)key.clk,(SLAVE)onchip_memory2.clk1,(MASTER)clk_50m.clk,(SLAVE)jtag_uart.clk,(SLAVE)niosv.clk,(SLAVE)sys_clk.clk) 1 0 3 120 210 490 240 820
+preplace netloc FAN_OUT<net_container>niosv</net_container>(MASTER)niosv.platform_irq_rx,(SLAVE)jtag_uart.irq,(SLAVE)sys_clk.irq) 1 1 2 450 260 740
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.clk_50m,(SLAVE)clk_50m.clk_in) 1 0 2 NJ 370 NJ
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.reset_50m,(SLAVE)clk_50m.clk_in_reset) 1 0 2 NJ 390 NJ
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)key.external_connection,(SLAVE)niosv.key) 1 0 3 NJ 350 NJ 350 NJ
+preplace netloc INTERCONNECT<net_container>niosv</net_container>(SLAVE)sys_clk.s1,(SLAVE)niosv.timer_sw_agent,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)onchip_memory2.s1,(SLAVE)key.s1,(MASTER)niosv.instruction_manager,(MASTER)niosv.data_manager,(SLAVE)led.s1,(SLAVE)niosv.dm_agent) 1 0 3 100 30 470 320 760
+levelinfo -pg 1 0 70 1010
+levelinfo -hier niosv 80 250 570 850 1000

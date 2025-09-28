@@ -1,0 +1,32 @@
+bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_ts.c.obj: \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/drivers/src/altera_avalon_timer_ts.c \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\string.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_ansi.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\newlib.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_newlib_version.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\config.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\ieeefp.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\features.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\reent.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_ansi.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stddef.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\_types.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\_types.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\_default_types.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\lock.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\cdefs.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\_locale.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\strings.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\string.h \
+ c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\system.h \
+ c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\linker.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/drivers/inc/altera_avalon_timer.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_dev.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_dev_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_warning.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/drivers/inc/altera_avalon_timer_regs.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/io.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_timestamp.h

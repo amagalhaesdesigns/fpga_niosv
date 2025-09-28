@@ -1,0 +1,27 @@
+bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_irq_handler.c.obj: \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_irq_handler.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_irq.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/intel_niosv.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
+ c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\system.h \
+ c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\linker.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_exceptions.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_log_printf.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stdarg.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_alarm.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_alarm.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_dev.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_dev_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/drivers/inc/altera_avalon_jtag_uart.h \
+ c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stddef.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_warning.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_hooks.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_sem.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_no_error.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_flag.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/drivers/inc/altera_avalon_jtag_uart_fd.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/drivers/inc/altera_avalon_jtag_uart_regs.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/io.h
