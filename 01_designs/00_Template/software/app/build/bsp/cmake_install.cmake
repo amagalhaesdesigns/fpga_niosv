@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp
+# Install script for directory: C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

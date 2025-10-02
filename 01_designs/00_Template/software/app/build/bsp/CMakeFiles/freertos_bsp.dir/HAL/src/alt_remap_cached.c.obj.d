@@ -1,6 +1,6 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_remap_cached.c \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_cache.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_remap_cached.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_cache.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\stdlib.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\ieeefp.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_ansi.h \
@@ -18,5 +18,5 @@ bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.obj: \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\cdefs.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\stdlib.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\alloca.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_warning.h
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_warning.h

@@ -1,3 +1,3 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_environ.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_environ.c \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_syscall.h
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_environ.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/os/alt_syscall.h

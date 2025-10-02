@@ -1,5 +1,5 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_kill.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_kill.c \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\signal.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_ansi.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\newlib.h \
@@ -28,10 +28,10 @@ bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.obj: \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\types.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\unistd.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\unistd.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_errno.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_errno.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\errno.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\errno.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\reent.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\lock.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_syscall.h
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/os/alt_syscall.h

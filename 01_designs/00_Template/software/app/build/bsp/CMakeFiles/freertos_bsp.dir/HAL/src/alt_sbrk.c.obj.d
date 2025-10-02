@@ -1,5 +1,5 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_sbrk.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_sbrk.c \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\types.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_ansi.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\newlib.h \
@@ -23,11 +23,11 @@ bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.obj: \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\_pthreadtypes.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\sched.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_syscall.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_irq.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/intel_niosv.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\system.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\linker.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_stack.h
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/os/alt_syscall.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_irq.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/intel_niosv.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\system.h \
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\linker.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_stack.h

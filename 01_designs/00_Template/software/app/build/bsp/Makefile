@@ -57,10 +57,10 @@ RM = C:/intelFPGA/23.1std/riscfree/build_tools/cmake/bin/cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app
+CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build
+CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/bsp//CMakeFiles/progress.marks
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles 0
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/bsp//CMakeFiles/progress.marks
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/clean
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/preinstall
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/preinstall
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 bsp/CMakeFiles/freertos_bsp.dir/rule:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/CMakeFiles/freertos_bsp.dir/rule
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/CMakeFiles/freertos_bsp.dir/rule
 .PHONY : bsp/CMakeFiles/freertos_bsp.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ freertos_bsp: bsp/CMakeFiles/freertos_bsp.dir/rule
 
 # fast build rule for target.
 freertos_bsp/fast:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/build
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/build
 .PHONY : freertos_bsp/fast
 
 FREERTOS/src/alt_env_lock.obj: FREERTOS/src/alt_env_lock.c.obj
@@ -135,7 +135,7 @@ FREERTOS/src/alt_env_lock.obj: FREERTOS/src/alt_env_lock.c.obj
 
 # target to build an object file
 FREERTOS/src/alt_env_lock.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_env_lock.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_env_lock.c.obj
 .PHONY : FREERTOS/src/alt_env_lock.c.obj
 
 FREERTOS/src/alt_env_lock.i: FREERTOS/src/alt_env_lock.c.i
@@ -143,7 +143,7 @@ FREERTOS/src/alt_env_lock.i: FREERTOS/src/alt_env_lock.c.i
 
 # target to preprocess a source file
 FREERTOS/src/alt_env_lock.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_env_lock.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_env_lock.c.i
 .PHONY : FREERTOS/src/alt_env_lock.c.i
 
 FREERTOS/src/alt_env_lock.s: FREERTOS/src/alt_env_lock.c.s
@@ -151,7 +151,7 @@ FREERTOS/src/alt_env_lock.s: FREERTOS/src/alt_env_lock.c.s
 
 # target to generate assembly for a file
 FREERTOS/src/alt_env_lock.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_env_lock.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_env_lock.c.s
 .PHONY : FREERTOS/src/alt_env_lock.c.s
 
 FREERTOS/src/alt_malloc_lock.obj: FREERTOS/src/alt_malloc_lock.c.obj
@@ -159,7 +159,7 @@ FREERTOS/src/alt_malloc_lock.obj: FREERTOS/src/alt_malloc_lock.c.obj
 
 # target to build an object file
 FREERTOS/src/alt_malloc_lock.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_malloc_lock.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_malloc_lock.c.obj
 .PHONY : FREERTOS/src/alt_malloc_lock.c.obj
 
 FREERTOS/src/alt_malloc_lock.i: FREERTOS/src/alt_malloc_lock.c.i
@@ -167,7 +167,7 @@ FREERTOS/src/alt_malloc_lock.i: FREERTOS/src/alt_malloc_lock.c.i
 
 # target to preprocess a source file
 FREERTOS/src/alt_malloc_lock.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_malloc_lock.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_malloc_lock.c.i
 .PHONY : FREERTOS/src/alt_malloc_lock.c.i
 
 FREERTOS/src/alt_malloc_lock.s: FREERTOS/src/alt_malloc_lock.c.s
@@ -175,7 +175,7 @@ FREERTOS/src/alt_malloc_lock.s: FREERTOS/src/alt_malloc_lock.c.s
 
 # target to generate assembly for a file
 FREERTOS/src/alt_malloc_lock.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_malloc_lock.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/alt_malloc_lock.c.s
 .PHONY : FREERTOS/src/alt_malloc_lock.c.s
 
 FREERTOS/src/heap_wrapper.obj: FREERTOS/src/heap_wrapper.c.obj
@@ -183,7 +183,7 @@ FREERTOS/src/heap_wrapper.obj: FREERTOS/src/heap_wrapper.c.obj
 
 # target to build an object file
 FREERTOS/src/heap_wrapper.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/heap_wrapper.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/heap_wrapper.c.obj
 .PHONY : FREERTOS/src/heap_wrapper.c.obj
 
 FREERTOS/src/heap_wrapper.i: FREERTOS/src/heap_wrapper.c.i
@@ -191,7 +191,7 @@ FREERTOS/src/heap_wrapper.i: FREERTOS/src/heap_wrapper.c.i
 
 # target to preprocess a source file
 FREERTOS/src/heap_wrapper.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/heap_wrapper.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/heap_wrapper.c.i
 .PHONY : FREERTOS/src/heap_wrapper.c.i
 
 FREERTOS/src/heap_wrapper.s: FREERTOS/src/heap_wrapper.c.s
@@ -199,7 +199,7 @@ FREERTOS/src/heap_wrapper.s: FREERTOS/src/heap_wrapper.c.s
 
 # target to generate assembly for a file
 FREERTOS/src/heap_wrapper.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/heap_wrapper.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FREERTOS/src/heap_wrapper.c.s
 .PHONY : FREERTOS/src/heap_wrapper.c.s
 
 FreeRTOS-Kernel/croutine.obj: FreeRTOS-Kernel/croutine.c.obj
@@ -207,7 +207,7 @@ FreeRTOS-Kernel/croutine.obj: FreeRTOS-Kernel/croutine.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/croutine.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/croutine.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/croutine.c.obj
 .PHONY : FreeRTOS-Kernel/croutine.c.obj
 
 FreeRTOS-Kernel/croutine.i: FreeRTOS-Kernel/croutine.c.i
@@ -215,7 +215,7 @@ FreeRTOS-Kernel/croutine.i: FreeRTOS-Kernel/croutine.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/croutine.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/croutine.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/croutine.c.i
 .PHONY : FreeRTOS-Kernel/croutine.c.i
 
 FreeRTOS-Kernel/croutine.s: FreeRTOS-Kernel/croutine.c.s
@@ -223,7 +223,7 @@ FreeRTOS-Kernel/croutine.s: FreeRTOS-Kernel/croutine.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/croutine.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/croutine.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/croutine.c.s
 .PHONY : FreeRTOS-Kernel/croutine.c.s
 
 FreeRTOS-Kernel/event_groups.obj: FreeRTOS-Kernel/event_groups.c.obj
@@ -231,7 +231,7 @@ FreeRTOS-Kernel/event_groups.obj: FreeRTOS-Kernel/event_groups.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/event_groups.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/event_groups.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/event_groups.c.obj
 .PHONY : FreeRTOS-Kernel/event_groups.c.obj
 
 FreeRTOS-Kernel/event_groups.i: FreeRTOS-Kernel/event_groups.c.i
@@ -239,7 +239,7 @@ FreeRTOS-Kernel/event_groups.i: FreeRTOS-Kernel/event_groups.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/event_groups.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/event_groups.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/event_groups.c.i
 .PHONY : FreeRTOS-Kernel/event_groups.c.i
 
 FreeRTOS-Kernel/event_groups.s: FreeRTOS-Kernel/event_groups.c.s
@@ -247,7 +247,7 @@ FreeRTOS-Kernel/event_groups.s: FreeRTOS-Kernel/event_groups.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/event_groups.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/event_groups.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/event_groups.c.s
 .PHONY : FreeRTOS-Kernel/event_groups.c.s
 
 FreeRTOS-Kernel/list.obj: FreeRTOS-Kernel/list.c.obj
@@ -255,7 +255,7 @@ FreeRTOS-Kernel/list.obj: FreeRTOS-Kernel/list.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/list.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/list.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/list.c.obj
 .PHONY : FreeRTOS-Kernel/list.c.obj
 
 FreeRTOS-Kernel/list.i: FreeRTOS-Kernel/list.c.i
@@ -263,7 +263,7 @@ FreeRTOS-Kernel/list.i: FreeRTOS-Kernel/list.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/list.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/list.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/list.c.i
 .PHONY : FreeRTOS-Kernel/list.c.i
 
 FreeRTOS-Kernel/list.s: FreeRTOS-Kernel/list.c.s
@@ -271,7 +271,7 @@ FreeRTOS-Kernel/list.s: FreeRTOS-Kernel/list.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/list.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/list.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/list.c.s
 .PHONY : FreeRTOS-Kernel/list.c.s
 
 FreeRTOS-Kernel/portable/GCC/RISC-V/port.obj: FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.obj
@@ -279,7 +279,7 @@ FreeRTOS-Kernel/portable/GCC/RISC-V/port.obj: FreeRTOS-Kernel/portable/GCC/RISC-
 
 # target to build an object file
 FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.obj
 .PHONY : FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.obj
 
 FreeRTOS-Kernel/portable/GCC/RISC-V/port.i: FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.i
@@ -287,7 +287,7 @@ FreeRTOS-Kernel/portable/GCC/RISC-V/port.i: FreeRTOS-Kernel/portable/GCC/RISC-V/
 
 # target to preprocess a source file
 FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.i
 .PHONY : FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.i
 
 FreeRTOS-Kernel/portable/GCC/RISC-V/port.s: FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.s
@@ -295,7 +295,7 @@ FreeRTOS-Kernel/portable/GCC/RISC-V/port.s: FreeRTOS-Kernel/portable/GCC/RISC-V/
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.s
 .PHONY : FreeRTOS-Kernel/portable/GCC/RISC-V/port.c.s
 
 FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.obj: FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S.obj
@@ -303,7 +303,7 @@ FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.obj: FreeRTOS-Kernel/portable/GCC/RI
 
 # target to build an object file
 FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S.obj
 .PHONY : FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S.obj
 
 FreeRTOS-Kernel/queue.obj: FreeRTOS-Kernel/queue.c.obj
@@ -311,7 +311,7 @@ FreeRTOS-Kernel/queue.obj: FreeRTOS-Kernel/queue.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/queue.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/queue.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/queue.c.obj
 .PHONY : FreeRTOS-Kernel/queue.c.obj
 
 FreeRTOS-Kernel/queue.i: FreeRTOS-Kernel/queue.c.i
@@ -319,7 +319,7 @@ FreeRTOS-Kernel/queue.i: FreeRTOS-Kernel/queue.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/queue.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/queue.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/queue.c.i
 .PHONY : FreeRTOS-Kernel/queue.c.i
 
 FreeRTOS-Kernel/queue.s: FreeRTOS-Kernel/queue.c.s
@@ -327,7 +327,7 @@ FreeRTOS-Kernel/queue.s: FreeRTOS-Kernel/queue.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/queue.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/queue.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/queue.c.s
 .PHONY : FreeRTOS-Kernel/queue.c.s
 
 FreeRTOS-Kernel/stream_buffer.obj: FreeRTOS-Kernel/stream_buffer.c.obj
@@ -335,7 +335,7 @@ FreeRTOS-Kernel/stream_buffer.obj: FreeRTOS-Kernel/stream_buffer.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/stream_buffer.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/stream_buffer.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/stream_buffer.c.obj
 .PHONY : FreeRTOS-Kernel/stream_buffer.c.obj
 
 FreeRTOS-Kernel/stream_buffer.i: FreeRTOS-Kernel/stream_buffer.c.i
@@ -343,7 +343,7 @@ FreeRTOS-Kernel/stream_buffer.i: FreeRTOS-Kernel/stream_buffer.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/stream_buffer.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/stream_buffer.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/stream_buffer.c.i
 .PHONY : FreeRTOS-Kernel/stream_buffer.c.i
 
 FreeRTOS-Kernel/stream_buffer.s: FreeRTOS-Kernel/stream_buffer.c.s
@@ -351,7 +351,7 @@ FreeRTOS-Kernel/stream_buffer.s: FreeRTOS-Kernel/stream_buffer.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/stream_buffer.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/stream_buffer.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/stream_buffer.c.s
 .PHONY : FreeRTOS-Kernel/stream_buffer.c.s
 
 FreeRTOS-Kernel/tasks.obj: FreeRTOS-Kernel/tasks.c.obj
@@ -359,7 +359,7 @@ FreeRTOS-Kernel/tasks.obj: FreeRTOS-Kernel/tasks.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/tasks.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/tasks.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/tasks.c.obj
 .PHONY : FreeRTOS-Kernel/tasks.c.obj
 
 FreeRTOS-Kernel/tasks.i: FreeRTOS-Kernel/tasks.c.i
@@ -367,7 +367,7 @@ FreeRTOS-Kernel/tasks.i: FreeRTOS-Kernel/tasks.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/tasks.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/tasks.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/tasks.c.i
 .PHONY : FreeRTOS-Kernel/tasks.c.i
 
 FreeRTOS-Kernel/tasks.s: FreeRTOS-Kernel/tasks.c.s
@@ -375,7 +375,7 @@ FreeRTOS-Kernel/tasks.s: FreeRTOS-Kernel/tasks.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/tasks.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/tasks.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/tasks.c.s
 .PHONY : FreeRTOS-Kernel/tasks.c.s
 
 FreeRTOS-Kernel/timers.obj: FreeRTOS-Kernel/timers.c.obj
@@ -383,7 +383,7 @@ FreeRTOS-Kernel/timers.obj: FreeRTOS-Kernel/timers.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/timers.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/timers.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/timers.c.obj
 .PHONY : FreeRTOS-Kernel/timers.c.obj
 
 FreeRTOS-Kernel/timers.i: FreeRTOS-Kernel/timers.c.i
@@ -391,7 +391,7 @@ FreeRTOS-Kernel/timers.i: FreeRTOS-Kernel/timers.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/timers.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/timers.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/timers.c.i
 .PHONY : FreeRTOS-Kernel/timers.c.i
 
 FreeRTOS-Kernel/timers.s: FreeRTOS-Kernel/timers.c.s
@@ -399,7 +399,7 @@ FreeRTOS-Kernel/timers.s: FreeRTOS-Kernel/timers.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/timers.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/timers.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/timers.c.s
 .PHONY : FreeRTOS-Kernel/timers.c.s
 
 HAL/src/alt_alarm_start.obj: HAL/src/alt_alarm_start.c.obj
@@ -407,7 +407,7 @@ HAL/src/alt_alarm_start.obj: HAL/src/alt_alarm_start.c.obj
 
 # target to build an object file
 HAL/src/alt_alarm_start.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_alarm_start.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_alarm_start.c.obj
 .PHONY : HAL/src/alt_alarm_start.c.obj
 
 HAL/src/alt_alarm_start.i: HAL/src/alt_alarm_start.c.i
@@ -415,7 +415,7 @@ HAL/src/alt_alarm_start.i: HAL/src/alt_alarm_start.c.i
 
 # target to preprocess a source file
 HAL/src/alt_alarm_start.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_alarm_start.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_alarm_start.c.i
 .PHONY : HAL/src/alt_alarm_start.c.i
 
 HAL/src/alt_alarm_start.s: HAL/src/alt_alarm_start.c.s
@@ -423,7 +423,7 @@ HAL/src/alt_alarm_start.s: HAL/src/alt_alarm_start.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_alarm_start.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_alarm_start.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_alarm_start.c.s
 .PHONY : HAL/src/alt_alarm_start.c.s
 
 HAL/src/alt_busy_sleep.obj: HAL/src/alt_busy_sleep.c.obj
@@ -431,7 +431,7 @@ HAL/src/alt_busy_sleep.obj: HAL/src/alt_busy_sleep.c.obj
 
 # target to build an object file
 HAL/src/alt_busy_sleep.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.obj
 .PHONY : HAL/src/alt_busy_sleep.c.obj
 
 HAL/src/alt_busy_sleep.i: HAL/src/alt_busy_sleep.c.i
@@ -439,7 +439,7 @@ HAL/src/alt_busy_sleep.i: HAL/src/alt_busy_sleep.c.i
 
 # target to preprocess a source file
 HAL/src/alt_busy_sleep.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.i
 .PHONY : HAL/src/alt_busy_sleep.c.i
 
 HAL/src/alt_busy_sleep.s: HAL/src/alt_busy_sleep.c.s
@@ -447,7 +447,7 @@ HAL/src/alt_busy_sleep.s: HAL/src/alt_busy_sleep.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_busy_sleep.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.s
 .PHONY : HAL/src/alt_busy_sleep.c.s
 
 HAL/src/alt_close.obj: HAL/src/alt_close.c.obj
@@ -455,7 +455,7 @@ HAL/src/alt_close.obj: HAL/src/alt_close.c.obj
 
 # target to build an object file
 HAL/src/alt_close.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_close.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_close.c.obj
 .PHONY : HAL/src/alt_close.c.obj
 
 HAL/src/alt_close.i: HAL/src/alt_close.c.i
@@ -463,7 +463,7 @@ HAL/src/alt_close.i: HAL/src/alt_close.c.i
 
 # target to preprocess a source file
 HAL/src/alt_close.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_close.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_close.c.i
 .PHONY : HAL/src/alt_close.c.i
 
 HAL/src/alt_close.s: HAL/src/alt_close.c.s
@@ -471,7 +471,7 @@ HAL/src/alt_close.s: HAL/src/alt_close.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_close.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_close.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_close.c.s
 .PHONY : HAL/src/alt_close.c.s
 
 HAL/src/alt_dcache_flush.obj: HAL/src/alt_dcache_flush.c.obj
@@ -479,7 +479,7 @@ HAL/src/alt_dcache_flush.obj: HAL/src/alt_dcache_flush.c.obj
 
 # target to build an object file
 HAL/src/alt_dcache_flush.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush.c.obj
 .PHONY : HAL/src/alt_dcache_flush.c.obj
 
 HAL/src/alt_dcache_flush.i: HAL/src/alt_dcache_flush.c.i
@@ -487,7 +487,7 @@ HAL/src/alt_dcache_flush.i: HAL/src/alt_dcache_flush.c.i
 
 # target to preprocess a source file
 HAL/src/alt_dcache_flush.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush.c.i
 .PHONY : HAL/src/alt_dcache_flush.c.i
 
 HAL/src/alt_dcache_flush.s: HAL/src/alt_dcache_flush.c.s
@@ -495,7 +495,7 @@ HAL/src/alt_dcache_flush.s: HAL/src/alt_dcache_flush.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_dcache_flush.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush.c.s
 .PHONY : HAL/src/alt_dcache_flush.c.s
 
 HAL/src/alt_dcache_flush_all.obj: HAL/src/alt_dcache_flush_all.c.obj
@@ -503,7 +503,7 @@ HAL/src/alt_dcache_flush_all.obj: HAL/src/alt_dcache_flush_all.c.obj
 
 # target to build an object file
 HAL/src/alt_dcache_flush_all.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_all.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_all.c.obj
 .PHONY : HAL/src/alt_dcache_flush_all.c.obj
 
 HAL/src/alt_dcache_flush_all.i: HAL/src/alt_dcache_flush_all.c.i
@@ -511,7 +511,7 @@ HAL/src/alt_dcache_flush_all.i: HAL/src/alt_dcache_flush_all.c.i
 
 # target to preprocess a source file
 HAL/src/alt_dcache_flush_all.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_all.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_all.c.i
 .PHONY : HAL/src/alt_dcache_flush_all.c.i
 
 HAL/src/alt_dcache_flush_all.s: HAL/src/alt_dcache_flush_all.c.s
@@ -519,7 +519,7 @@ HAL/src/alt_dcache_flush_all.s: HAL/src/alt_dcache_flush_all.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_dcache_flush_all.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_all.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_all.c.s
 .PHONY : HAL/src/alt_dcache_flush_all.c.s
 
 HAL/src/alt_dcache_flush_no_writeback.obj: HAL/src/alt_dcache_flush_no_writeback.c.obj
@@ -527,7 +527,7 @@ HAL/src/alt_dcache_flush_no_writeback.obj: HAL/src/alt_dcache_flush_no_writeback
 
 # target to build an object file
 HAL/src/alt_dcache_flush_no_writeback.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.obj
 .PHONY : HAL/src/alt_dcache_flush_no_writeback.c.obj
 
 HAL/src/alt_dcache_flush_no_writeback.i: HAL/src/alt_dcache_flush_no_writeback.c.i
@@ -535,7 +535,7 @@ HAL/src/alt_dcache_flush_no_writeback.i: HAL/src/alt_dcache_flush_no_writeback.c
 
 # target to preprocess a source file
 HAL/src/alt_dcache_flush_no_writeback.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.i
 .PHONY : HAL/src/alt_dcache_flush_no_writeback.c.i
 
 HAL/src/alt_dcache_flush_no_writeback.s: HAL/src/alt_dcache_flush_no_writeback.c.s
@@ -543,7 +543,7 @@ HAL/src/alt_dcache_flush_no_writeback.s: HAL/src/alt_dcache_flush_no_writeback.c
 
 # target to generate assembly for a file
 HAL/src/alt_dcache_flush_no_writeback.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.s
 .PHONY : HAL/src/alt_dcache_flush_no_writeback.c.s
 
 HAL/src/alt_dev.obj: HAL/src/alt_dev.c.obj
@@ -551,7 +551,7 @@ HAL/src/alt_dev.obj: HAL/src/alt_dev.c.obj
 
 # target to build an object file
 HAL/src/alt_dev.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev.c.obj
 .PHONY : HAL/src/alt_dev.c.obj
 
 HAL/src/alt_dev.i: HAL/src/alt_dev.c.i
@@ -559,7 +559,7 @@ HAL/src/alt_dev.i: HAL/src/alt_dev.c.i
 
 # target to preprocess a source file
 HAL/src/alt_dev.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev.c.i
 .PHONY : HAL/src/alt_dev.c.i
 
 HAL/src/alt_dev.s: HAL/src/alt_dev.c.s
@@ -567,7 +567,7 @@ HAL/src/alt_dev.s: HAL/src/alt_dev.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_dev.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev.c.s
 .PHONY : HAL/src/alt_dev.c.s
 
 HAL/src/alt_dev_llist_insert.obj: HAL/src/alt_dev_llist_insert.c.obj
@@ -575,7 +575,7 @@ HAL/src/alt_dev_llist_insert.obj: HAL/src/alt_dev_llist_insert.c.obj
 
 # target to build an object file
 HAL/src/alt_dev_llist_insert.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev_llist_insert.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev_llist_insert.c.obj
 .PHONY : HAL/src/alt_dev_llist_insert.c.obj
 
 HAL/src/alt_dev_llist_insert.i: HAL/src/alt_dev_llist_insert.c.i
@@ -583,7 +583,7 @@ HAL/src/alt_dev_llist_insert.i: HAL/src/alt_dev_llist_insert.c.i
 
 # target to preprocess a source file
 HAL/src/alt_dev_llist_insert.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev_llist_insert.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev_llist_insert.c.i
 .PHONY : HAL/src/alt_dev_llist_insert.c.i
 
 HAL/src/alt_dev_llist_insert.s: HAL/src/alt_dev_llist_insert.c.s
@@ -591,7 +591,7 @@ HAL/src/alt_dev_llist_insert.s: HAL/src/alt_dev_llist_insert.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_dev_llist_insert.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev_llist_insert.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dev_llist_insert.c.s
 .PHONY : HAL/src/alt_dev_llist_insert.c.s
 
 HAL/src/alt_dma_rxchan_open.obj: HAL/src/alt_dma_rxchan_open.c.obj
@@ -599,7 +599,7 @@ HAL/src/alt_dma_rxchan_open.obj: HAL/src/alt_dma_rxchan_open.c.obj
 
 # target to build an object file
 HAL/src/alt_dma_rxchan_open.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_rxchan_open.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_rxchan_open.c.obj
 .PHONY : HAL/src/alt_dma_rxchan_open.c.obj
 
 HAL/src/alt_dma_rxchan_open.i: HAL/src/alt_dma_rxchan_open.c.i
@@ -607,7 +607,7 @@ HAL/src/alt_dma_rxchan_open.i: HAL/src/alt_dma_rxchan_open.c.i
 
 # target to preprocess a source file
 HAL/src/alt_dma_rxchan_open.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_rxchan_open.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_rxchan_open.c.i
 .PHONY : HAL/src/alt_dma_rxchan_open.c.i
 
 HAL/src/alt_dma_rxchan_open.s: HAL/src/alt_dma_rxchan_open.c.s
@@ -615,7 +615,7 @@ HAL/src/alt_dma_rxchan_open.s: HAL/src/alt_dma_rxchan_open.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_dma_rxchan_open.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_rxchan_open.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_rxchan_open.c.s
 .PHONY : HAL/src/alt_dma_rxchan_open.c.s
 
 HAL/src/alt_dma_txchan_open.obj: HAL/src/alt_dma_txchan_open.c.obj
@@ -623,7 +623,7 @@ HAL/src/alt_dma_txchan_open.obj: HAL/src/alt_dma_txchan_open.c.obj
 
 # target to build an object file
 HAL/src/alt_dma_txchan_open.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_txchan_open.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_txchan_open.c.obj
 .PHONY : HAL/src/alt_dma_txchan_open.c.obj
 
 HAL/src/alt_dma_txchan_open.i: HAL/src/alt_dma_txchan_open.c.i
@@ -631,7 +631,7 @@ HAL/src/alt_dma_txchan_open.i: HAL/src/alt_dma_txchan_open.c.i
 
 # target to preprocess a source file
 HAL/src/alt_dma_txchan_open.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_txchan_open.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_txchan_open.c.i
 .PHONY : HAL/src/alt_dma_txchan_open.c.i
 
 HAL/src/alt_dma_txchan_open.s: HAL/src/alt_dma_txchan_open.c.s
@@ -639,7 +639,7 @@ HAL/src/alt_dma_txchan_open.s: HAL/src/alt_dma_txchan_open.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_dma_txchan_open.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_txchan_open.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_dma_txchan_open.c.s
 .PHONY : HAL/src/alt_dma_txchan_open.c.s
 
 HAL/src/alt_do_ctors.obj: HAL/src/alt_do_ctors.c.obj
@@ -647,7 +647,7 @@ HAL/src/alt_do_ctors.obj: HAL/src/alt_do_ctors.c.obj
 
 # target to build an object file
 HAL/src/alt_do_ctors.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_ctors.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_ctors.c.obj
 .PHONY : HAL/src/alt_do_ctors.c.obj
 
 HAL/src/alt_do_ctors.i: HAL/src/alt_do_ctors.c.i
@@ -655,7 +655,7 @@ HAL/src/alt_do_ctors.i: HAL/src/alt_do_ctors.c.i
 
 # target to preprocess a source file
 HAL/src/alt_do_ctors.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_ctors.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_ctors.c.i
 .PHONY : HAL/src/alt_do_ctors.c.i
 
 HAL/src/alt_do_ctors.s: HAL/src/alt_do_ctors.c.s
@@ -663,7 +663,7 @@ HAL/src/alt_do_ctors.s: HAL/src/alt_do_ctors.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_do_ctors.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_ctors.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_ctors.c.s
 .PHONY : HAL/src/alt_do_ctors.c.s
 
 HAL/src/alt_do_dtors.obj: HAL/src/alt_do_dtors.c.obj
@@ -671,7 +671,7 @@ HAL/src/alt_do_dtors.obj: HAL/src/alt_do_dtors.c.obj
 
 # target to build an object file
 HAL/src/alt_do_dtors.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_dtors.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_dtors.c.obj
 .PHONY : HAL/src/alt_do_dtors.c.obj
 
 HAL/src/alt_do_dtors.i: HAL/src/alt_do_dtors.c.i
@@ -679,7 +679,7 @@ HAL/src/alt_do_dtors.i: HAL/src/alt_do_dtors.c.i
 
 # target to preprocess a source file
 HAL/src/alt_do_dtors.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_dtors.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_dtors.c.i
 .PHONY : HAL/src/alt_do_dtors.c.i
 
 HAL/src/alt_do_dtors.s: HAL/src/alt_do_dtors.c.s
@@ -687,7 +687,7 @@ HAL/src/alt_do_dtors.s: HAL/src/alt_do_dtors.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_do_dtors.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_dtors.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_do_dtors.c.s
 .PHONY : HAL/src/alt_do_dtors.c.s
 
 HAL/src/alt_environ.obj: HAL/src/alt_environ.c.obj
@@ -695,7 +695,7 @@ HAL/src/alt_environ.obj: HAL/src/alt_environ.c.obj
 
 # target to build an object file
 HAL/src/alt_environ.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_environ.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_environ.c.obj
 .PHONY : HAL/src/alt_environ.c.obj
 
 HAL/src/alt_environ.i: HAL/src/alt_environ.c.i
@@ -703,7 +703,7 @@ HAL/src/alt_environ.i: HAL/src/alt_environ.c.i
 
 # target to preprocess a source file
 HAL/src/alt_environ.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_environ.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_environ.c.i
 .PHONY : HAL/src/alt_environ.c.i
 
 HAL/src/alt_environ.s: HAL/src/alt_environ.c.s
@@ -711,7 +711,7 @@ HAL/src/alt_environ.s: HAL/src/alt_environ.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_environ.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_environ.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_environ.c.s
 .PHONY : HAL/src/alt_environ.c.s
 
 HAL/src/alt_errno.obj: HAL/src/alt_errno.c.obj
@@ -719,7 +719,7 @@ HAL/src/alt_errno.obj: HAL/src/alt_errno.c.obj
 
 # target to build an object file
 HAL/src/alt_errno.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_errno.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_errno.c.obj
 .PHONY : HAL/src/alt_errno.c.obj
 
 HAL/src/alt_errno.i: HAL/src/alt_errno.c.i
@@ -727,7 +727,7 @@ HAL/src/alt_errno.i: HAL/src/alt_errno.c.i
 
 # target to preprocess a source file
 HAL/src/alt_errno.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_errno.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_errno.c.i
 .PHONY : HAL/src/alt_errno.c.i
 
 HAL/src/alt_errno.s: HAL/src/alt_errno.c.s
@@ -735,7 +735,7 @@ HAL/src/alt_errno.s: HAL/src/alt_errno.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_errno.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_errno.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_errno.c.s
 .PHONY : HAL/src/alt_errno.c.s
 
 HAL/src/alt_execve.obj: HAL/src/alt_execve.c.obj
@@ -743,7 +743,7 @@ HAL/src/alt_execve.obj: HAL/src/alt_execve.c.obj
 
 # target to build an object file
 HAL/src/alt_execve.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_execve.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_execve.c.obj
 .PHONY : HAL/src/alt_execve.c.obj
 
 HAL/src/alt_execve.i: HAL/src/alt_execve.c.i
@@ -751,7 +751,7 @@ HAL/src/alt_execve.i: HAL/src/alt_execve.c.i
 
 # target to preprocess a source file
 HAL/src/alt_execve.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_execve.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_execve.c.i
 .PHONY : HAL/src/alt_execve.c.i
 
 HAL/src/alt_execve.s: HAL/src/alt_execve.c.s
@@ -759,7 +759,7 @@ HAL/src/alt_execve.s: HAL/src/alt_execve.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_execve.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_execve.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_execve.c.s
 .PHONY : HAL/src/alt_execve.c.s
 
 HAL/src/alt_exit.obj: HAL/src/alt_exit.c.obj
@@ -767,7 +767,7 @@ HAL/src/alt_exit.obj: HAL/src/alt_exit.c.obj
 
 # target to build an object file
 HAL/src/alt_exit.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_exit.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_exit.c.obj
 .PHONY : HAL/src/alt_exit.c.obj
 
 HAL/src/alt_exit.i: HAL/src/alt_exit.c.i
@@ -775,7 +775,7 @@ HAL/src/alt_exit.i: HAL/src/alt_exit.c.i
 
 # target to preprocess a source file
 HAL/src/alt_exit.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_exit.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_exit.c.i
 .PHONY : HAL/src/alt_exit.c.i
 
 HAL/src/alt_exit.s: HAL/src/alt_exit.c.s
@@ -783,7 +783,7 @@ HAL/src/alt_exit.s: HAL/src/alt_exit.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_exit.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_exit.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_exit.c.s
 .PHONY : HAL/src/alt_exit.c.s
 
 HAL/src/alt_fcntl.obj: HAL/src/alt_fcntl.c.obj
@@ -791,7 +791,7 @@ HAL/src/alt_fcntl.obj: HAL/src/alt_fcntl.c.obj
 
 # target to build an object file
 HAL/src/alt_fcntl.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fcntl.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fcntl.c.obj
 .PHONY : HAL/src/alt_fcntl.c.obj
 
 HAL/src/alt_fcntl.i: HAL/src/alt_fcntl.c.i
@@ -799,7 +799,7 @@ HAL/src/alt_fcntl.i: HAL/src/alt_fcntl.c.i
 
 # target to preprocess a source file
 HAL/src/alt_fcntl.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fcntl.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fcntl.c.i
 .PHONY : HAL/src/alt_fcntl.c.i
 
 HAL/src/alt_fcntl.s: HAL/src/alt_fcntl.c.s
@@ -807,7 +807,7 @@ HAL/src/alt_fcntl.s: HAL/src/alt_fcntl.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_fcntl.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fcntl.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fcntl.c.s
 .PHONY : HAL/src/alt_fcntl.c.s
 
 HAL/src/alt_fd_lock.obj: HAL/src/alt_fd_lock.c.obj
@@ -815,7 +815,7 @@ HAL/src/alt_fd_lock.obj: HAL/src/alt_fd_lock.c.obj
 
 # target to build an object file
 HAL/src/alt_fd_lock.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_lock.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_lock.c.obj
 .PHONY : HAL/src/alt_fd_lock.c.obj
 
 HAL/src/alt_fd_lock.i: HAL/src/alt_fd_lock.c.i
@@ -823,7 +823,7 @@ HAL/src/alt_fd_lock.i: HAL/src/alt_fd_lock.c.i
 
 # target to preprocess a source file
 HAL/src/alt_fd_lock.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_lock.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_lock.c.i
 .PHONY : HAL/src/alt_fd_lock.c.i
 
 HAL/src/alt_fd_lock.s: HAL/src/alt_fd_lock.c.s
@@ -831,7 +831,7 @@ HAL/src/alt_fd_lock.s: HAL/src/alt_fd_lock.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_fd_lock.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_lock.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_lock.c.s
 .PHONY : HAL/src/alt_fd_lock.c.s
 
 HAL/src/alt_fd_unlock.obj: HAL/src/alt_fd_unlock.c.obj
@@ -839,7 +839,7 @@ HAL/src/alt_fd_unlock.obj: HAL/src/alt_fd_unlock.c.obj
 
 # target to build an object file
 HAL/src/alt_fd_unlock.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_unlock.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_unlock.c.obj
 .PHONY : HAL/src/alt_fd_unlock.c.obj
 
 HAL/src/alt_fd_unlock.i: HAL/src/alt_fd_unlock.c.i
@@ -847,7 +847,7 @@ HAL/src/alt_fd_unlock.i: HAL/src/alt_fd_unlock.c.i
 
 # target to preprocess a source file
 HAL/src/alt_fd_unlock.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_unlock.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_unlock.c.i
 .PHONY : HAL/src/alt_fd_unlock.c.i
 
 HAL/src/alt_fd_unlock.s: HAL/src/alt_fd_unlock.c.s
@@ -855,7 +855,7 @@ HAL/src/alt_fd_unlock.s: HAL/src/alt_fd_unlock.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_fd_unlock.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_unlock.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fd_unlock.c.s
 .PHONY : HAL/src/alt_fd_unlock.c.s
 
 HAL/src/alt_find_dev.obj: HAL/src/alt_find_dev.c.obj
@@ -863,7 +863,7 @@ HAL/src/alt_find_dev.obj: HAL/src/alt_find_dev.c.obj
 
 # target to build an object file
 HAL/src/alt_find_dev.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_dev.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_dev.c.obj
 .PHONY : HAL/src/alt_find_dev.c.obj
 
 HAL/src/alt_find_dev.i: HAL/src/alt_find_dev.c.i
@@ -871,7 +871,7 @@ HAL/src/alt_find_dev.i: HAL/src/alt_find_dev.c.i
 
 # target to preprocess a source file
 HAL/src/alt_find_dev.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_dev.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_dev.c.i
 .PHONY : HAL/src/alt_find_dev.c.i
 
 HAL/src/alt_find_dev.s: HAL/src/alt_find_dev.c.s
@@ -879,7 +879,7 @@ HAL/src/alt_find_dev.s: HAL/src/alt_find_dev.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_find_dev.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_dev.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_dev.c.s
 .PHONY : HAL/src/alt_find_dev.c.s
 
 HAL/src/alt_find_file.obj: HAL/src/alt_find_file.c.obj
@@ -887,7 +887,7 @@ HAL/src/alt_find_file.obj: HAL/src/alt_find_file.c.obj
 
 # target to build an object file
 HAL/src/alt_find_file.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_file.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_file.c.obj
 .PHONY : HAL/src/alt_find_file.c.obj
 
 HAL/src/alt_find_file.i: HAL/src/alt_find_file.c.i
@@ -895,7 +895,7 @@ HAL/src/alt_find_file.i: HAL/src/alt_find_file.c.i
 
 # target to preprocess a source file
 HAL/src/alt_find_file.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_file.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_file.c.i
 .PHONY : HAL/src/alt_find_file.c.i
 
 HAL/src/alt_find_file.s: HAL/src/alt_find_file.c.s
@@ -903,7 +903,7 @@ HAL/src/alt_find_file.s: HAL/src/alt_find_file.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_find_file.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_file.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_find_file.c.s
 .PHONY : HAL/src/alt_find_file.c.s
 
 HAL/src/alt_flash_dev.obj: HAL/src/alt_flash_dev.c.obj
@@ -911,7 +911,7 @@ HAL/src/alt_flash_dev.obj: HAL/src/alt_flash_dev.c.obj
 
 # target to build an object file
 HAL/src/alt_flash_dev.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_flash_dev.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_flash_dev.c.obj
 .PHONY : HAL/src/alt_flash_dev.c.obj
 
 HAL/src/alt_flash_dev.i: HAL/src/alt_flash_dev.c.i
@@ -919,7 +919,7 @@ HAL/src/alt_flash_dev.i: HAL/src/alt_flash_dev.c.i
 
 # target to preprocess a source file
 HAL/src/alt_flash_dev.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_flash_dev.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_flash_dev.c.i
 .PHONY : HAL/src/alt_flash_dev.c.i
 
 HAL/src/alt_flash_dev.s: HAL/src/alt_flash_dev.c.s
@@ -927,7 +927,7 @@ HAL/src/alt_flash_dev.s: HAL/src/alt_flash_dev.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_flash_dev.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_flash_dev.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_flash_dev.c.s
 .PHONY : HAL/src/alt_flash_dev.c.s
 
 HAL/src/alt_fork.obj: HAL/src/alt_fork.c.obj
@@ -935,7 +935,7 @@ HAL/src/alt_fork.obj: HAL/src/alt_fork.c.obj
 
 # target to build an object file
 HAL/src/alt_fork.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fork.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fork.c.obj
 .PHONY : HAL/src/alt_fork.c.obj
 
 HAL/src/alt_fork.i: HAL/src/alt_fork.c.i
@@ -943,7 +943,7 @@ HAL/src/alt_fork.i: HAL/src/alt_fork.c.i
 
 # target to preprocess a source file
 HAL/src/alt_fork.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fork.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fork.c.i
 .PHONY : HAL/src/alt_fork.c.i
 
 HAL/src/alt_fork.s: HAL/src/alt_fork.c.s
@@ -951,7 +951,7 @@ HAL/src/alt_fork.s: HAL/src/alt_fork.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_fork.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fork.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fork.c.s
 .PHONY : HAL/src/alt_fork.c.s
 
 HAL/src/alt_fs_reg.obj: HAL/src/alt_fs_reg.c.obj
@@ -959,7 +959,7 @@ HAL/src/alt_fs_reg.obj: HAL/src/alt_fs_reg.c.obj
 
 # target to build an object file
 HAL/src/alt_fs_reg.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fs_reg.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fs_reg.c.obj
 .PHONY : HAL/src/alt_fs_reg.c.obj
 
 HAL/src/alt_fs_reg.i: HAL/src/alt_fs_reg.c.i
@@ -967,7 +967,7 @@ HAL/src/alt_fs_reg.i: HAL/src/alt_fs_reg.c.i
 
 # target to preprocess a source file
 HAL/src/alt_fs_reg.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fs_reg.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fs_reg.c.i
 .PHONY : HAL/src/alt_fs_reg.c.i
 
 HAL/src/alt_fs_reg.s: HAL/src/alt_fs_reg.c.s
@@ -975,7 +975,7 @@ HAL/src/alt_fs_reg.s: HAL/src/alt_fs_reg.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_fs_reg.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fs_reg.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fs_reg.c.s
 .PHONY : HAL/src/alt_fs_reg.c.s
 
 HAL/src/alt_fstat.obj: HAL/src/alt_fstat.c.obj
@@ -983,7 +983,7 @@ HAL/src/alt_fstat.obj: HAL/src/alt_fstat.c.obj
 
 # target to build an object file
 HAL/src/alt_fstat.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fstat.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fstat.c.obj
 .PHONY : HAL/src/alt_fstat.c.obj
 
 HAL/src/alt_fstat.i: HAL/src/alt_fstat.c.i
@@ -991,7 +991,7 @@ HAL/src/alt_fstat.i: HAL/src/alt_fstat.c.i
 
 # target to preprocess a source file
 HAL/src/alt_fstat.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fstat.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fstat.c.i
 .PHONY : HAL/src/alt_fstat.c.i
 
 HAL/src/alt_fstat.s: HAL/src/alt_fstat.c.s
@@ -999,7 +999,7 @@ HAL/src/alt_fstat.s: HAL/src/alt_fstat.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_fstat.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fstat.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_fstat.c.s
 .PHONY : HAL/src/alt_fstat.c.s
 
 HAL/src/alt_get_fd.obj: HAL/src/alt_get_fd.c.obj
@@ -1007,7 +1007,7 @@ HAL/src/alt_get_fd.obj: HAL/src/alt_get_fd.c.obj
 
 # target to build an object file
 HAL/src/alt_get_fd.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_get_fd.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_get_fd.c.obj
 .PHONY : HAL/src/alt_get_fd.c.obj
 
 HAL/src/alt_get_fd.i: HAL/src/alt_get_fd.c.i
@@ -1015,7 +1015,7 @@ HAL/src/alt_get_fd.i: HAL/src/alt_get_fd.c.i
 
 # target to preprocess a source file
 HAL/src/alt_get_fd.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_get_fd.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_get_fd.c.i
 .PHONY : HAL/src/alt_get_fd.c.i
 
 HAL/src/alt_get_fd.s: HAL/src/alt_get_fd.c.s
@@ -1023,7 +1023,7 @@ HAL/src/alt_get_fd.s: HAL/src/alt_get_fd.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_get_fd.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_get_fd.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_get_fd.c.s
 .PHONY : HAL/src/alt_get_fd.c.s
 
 HAL/src/alt_getchar.obj: HAL/src/alt_getchar.c.obj
@@ -1031,7 +1031,7 @@ HAL/src/alt_getchar.obj: HAL/src/alt_getchar.c.obj
 
 # target to build an object file
 HAL/src/alt_getchar.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getchar.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getchar.c.obj
 .PHONY : HAL/src/alt_getchar.c.obj
 
 HAL/src/alt_getchar.i: HAL/src/alt_getchar.c.i
@@ -1039,7 +1039,7 @@ HAL/src/alt_getchar.i: HAL/src/alt_getchar.c.i
 
 # target to preprocess a source file
 HAL/src/alt_getchar.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getchar.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getchar.c.i
 .PHONY : HAL/src/alt_getchar.c.i
 
 HAL/src/alt_getchar.s: HAL/src/alt_getchar.c.s
@@ -1047,7 +1047,7 @@ HAL/src/alt_getchar.s: HAL/src/alt_getchar.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_getchar.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getchar.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getchar.c.s
 .PHONY : HAL/src/alt_getchar.c.s
 
 HAL/src/alt_getpid.obj: HAL/src/alt_getpid.c.obj
@@ -1055,7 +1055,7 @@ HAL/src/alt_getpid.obj: HAL/src/alt_getpid.c.obj
 
 # target to build an object file
 HAL/src/alt_getpid.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getpid.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getpid.c.obj
 .PHONY : HAL/src/alt_getpid.c.obj
 
 HAL/src/alt_getpid.i: HAL/src/alt_getpid.c.i
@@ -1063,7 +1063,7 @@ HAL/src/alt_getpid.i: HAL/src/alt_getpid.c.i
 
 # target to preprocess a source file
 HAL/src/alt_getpid.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getpid.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getpid.c.i
 .PHONY : HAL/src/alt_getpid.c.i
 
 HAL/src/alt_getpid.s: HAL/src/alt_getpid.c.s
@@ -1071,7 +1071,7 @@ HAL/src/alt_getpid.s: HAL/src/alt_getpid.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_getpid.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getpid.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_getpid.c.s
 .PHONY : HAL/src/alt_getpid.c.s
 
 HAL/src/alt_gettod.obj: HAL/src/alt_gettod.c.obj
@@ -1079,7 +1079,7 @@ HAL/src/alt_gettod.obj: HAL/src/alt_gettod.c.obj
 
 # target to build an object file
 HAL/src/alt_gettod.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.obj
 .PHONY : HAL/src/alt_gettod.c.obj
 
 HAL/src/alt_gettod.i: HAL/src/alt_gettod.c.i
@@ -1087,7 +1087,7 @@ HAL/src/alt_gettod.i: HAL/src/alt_gettod.c.i
 
 # target to preprocess a source file
 HAL/src/alt_gettod.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.i
 .PHONY : HAL/src/alt_gettod.c.i
 
 HAL/src/alt_gettod.s: HAL/src/alt_gettod.c.s
@@ -1095,7 +1095,7 @@ HAL/src/alt_gettod.s: HAL/src/alt_gettod.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_gettod.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.s
 .PHONY : HAL/src/alt_gettod.c.s
 
 HAL/src/alt_gmon.obj: HAL/src/alt_gmon.c.obj
@@ -1103,7 +1103,7 @@ HAL/src/alt_gmon.obj: HAL/src/alt_gmon.c.obj
 
 # target to build an object file
 HAL/src/alt_gmon.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gmon.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gmon.c.obj
 .PHONY : HAL/src/alt_gmon.c.obj
 
 HAL/src/alt_gmon.i: HAL/src/alt_gmon.c.i
@@ -1111,7 +1111,7 @@ HAL/src/alt_gmon.i: HAL/src/alt_gmon.c.i
 
 # target to preprocess a source file
 HAL/src/alt_gmon.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gmon.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gmon.c.i
 .PHONY : HAL/src/alt_gmon.c.i
 
 HAL/src/alt_gmon.s: HAL/src/alt_gmon.c.s
@@ -1119,7 +1119,7 @@ HAL/src/alt_gmon.s: HAL/src/alt_gmon.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_gmon.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gmon.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gmon.c.s
 .PHONY : HAL/src/alt_gmon.c.s
 
 HAL/src/alt_icache_flush.obj: HAL/src/alt_icache_flush.c.obj
@@ -1127,7 +1127,7 @@ HAL/src/alt_icache_flush.obj: HAL/src/alt_icache_flush.c.obj
 
 # target to build an object file
 HAL/src/alt_icache_flush.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush.c.obj
 .PHONY : HAL/src/alt_icache_flush.c.obj
 
 HAL/src/alt_icache_flush.i: HAL/src/alt_icache_flush.c.i
@@ -1135,7 +1135,7 @@ HAL/src/alt_icache_flush.i: HAL/src/alt_icache_flush.c.i
 
 # target to preprocess a source file
 HAL/src/alt_icache_flush.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush.c.i
 .PHONY : HAL/src/alt_icache_flush.c.i
 
 HAL/src/alt_icache_flush.s: HAL/src/alt_icache_flush.c.s
@@ -1143,7 +1143,7 @@ HAL/src/alt_icache_flush.s: HAL/src/alt_icache_flush.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_icache_flush.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush.c.s
 .PHONY : HAL/src/alt_icache_flush.c.s
 
 HAL/src/alt_icache_flush_all.obj: HAL/src/alt_icache_flush_all.c.obj
@@ -1151,7 +1151,7 @@ HAL/src/alt_icache_flush_all.obj: HAL/src/alt_icache_flush_all.c.obj
 
 # target to build an object file
 HAL/src/alt_icache_flush_all.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush_all.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush_all.c.obj
 .PHONY : HAL/src/alt_icache_flush_all.c.obj
 
 HAL/src/alt_icache_flush_all.i: HAL/src/alt_icache_flush_all.c.i
@@ -1159,7 +1159,7 @@ HAL/src/alt_icache_flush_all.i: HAL/src/alt_icache_flush_all.c.i
 
 # target to preprocess a source file
 HAL/src/alt_icache_flush_all.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush_all.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush_all.c.i
 .PHONY : HAL/src/alt_icache_flush_all.c.i
 
 HAL/src/alt_icache_flush_all.s: HAL/src/alt_icache_flush_all.c.s
@@ -1167,7 +1167,7 @@ HAL/src/alt_icache_flush_all.s: HAL/src/alt_icache_flush_all.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_icache_flush_all.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush_all.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_icache_flush_all.c.s
 .PHONY : HAL/src/alt_icache_flush_all.c.s
 
 HAL/src/alt_iic.obj: HAL/src/alt_iic.c.obj
@@ -1175,7 +1175,7 @@ HAL/src/alt_iic.obj: HAL/src/alt_iic.c.obj
 
 # target to build an object file
 HAL/src/alt_iic.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic.c.obj
 .PHONY : HAL/src/alt_iic.c.obj
 
 HAL/src/alt_iic.i: HAL/src/alt_iic.c.i
@@ -1183,7 +1183,7 @@ HAL/src/alt_iic.i: HAL/src/alt_iic.c.i
 
 # target to preprocess a source file
 HAL/src/alt_iic.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic.c.i
 .PHONY : HAL/src/alt_iic.c.i
 
 HAL/src/alt_iic.s: HAL/src/alt_iic.c.s
@@ -1191,7 +1191,7 @@ HAL/src/alt_iic.s: HAL/src/alt_iic.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_iic.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic.c.s
 .PHONY : HAL/src/alt_iic.c.s
 
 HAL/src/alt_iic_isr_register.obj: HAL/src/alt_iic_isr_register.c.obj
@@ -1199,7 +1199,7 @@ HAL/src/alt_iic_isr_register.obj: HAL/src/alt_iic_isr_register.c.obj
 
 # target to build an object file
 HAL/src/alt_iic_isr_register.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic_isr_register.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic_isr_register.c.obj
 .PHONY : HAL/src/alt_iic_isr_register.c.obj
 
 HAL/src/alt_iic_isr_register.i: HAL/src/alt_iic_isr_register.c.i
@@ -1207,7 +1207,7 @@ HAL/src/alt_iic_isr_register.i: HAL/src/alt_iic_isr_register.c.i
 
 # target to preprocess a source file
 HAL/src/alt_iic_isr_register.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic_isr_register.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic_isr_register.c.i
 .PHONY : HAL/src/alt_iic_isr_register.c.i
 
 HAL/src/alt_iic_isr_register.s: HAL/src/alt_iic_isr_register.c.s
@@ -1215,7 +1215,7 @@ HAL/src/alt_iic_isr_register.s: HAL/src/alt_iic_isr_register.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_iic_isr_register.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic_isr_register.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_iic_isr_register.c.s
 .PHONY : HAL/src/alt_iic_isr_register.c.s
 
 HAL/src/alt_instruction_exception_register.obj: HAL/src/alt_instruction_exception_register.c.obj
@@ -1223,7 +1223,7 @@ HAL/src/alt_instruction_exception_register.obj: HAL/src/alt_instruction_exceptio
 
 # target to build an object file
 HAL/src/alt_instruction_exception_register.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_instruction_exception_register.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_instruction_exception_register.c.obj
 .PHONY : HAL/src/alt_instruction_exception_register.c.obj
 
 HAL/src/alt_instruction_exception_register.i: HAL/src/alt_instruction_exception_register.c.i
@@ -1231,7 +1231,7 @@ HAL/src/alt_instruction_exception_register.i: HAL/src/alt_instruction_exception_
 
 # target to preprocess a source file
 HAL/src/alt_instruction_exception_register.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_instruction_exception_register.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_instruction_exception_register.c.i
 .PHONY : HAL/src/alt_instruction_exception_register.c.i
 
 HAL/src/alt_instruction_exception_register.s: HAL/src/alt_instruction_exception_register.c.s
@@ -1239,7 +1239,7 @@ HAL/src/alt_instruction_exception_register.s: HAL/src/alt_instruction_exception_
 
 # target to generate assembly for a file
 HAL/src/alt_instruction_exception_register.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_instruction_exception_register.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_instruction_exception_register.c.s
 .PHONY : HAL/src/alt_instruction_exception_register.c.s
 
 HAL/src/alt_io_redirect.obj: HAL/src/alt_io_redirect.c.obj
@@ -1247,7 +1247,7 @@ HAL/src/alt_io_redirect.obj: HAL/src/alt_io_redirect.c.obj
 
 # target to build an object file
 HAL/src/alt_io_redirect.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_io_redirect.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_io_redirect.c.obj
 .PHONY : HAL/src/alt_io_redirect.c.obj
 
 HAL/src/alt_io_redirect.i: HAL/src/alt_io_redirect.c.i
@@ -1255,7 +1255,7 @@ HAL/src/alt_io_redirect.i: HAL/src/alt_io_redirect.c.i
 
 # target to preprocess a source file
 HAL/src/alt_io_redirect.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_io_redirect.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_io_redirect.c.i
 .PHONY : HAL/src/alt_io_redirect.c.i
 
 HAL/src/alt_io_redirect.s: HAL/src/alt_io_redirect.c.s
@@ -1263,7 +1263,7 @@ HAL/src/alt_io_redirect.s: HAL/src/alt_io_redirect.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_io_redirect.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_io_redirect.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_io_redirect.c.s
 .PHONY : HAL/src/alt_io_redirect.c.s
 
 HAL/src/alt_ioctl.obj: HAL/src/alt_ioctl.c.obj
@@ -1271,7 +1271,7 @@ HAL/src/alt_ioctl.obj: HAL/src/alt_ioctl.c.obj
 
 # target to build an object file
 HAL/src/alt_ioctl.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_ioctl.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_ioctl.c.obj
 .PHONY : HAL/src/alt_ioctl.c.obj
 
 HAL/src/alt_ioctl.i: HAL/src/alt_ioctl.c.i
@@ -1279,7 +1279,7 @@ HAL/src/alt_ioctl.i: HAL/src/alt_ioctl.c.i
 
 # target to preprocess a source file
 HAL/src/alt_ioctl.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_ioctl.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_ioctl.c.i
 .PHONY : HAL/src/alt_ioctl.c.i
 
 HAL/src/alt_ioctl.s: HAL/src/alt_ioctl.c.s
@@ -1287,7 +1287,7 @@ HAL/src/alt_ioctl.s: HAL/src/alt_ioctl.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_ioctl.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_ioctl.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_ioctl.c.s
 .PHONY : HAL/src/alt_ioctl.c.s
 
 HAL/src/alt_irq_handler.obj: HAL/src/alt_irq_handler.c.obj
@@ -1295,7 +1295,7 @@ HAL/src/alt_irq_handler.obj: HAL/src/alt_irq_handler.c.obj
 
 # target to build an object file
 HAL/src/alt_irq_handler.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_irq_handler.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_irq_handler.c.obj
 .PHONY : HAL/src/alt_irq_handler.c.obj
 
 HAL/src/alt_irq_handler.i: HAL/src/alt_irq_handler.c.i
@@ -1303,7 +1303,7 @@ HAL/src/alt_irq_handler.i: HAL/src/alt_irq_handler.c.i
 
 # target to preprocess a source file
 HAL/src/alt_irq_handler.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_irq_handler.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_irq_handler.c.i
 .PHONY : HAL/src/alt_irq_handler.c.i
 
 HAL/src/alt_irq_handler.s: HAL/src/alt_irq_handler.c.s
@@ -1311,7 +1311,7 @@ HAL/src/alt_irq_handler.s: HAL/src/alt_irq_handler.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_irq_handler.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_irq_handler.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_irq_handler.c.s
 .PHONY : HAL/src/alt_irq_handler.c.s
 
 HAL/src/alt_isatty.obj: HAL/src/alt_isatty.c.obj
@@ -1319,7 +1319,7 @@ HAL/src/alt_isatty.obj: HAL/src/alt_isatty.c.obj
 
 # target to build an object file
 HAL/src/alt_isatty.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_isatty.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_isatty.c.obj
 .PHONY : HAL/src/alt_isatty.c.obj
 
 HAL/src/alt_isatty.i: HAL/src/alt_isatty.c.i
@@ -1327,7 +1327,7 @@ HAL/src/alt_isatty.i: HAL/src/alt_isatty.c.i
 
 # target to preprocess a source file
 HAL/src/alt_isatty.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_isatty.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_isatty.c.i
 .PHONY : HAL/src/alt_isatty.c.i
 
 HAL/src/alt_isatty.s: HAL/src/alt_isatty.c.s
@@ -1335,7 +1335,7 @@ HAL/src/alt_isatty.s: HAL/src/alt_isatty.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_isatty.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_isatty.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_isatty.c.s
 .PHONY : HAL/src/alt_isatty.c.s
 
 HAL/src/alt_kill.obj: HAL/src/alt_kill.c.obj
@@ -1343,7 +1343,7 @@ HAL/src/alt_kill.obj: HAL/src/alt_kill.c.obj
 
 # target to build an object file
 HAL/src/alt_kill.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.obj
 .PHONY : HAL/src/alt_kill.c.obj
 
 HAL/src/alt_kill.i: HAL/src/alt_kill.c.i
@@ -1351,7 +1351,7 @@ HAL/src/alt_kill.i: HAL/src/alt_kill.c.i
 
 # target to preprocess a source file
 HAL/src/alt_kill.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.i
 .PHONY : HAL/src/alt_kill.c.i
 
 HAL/src/alt_kill.s: HAL/src/alt_kill.c.s
@@ -1359,7 +1359,7 @@ HAL/src/alt_kill.s: HAL/src/alt_kill.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_kill.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_kill.c.s
 .PHONY : HAL/src/alt_kill.c.s
 
 HAL/src/alt_link.obj: HAL/src/alt_link.c.obj
@@ -1367,7 +1367,7 @@ HAL/src/alt_link.obj: HAL/src/alt_link.c.obj
 
 # target to build an object file
 HAL/src/alt_link.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_link.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_link.c.obj
 .PHONY : HAL/src/alt_link.c.obj
 
 HAL/src/alt_link.i: HAL/src/alt_link.c.i
@@ -1375,7 +1375,7 @@ HAL/src/alt_link.i: HAL/src/alt_link.c.i
 
 # target to preprocess a source file
 HAL/src/alt_link.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_link.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_link.c.i
 .PHONY : HAL/src/alt_link.c.i
 
 HAL/src/alt_link.s: HAL/src/alt_link.c.s
@@ -1383,7 +1383,7 @@ HAL/src/alt_link.s: HAL/src/alt_link.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_link.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_link.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_link.c.s
 .PHONY : HAL/src/alt_link.c.s
 
 HAL/src/alt_load.obj: HAL/src/alt_load.c.obj
@@ -1391,7 +1391,7 @@ HAL/src/alt_load.obj: HAL/src/alt_load.c.obj
 
 # target to build an object file
 HAL/src/alt_load.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_load.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_load.c.obj
 .PHONY : HAL/src/alt_load.c.obj
 
 HAL/src/alt_load.i: HAL/src/alt_load.c.i
@@ -1399,7 +1399,7 @@ HAL/src/alt_load.i: HAL/src/alt_load.c.i
 
 # target to preprocess a source file
 HAL/src/alt_load.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_load.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_load.c.i
 .PHONY : HAL/src/alt_load.c.i
 
 HAL/src/alt_load.s: HAL/src/alt_load.c.s
@@ -1407,7 +1407,7 @@ HAL/src/alt_load.s: HAL/src/alt_load.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_load.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_load.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_load.c.s
 .PHONY : HAL/src/alt_load.c.s
 
 HAL/src/alt_log_macro.obj: HAL/src/alt_log_macro.S.obj
@@ -1415,7 +1415,7 @@ HAL/src/alt_log_macro.obj: HAL/src/alt_log_macro.S.obj
 
 # target to build an object file
 HAL/src/alt_log_macro.S.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_macro.S.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_macro.S.obj
 .PHONY : HAL/src/alt_log_macro.S.obj
 
 HAL/src/alt_log_printf.obj: HAL/src/alt_log_printf.c.obj
@@ -1423,7 +1423,7 @@ HAL/src/alt_log_printf.obj: HAL/src/alt_log_printf.c.obj
 
 # target to build an object file
 HAL/src/alt_log_printf.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_printf.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_printf.c.obj
 .PHONY : HAL/src/alt_log_printf.c.obj
 
 HAL/src/alt_log_printf.i: HAL/src/alt_log_printf.c.i
@@ -1431,7 +1431,7 @@ HAL/src/alt_log_printf.i: HAL/src/alt_log_printf.c.i
 
 # target to preprocess a source file
 HAL/src/alt_log_printf.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_printf.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_printf.c.i
 .PHONY : HAL/src/alt_log_printf.c.i
 
 HAL/src/alt_log_printf.s: HAL/src/alt_log_printf.c.s
@@ -1439,7 +1439,7 @@ HAL/src/alt_log_printf.s: HAL/src/alt_log_printf.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_log_printf.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_printf.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_printf.c.s
 .PHONY : HAL/src/alt_log_printf.c.s
 
 HAL/src/alt_lseek.obj: HAL/src/alt_lseek.c.obj
@@ -1447,7 +1447,7 @@ HAL/src/alt_lseek.obj: HAL/src/alt_lseek.c.obj
 
 # target to build an object file
 HAL/src/alt_lseek.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_lseek.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_lseek.c.obj
 .PHONY : HAL/src/alt_lseek.c.obj
 
 HAL/src/alt_lseek.i: HAL/src/alt_lseek.c.i
@@ -1455,7 +1455,7 @@ HAL/src/alt_lseek.i: HAL/src/alt_lseek.c.i
 
 # target to preprocess a source file
 HAL/src/alt_lseek.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_lseek.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_lseek.c.i
 .PHONY : HAL/src/alt_lseek.c.i
 
 HAL/src/alt_lseek.s: HAL/src/alt_lseek.c.s
@@ -1463,7 +1463,7 @@ HAL/src/alt_lseek.s: HAL/src/alt_lseek.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_lseek.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_lseek.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_lseek.c.s
 .PHONY : HAL/src/alt_lseek.c.s
 
 HAL/src/alt_main.obj: HAL/src/alt_main.c.obj
@@ -1471,7 +1471,7 @@ HAL/src/alt_main.obj: HAL/src/alt_main.c.obj
 
 # target to build an object file
 HAL/src/alt_main.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_main.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_main.c.obj
 .PHONY : HAL/src/alt_main.c.obj
 
 HAL/src/alt_main.i: HAL/src/alt_main.c.i
@@ -1479,7 +1479,7 @@ HAL/src/alt_main.i: HAL/src/alt_main.c.i
 
 # target to preprocess a source file
 HAL/src/alt_main.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_main.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_main.c.i
 .PHONY : HAL/src/alt_main.c.i
 
 HAL/src/alt_main.s: HAL/src/alt_main.c.s
@@ -1487,7 +1487,7 @@ HAL/src/alt_main.s: HAL/src/alt_main.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_main.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_main.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_main.c.s
 .PHONY : HAL/src/alt_main.c.s
 
 HAL/src/alt_mcount.obj: HAL/src/alt_mcount.S.obj
@@ -1495,7 +1495,7 @@ HAL/src/alt_mcount.obj: HAL/src/alt_mcount.S.obj
 
 # target to build an object file
 HAL/src/alt_mcount.S.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_mcount.S.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_mcount.S.obj
 .PHONY : HAL/src/alt_mcount.S.obj
 
 HAL/src/alt_open.obj: HAL/src/alt_open.c.obj
@@ -1503,7 +1503,7 @@ HAL/src/alt_open.obj: HAL/src/alt_open.c.obj
 
 # target to build an object file
 HAL/src/alt_open.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_open.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_open.c.obj
 .PHONY : HAL/src/alt_open.c.obj
 
 HAL/src/alt_open.i: HAL/src/alt_open.c.i
@@ -1511,7 +1511,7 @@ HAL/src/alt_open.i: HAL/src/alt_open.c.i
 
 # target to preprocess a source file
 HAL/src/alt_open.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_open.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_open.c.i
 .PHONY : HAL/src/alt_open.c.i
 
 HAL/src/alt_open.s: HAL/src/alt_open.c.s
@@ -1519,7 +1519,7 @@ HAL/src/alt_open.s: HAL/src/alt_open.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_open.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_open.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_open.c.s
 .PHONY : HAL/src/alt_open.c.s
 
 HAL/src/alt_printf.obj: HAL/src/alt_printf.c.obj
@@ -1527,7 +1527,7 @@ HAL/src/alt_printf.obj: HAL/src/alt_printf.c.obj
 
 # target to build an object file
 HAL/src/alt_printf.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_printf.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_printf.c.obj
 .PHONY : HAL/src/alt_printf.c.obj
 
 HAL/src/alt_printf.i: HAL/src/alt_printf.c.i
@@ -1535,7 +1535,7 @@ HAL/src/alt_printf.i: HAL/src/alt_printf.c.i
 
 # target to preprocess a source file
 HAL/src/alt_printf.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_printf.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_printf.c.i
 .PHONY : HAL/src/alt_printf.c.i
 
 HAL/src/alt_printf.s: HAL/src/alt_printf.c.s
@@ -1543,7 +1543,7 @@ HAL/src/alt_printf.s: HAL/src/alt_printf.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_printf.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_printf.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_printf.c.s
 .PHONY : HAL/src/alt_printf.c.s
 
 HAL/src/alt_putchar.obj: HAL/src/alt_putchar.c.obj
@@ -1551,7 +1551,7 @@ HAL/src/alt_putchar.obj: HAL/src/alt_putchar.c.obj
 
 # target to build an object file
 HAL/src/alt_putchar.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putchar.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putchar.c.obj
 .PHONY : HAL/src/alt_putchar.c.obj
 
 HAL/src/alt_putchar.i: HAL/src/alt_putchar.c.i
@@ -1559,7 +1559,7 @@ HAL/src/alt_putchar.i: HAL/src/alt_putchar.c.i
 
 # target to preprocess a source file
 HAL/src/alt_putchar.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putchar.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putchar.c.i
 .PHONY : HAL/src/alt_putchar.c.i
 
 HAL/src/alt_putchar.s: HAL/src/alt_putchar.c.s
@@ -1567,7 +1567,7 @@ HAL/src/alt_putchar.s: HAL/src/alt_putchar.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_putchar.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putchar.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putchar.c.s
 .PHONY : HAL/src/alt_putchar.c.s
 
 HAL/src/alt_putcharbuf.obj: HAL/src/alt_putcharbuf.c.obj
@@ -1575,7 +1575,7 @@ HAL/src/alt_putcharbuf.obj: HAL/src/alt_putcharbuf.c.obj
 
 # target to build an object file
 HAL/src/alt_putcharbuf.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putcharbuf.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putcharbuf.c.obj
 .PHONY : HAL/src/alt_putcharbuf.c.obj
 
 HAL/src/alt_putcharbuf.i: HAL/src/alt_putcharbuf.c.i
@@ -1583,7 +1583,7 @@ HAL/src/alt_putcharbuf.i: HAL/src/alt_putcharbuf.c.i
 
 # target to preprocess a source file
 HAL/src/alt_putcharbuf.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putcharbuf.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putcharbuf.c.i
 .PHONY : HAL/src/alt_putcharbuf.c.i
 
 HAL/src/alt_putcharbuf.s: HAL/src/alt_putcharbuf.c.s
@@ -1591,7 +1591,7 @@ HAL/src/alt_putcharbuf.s: HAL/src/alt_putcharbuf.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_putcharbuf.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putcharbuf.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putcharbuf.c.s
 .PHONY : HAL/src/alt_putcharbuf.c.s
 
 HAL/src/alt_putstr.obj: HAL/src/alt_putstr.c.obj
@@ -1599,7 +1599,7 @@ HAL/src/alt_putstr.obj: HAL/src/alt_putstr.c.obj
 
 # target to build an object file
 HAL/src/alt_putstr.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putstr.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putstr.c.obj
 .PHONY : HAL/src/alt_putstr.c.obj
 
 HAL/src/alt_putstr.i: HAL/src/alt_putstr.c.i
@@ -1607,7 +1607,7 @@ HAL/src/alt_putstr.i: HAL/src/alt_putstr.c.i
 
 # target to preprocess a source file
 HAL/src/alt_putstr.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putstr.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putstr.c.i
 .PHONY : HAL/src/alt_putstr.c.i
 
 HAL/src/alt_putstr.s: HAL/src/alt_putstr.c.s
@@ -1615,7 +1615,7 @@ HAL/src/alt_putstr.s: HAL/src/alt_putstr.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_putstr.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putstr.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_putstr.c.s
 .PHONY : HAL/src/alt_putstr.c.s
 
 HAL/src/alt_read.obj: HAL/src/alt_read.c.obj
@@ -1623,7 +1623,7 @@ HAL/src/alt_read.obj: HAL/src/alt_read.c.obj
 
 # target to build an object file
 HAL/src/alt_read.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_read.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_read.c.obj
 .PHONY : HAL/src/alt_read.c.obj
 
 HAL/src/alt_read.i: HAL/src/alt_read.c.i
@@ -1631,7 +1631,7 @@ HAL/src/alt_read.i: HAL/src/alt_read.c.i
 
 # target to preprocess a source file
 HAL/src/alt_read.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_read.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_read.c.i
 .PHONY : HAL/src/alt_read.c.i
 
 HAL/src/alt_read.s: HAL/src/alt_read.c.s
@@ -1639,7 +1639,7 @@ HAL/src/alt_read.s: HAL/src/alt_read.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_read.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_read.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_read.c.s
 .PHONY : HAL/src/alt_read.c.s
 
 HAL/src/alt_release_fd.obj: HAL/src/alt_release_fd.c.obj
@@ -1647,7 +1647,7 @@ HAL/src/alt_release_fd.obj: HAL/src/alt_release_fd.c.obj
 
 # target to build an object file
 HAL/src/alt_release_fd.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_release_fd.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_release_fd.c.obj
 .PHONY : HAL/src/alt_release_fd.c.obj
 
 HAL/src/alt_release_fd.i: HAL/src/alt_release_fd.c.i
@@ -1655,7 +1655,7 @@ HAL/src/alt_release_fd.i: HAL/src/alt_release_fd.c.i
 
 # target to preprocess a source file
 HAL/src/alt_release_fd.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_release_fd.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_release_fd.c.i
 .PHONY : HAL/src/alt_release_fd.c.i
 
 HAL/src/alt_release_fd.s: HAL/src/alt_release_fd.c.s
@@ -1663,7 +1663,7 @@ HAL/src/alt_release_fd.s: HAL/src/alt_release_fd.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_release_fd.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_release_fd.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_release_fd.c.s
 .PHONY : HAL/src/alt_release_fd.c.s
 
 HAL/src/alt_remap_cached.obj: HAL/src/alt_remap_cached.c.obj
@@ -1671,7 +1671,7 @@ HAL/src/alt_remap_cached.obj: HAL/src/alt_remap_cached.c.obj
 
 # target to build an object file
 HAL/src/alt_remap_cached.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.obj
 .PHONY : HAL/src/alt_remap_cached.c.obj
 
 HAL/src/alt_remap_cached.i: HAL/src/alt_remap_cached.c.i
@@ -1679,7 +1679,7 @@ HAL/src/alt_remap_cached.i: HAL/src/alt_remap_cached.c.i
 
 # target to preprocess a source file
 HAL/src/alt_remap_cached.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.i
 .PHONY : HAL/src/alt_remap_cached.c.i
 
 HAL/src/alt_remap_cached.s: HAL/src/alt_remap_cached.c.s
@@ -1687,7 +1687,7 @@ HAL/src/alt_remap_cached.s: HAL/src/alt_remap_cached.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_remap_cached.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_cached.c.s
 .PHONY : HAL/src/alt_remap_cached.c.s
 
 HAL/src/alt_remap_uncached.obj: HAL/src/alt_remap_uncached.c.obj
@@ -1695,7 +1695,7 @@ HAL/src/alt_remap_uncached.obj: HAL/src/alt_remap_uncached.c.obj
 
 # target to build an object file
 HAL/src/alt_remap_uncached.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_uncached.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_uncached.c.obj
 .PHONY : HAL/src/alt_remap_uncached.c.obj
 
 HAL/src/alt_remap_uncached.i: HAL/src/alt_remap_uncached.c.i
@@ -1703,7 +1703,7 @@ HAL/src/alt_remap_uncached.i: HAL/src/alt_remap_uncached.c.i
 
 # target to preprocess a source file
 HAL/src/alt_remap_uncached.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_uncached.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_uncached.c.i
 .PHONY : HAL/src/alt_remap_uncached.c.i
 
 HAL/src/alt_remap_uncached.s: HAL/src/alt_remap_uncached.c.s
@@ -1711,7 +1711,7 @@ HAL/src/alt_remap_uncached.s: HAL/src/alt_remap_uncached.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_remap_uncached.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_uncached.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_remap_uncached.c.s
 .PHONY : HAL/src/alt_remap_uncached.c.s
 
 HAL/src/alt_rename.obj: HAL/src/alt_rename.c.obj
@@ -1719,7 +1719,7 @@ HAL/src/alt_rename.obj: HAL/src/alt_rename.c.obj
 
 # target to build an object file
 HAL/src/alt_rename.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_rename.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_rename.c.obj
 .PHONY : HAL/src/alt_rename.c.obj
 
 HAL/src/alt_rename.i: HAL/src/alt_rename.c.i
@@ -1727,7 +1727,7 @@ HAL/src/alt_rename.i: HAL/src/alt_rename.c.i
 
 # target to preprocess a source file
 HAL/src/alt_rename.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_rename.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_rename.c.i
 .PHONY : HAL/src/alt_rename.c.i
 
 HAL/src/alt_rename.s: HAL/src/alt_rename.c.s
@@ -1735,7 +1735,7 @@ HAL/src/alt_rename.s: HAL/src/alt_rename.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_rename.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_rename.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_rename.c.s
 .PHONY : HAL/src/alt_rename.c.s
 
 HAL/src/alt_sbrk.obj: HAL/src/alt_sbrk.c.obj
@@ -1743,7 +1743,7 @@ HAL/src/alt_sbrk.obj: HAL/src/alt_sbrk.c.obj
 
 # target to build an object file
 HAL/src/alt_sbrk.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.obj
 .PHONY : HAL/src/alt_sbrk.c.obj
 
 HAL/src/alt_sbrk.i: HAL/src/alt_sbrk.c.i
@@ -1751,7 +1751,7 @@ HAL/src/alt_sbrk.i: HAL/src/alt_sbrk.c.i
 
 # target to preprocess a source file
 HAL/src/alt_sbrk.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.i
 .PHONY : HAL/src/alt_sbrk.c.i
 
 HAL/src/alt_sbrk.s: HAL/src/alt_sbrk.c.s
@@ -1759,7 +1759,7 @@ HAL/src/alt_sbrk.s: HAL/src/alt_sbrk.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_sbrk.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_sbrk.c.s
 .PHONY : HAL/src/alt_sbrk.c.s
 
 HAL/src/alt_settod.obj: HAL/src/alt_settod.c.obj
@@ -1767,7 +1767,7 @@ HAL/src/alt_settod.obj: HAL/src/alt_settod.c.obj
 
 # target to build an object file
 HAL/src/alt_settod.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_settod.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_settod.c.obj
 .PHONY : HAL/src/alt_settod.c.obj
 
 HAL/src/alt_settod.i: HAL/src/alt_settod.c.i
@@ -1775,7 +1775,7 @@ HAL/src/alt_settod.i: HAL/src/alt_settod.c.i
 
 # target to preprocess a source file
 HAL/src/alt_settod.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_settod.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_settod.c.i
 .PHONY : HAL/src/alt_settod.c.i
 
 HAL/src/alt_settod.s: HAL/src/alt_settod.c.s
@@ -1783,7 +1783,7 @@ HAL/src/alt_settod.s: HAL/src/alt_settod.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_settod.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_settod.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_settod.c.s
 .PHONY : HAL/src/alt_settod.c.s
 
 HAL/src/alt_stat.obj: HAL/src/alt_stat.c.obj
@@ -1791,7 +1791,7 @@ HAL/src/alt_stat.obj: HAL/src/alt_stat.c.obj
 
 # target to build an object file
 HAL/src/alt_stat.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_stat.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_stat.c.obj
 .PHONY : HAL/src/alt_stat.c.obj
 
 HAL/src/alt_stat.i: HAL/src/alt_stat.c.i
@@ -1799,7 +1799,7 @@ HAL/src/alt_stat.i: HAL/src/alt_stat.c.i
 
 # target to preprocess a source file
 HAL/src/alt_stat.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_stat.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_stat.c.i
 .PHONY : HAL/src/alt_stat.c.i
 
 HAL/src/alt_stat.s: HAL/src/alt_stat.c.s
@@ -1807,7 +1807,7 @@ HAL/src/alt_stat.s: HAL/src/alt_stat.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_stat.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_stat.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_stat.c.s
 .PHONY : HAL/src/alt_stat.c.s
 
 HAL/src/alt_tick.obj: HAL/src/alt_tick.c.obj
@@ -1815,7 +1815,7 @@ HAL/src/alt_tick.obj: HAL/src/alt_tick.c.obj
 
 # target to build an object file
 HAL/src/alt_tick.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tick.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tick.c.obj
 .PHONY : HAL/src/alt_tick.c.obj
 
 HAL/src/alt_tick.i: HAL/src/alt_tick.c.i
@@ -1823,7 +1823,7 @@ HAL/src/alt_tick.i: HAL/src/alt_tick.c.i
 
 # target to preprocess a source file
 HAL/src/alt_tick.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tick.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tick.c.i
 .PHONY : HAL/src/alt_tick.c.i
 
 HAL/src/alt_tick.s: HAL/src/alt_tick.c.s
@@ -1831,7 +1831,7 @@ HAL/src/alt_tick.s: HAL/src/alt_tick.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_tick.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tick.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tick.c.s
 .PHONY : HAL/src/alt_tick.c.s
 
 HAL/src/alt_times.obj: HAL/src/alt_times.c.obj
@@ -1839,7 +1839,7 @@ HAL/src/alt_times.obj: HAL/src/alt_times.c.obj
 
 # target to build an object file
 HAL/src/alt_times.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_times.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_times.c.obj
 .PHONY : HAL/src/alt_times.c.obj
 
 HAL/src/alt_times.i: HAL/src/alt_times.c.i
@@ -1847,7 +1847,7 @@ HAL/src/alt_times.i: HAL/src/alt_times.c.i
 
 # target to preprocess a source file
 HAL/src/alt_times.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_times.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_times.c.i
 .PHONY : HAL/src/alt_times.c.i
 
 HAL/src/alt_times.s: HAL/src/alt_times.c.s
@@ -1855,7 +1855,7 @@ HAL/src/alt_times.s: HAL/src/alt_times.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_times.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_times.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_times.c.s
 .PHONY : HAL/src/alt_times.c.s
 
 HAL/src/alt_tls.obj: HAL/src/alt_tls.c.obj
@@ -1863,7 +1863,7 @@ HAL/src/alt_tls.obj: HAL/src/alt_tls.c.obj
 
 # target to build an object file
 HAL/src/alt_tls.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tls.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tls.c.obj
 .PHONY : HAL/src/alt_tls.c.obj
 
 HAL/src/alt_tls.i: HAL/src/alt_tls.c.i
@@ -1871,7 +1871,7 @@ HAL/src/alt_tls.i: HAL/src/alt_tls.c.i
 
 # target to preprocess a source file
 HAL/src/alt_tls.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tls.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tls.c.i
 .PHONY : HAL/src/alt_tls.c.i
 
 HAL/src/alt_tls.s: HAL/src/alt_tls.c.s
@@ -1879,7 +1879,7 @@ HAL/src/alt_tls.s: HAL/src/alt_tls.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_tls.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tls.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_tls.c.s
 .PHONY : HAL/src/alt_tls.c.s
 
 HAL/src/alt_uncached_free.obj: HAL/src/alt_uncached_free.c.obj
@@ -1887,7 +1887,7 @@ HAL/src/alt_uncached_free.obj: HAL/src/alt_uncached_free.c.obj
 
 # target to build an object file
 HAL/src/alt_uncached_free.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_free.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_free.c.obj
 .PHONY : HAL/src/alt_uncached_free.c.obj
 
 HAL/src/alt_uncached_free.i: HAL/src/alt_uncached_free.c.i
@@ -1895,7 +1895,7 @@ HAL/src/alt_uncached_free.i: HAL/src/alt_uncached_free.c.i
 
 # target to preprocess a source file
 HAL/src/alt_uncached_free.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_free.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_free.c.i
 .PHONY : HAL/src/alt_uncached_free.c.i
 
 HAL/src/alt_uncached_free.s: HAL/src/alt_uncached_free.c.s
@@ -1903,7 +1903,7 @@ HAL/src/alt_uncached_free.s: HAL/src/alt_uncached_free.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_uncached_free.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_free.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_free.c.s
 .PHONY : HAL/src/alt_uncached_free.c.s
 
 HAL/src/alt_uncached_malloc.obj: HAL/src/alt_uncached_malloc.c.obj
@@ -1911,7 +1911,7 @@ HAL/src/alt_uncached_malloc.obj: HAL/src/alt_uncached_malloc.c.obj
 
 # target to build an object file
 HAL/src/alt_uncached_malloc.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_malloc.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_malloc.c.obj
 .PHONY : HAL/src/alt_uncached_malloc.c.obj
 
 HAL/src/alt_uncached_malloc.i: HAL/src/alt_uncached_malloc.c.i
@@ -1919,7 +1919,7 @@ HAL/src/alt_uncached_malloc.i: HAL/src/alt_uncached_malloc.c.i
 
 # target to preprocess a source file
 HAL/src/alt_uncached_malloc.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_malloc.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_malloc.c.i
 .PHONY : HAL/src/alt_uncached_malloc.c.i
 
 HAL/src/alt_uncached_malloc.s: HAL/src/alt_uncached_malloc.c.s
@@ -1927,7 +1927,7 @@ HAL/src/alt_uncached_malloc.s: HAL/src/alt_uncached_malloc.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_uncached_malloc.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_malloc.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_uncached_malloc.c.s
 .PHONY : HAL/src/alt_uncached_malloc.c.s
 
 HAL/src/alt_unlink.obj: HAL/src/alt_unlink.c.obj
@@ -1935,7 +1935,7 @@ HAL/src/alt_unlink.obj: HAL/src/alt_unlink.c.obj
 
 # target to build an object file
 HAL/src/alt_unlink.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_unlink.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_unlink.c.obj
 .PHONY : HAL/src/alt_unlink.c.obj
 
 HAL/src/alt_unlink.i: HAL/src/alt_unlink.c.i
@@ -1943,7 +1943,7 @@ HAL/src/alt_unlink.i: HAL/src/alt_unlink.c.i
 
 # target to preprocess a source file
 HAL/src/alt_unlink.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_unlink.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_unlink.c.i
 .PHONY : HAL/src/alt_unlink.c.i
 
 HAL/src/alt_unlink.s: HAL/src/alt_unlink.c.s
@@ -1951,7 +1951,7 @@ HAL/src/alt_unlink.s: HAL/src/alt_unlink.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_unlink.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_unlink.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_unlink.c.s
 .PHONY : HAL/src/alt_unlink.c.s
 
 HAL/src/alt_usleep.obj: HAL/src/alt_usleep.c.obj
@@ -1959,7 +1959,7 @@ HAL/src/alt_usleep.obj: HAL/src/alt_usleep.c.obj
 
 # target to build an object file
 HAL/src/alt_usleep.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_usleep.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_usleep.c.obj
 .PHONY : HAL/src/alt_usleep.c.obj
 
 HAL/src/alt_usleep.i: HAL/src/alt_usleep.c.i
@@ -1967,7 +1967,7 @@ HAL/src/alt_usleep.i: HAL/src/alt_usleep.c.i
 
 # target to preprocess a source file
 HAL/src/alt_usleep.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_usleep.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_usleep.c.i
 .PHONY : HAL/src/alt_usleep.c.i
 
 HAL/src/alt_usleep.s: HAL/src/alt_usleep.c.s
@@ -1975,7 +1975,7 @@ HAL/src/alt_usleep.s: HAL/src/alt_usleep.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_usleep.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_usleep.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_usleep.c.s
 .PHONY : HAL/src/alt_usleep.c.s
 
 HAL/src/alt_wait.obj: HAL/src/alt_wait.c.obj
@@ -1983,7 +1983,7 @@ HAL/src/alt_wait.obj: HAL/src/alt_wait.c.obj
 
 # target to build an object file
 HAL/src/alt_wait.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_wait.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_wait.c.obj
 .PHONY : HAL/src/alt_wait.c.obj
 
 HAL/src/alt_wait.i: HAL/src/alt_wait.c.i
@@ -1991,7 +1991,7 @@ HAL/src/alt_wait.i: HAL/src/alt_wait.c.i
 
 # target to preprocess a source file
 HAL/src/alt_wait.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_wait.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_wait.c.i
 .PHONY : HAL/src/alt_wait.c.i
 
 HAL/src/alt_wait.s: HAL/src/alt_wait.c.s
@@ -1999,7 +1999,7 @@ HAL/src/alt_wait.s: HAL/src/alt_wait.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_wait.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_wait.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_wait.c.s
 .PHONY : HAL/src/alt_wait.c.s
 
 HAL/src/alt_write.obj: HAL/src/alt_write.c.obj
@@ -2007,7 +2007,7 @@ HAL/src/alt_write.obj: HAL/src/alt_write.c.obj
 
 # target to build an object file
 HAL/src/alt_write.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.obj
 .PHONY : HAL/src/alt_write.c.obj
 
 HAL/src/alt_write.i: HAL/src/alt_write.c.i
@@ -2015,7 +2015,7 @@ HAL/src/alt_write.i: HAL/src/alt_write.c.i
 
 # target to preprocess a source file
 HAL/src/alt_write.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.i
 .PHONY : HAL/src/alt_write.c.i
 
 HAL/src/alt_write.s: HAL/src/alt_write.c.s
@@ -2023,7 +2023,7 @@ HAL/src/alt_write.s: HAL/src/alt_write.c.s
 
 # target to generate assembly for a file
 HAL/src/alt_write.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.s
 .PHONY : HAL/src/alt_write.c.s
 
 HAL/src/crt0.obj: HAL/src/crt0.S.obj
@@ -2031,7 +2031,7 @@ HAL/src/crt0.obj: HAL/src/crt0.S.obj
 
 # target to build an object file
 HAL/src/crt0.S.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/crt0.S.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/crt0.S.obj
 .PHONY : HAL/src/crt0.S.obj
 
 HAL/src/intel_fpga_api_cmn_dfl.obj: HAL/src/intel_fpga_api_cmn_dfl.c.obj
@@ -2039,7 +2039,7 @@ HAL/src/intel_fpga_api_cmn_dfl.obj: HAL/src/intel_fpga_api_cmn_dfl.c.obj
 
 # target to build an object file
 HAL/src/intel_fpga_api_cmn_dfl.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.obj
 .PHONY : HAL/src/intel_fpga_api_cmn_dfl.c.obj
 
 HAL/src/intel_fpga_api_cmn_dfl.i: HAL/src/intel_fpga_api_cmn_dfl.c.i
@@ -2047,7 +2047,7 @@ HAL/src/intel_fpga_api_cmn_dfl.i: HAL/src/intel_fpga_api_cmn_dfl.c.i
 
 # target to preprocess a source file
 HAL/src/intel_fpga_api_cmn_dfl.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.i
 .PHONY : HAL/src/intel_fpga_api_cmn_dfl.c.i
 
 HAL/src/intel_fpga_api_cmn_dfl.s: HAL/src/intel_fpga_api_cmn_dfl.c.s
@@ -2055,7 +2055,7 @@ HAL/src/intel_fpga_api_cmn_dfl.s: HAL/src/intel_fpga_api_cmn_dfl.c.s
 
 # target to generate assembly for a file
 HAL/src/intel_fpga_api_cmn_dfl.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.s
 .PHONY : HAL/src/intel_fpga_api_cmn_dfl.c.s
 
 HAL/src/intel_fpga_api_cmn_inf.obj: HAL/src/intel_fpga_api_cmn_inf.c.obj
@@ -2063,7 +2063,7 @@ HAL/src/intel_fpga_api_cmn_inf.obj: HAL/src/intel_fpga_api_cmn_inf.c.obj
 
 # target to build an object file
 HAL/src/intel_fpga_api_cmn_inf.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.obj
 .PHONY : HAL/src/intel_fpga_api_cmn_inf.c.obj
 
 HAL/src/intel_fpga_api_cmn_inf.i: HAL/src/intel_fpga_api_cmn_inf.c.i
@@ -2071,7 +2071,7 @@ HAL/src/intel_fpga_api_cmn_inf.i: HAL/src/intel_fpga_api_cmn_inf.c.i
 
 # target to preprocess a source file
 HAL/src/intel_fpga_api_cmn_inf.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.i
 .PHONY : HAL/src/intel_fpga_api_cmn_inf.c.i
 
 HAL/src/intel_fpga_api_cmn_inf.s: HAL/src/intel_fpga_api_cmn_inf.c.s
@@ -2079,7 +2079,7 @@ HAL/src/intel_fpga_api_cmn_inf.s: HAL/src/intel_fpga_api_cmn_inf.c.s
 
 # target to generate assembly for a file
 HAL/src/intel_fpga_api_cmn_inf.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.s
 .PHONY : HAL/src/intel_fpga_api_cmn_inf.c.s
 
 HAL/src/intel_fpga_api_cmn_msg.obj: HAL/src/intel_fpga_api_cmn_msg.c.obj
@@ -2087,7 +2087,7 @@ HAL/src/intel_fpga_api_cmn_msg.obj: HAL/src/intel_fpga_api_cmn_msg.c.obj
 
 # target to build an object file
 HAL/src/intel_fpga_api_cmn_msg.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.obj
 .PHONY : HAL/src/intel_fpga_api_cmn_msg.c.obj
 
 HAL/src/intel_fpga_api_cmn_msg.i: HAL/src/intel_fpga_api_cmn_msg.c.i
@@ -2095,7 +2095,7 @@ HAL/src/intel_fpga_api_cmn_msg.i: HAL/src/intel_fpga_api_cmn_msg.c.i
 
 # target to preprocess a source file
 HAL/src/intel_fpga_api_cmn_msg.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.i
 .PHONY : HAL/src/intel_fpga_api_cmn_msg.c.i
 
 HAL/src/intel_fpga_api_cmn_msg.s: HAL/src/intel_fpga_api_cmn_msg.c.s
@@ -2103,7 +2103,7 @@ HAL/src/intel_fpga_api_cmn_msg.s: HAL/src/intel_fpga_api_cmn_msg.c.s
 
 # target to generate assembly for a file
 HAL/src/intel_fpga_api_cmn_msg.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.s
 .PHONY : HAL/src/intel_fpga_api_cmn_msg.c.s
 
 HAL/src/intel_fpga_api_niosv.obj: HAL/src/intel_fpga_api_niosv.c.obj
@@ -2111,7 +2111,7 @@ HAL/src/intel_fpga_api_niosv.obj: HAL/src/intel_fpga_api_niosv.c.obj
 
 # target to build an object file
 HAL/src/intel_fpga_api_niosv.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.obj
 .PHONY : HAL/src/intel_fpga_api_niosv.c.obj
 
 HAL/src/intel_fpga_api_niosv.i: HAL/src/intel_fpga_api_niosv.c.i
@@ -2119,7 +2119,7 @@ HAL/src/intel_fpga_api_niosv.i: HAL/src/intel_fpga_api_niosv.c.i
 
 # target to preprocess a source file
 HAL/src/intel_fpga_api_niosv.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.i
 .PHONY : HAL/src/intel_fpga_api_niosv.c.i
 
 HAL/src/intel_fpga_api_niosv.s: HAL/src/intel_fpga_api_niosv.c.s
@@ -2127,7 +2127,7 @@ HAL/src/intel_fpga_api_niosv.s: HAL/src/intel_fpga_api_niosv.c.s
 
 # target to generate assembly for a file
 HAL/src/intel_fpga_api_niosv.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.s
 .PHONY : HAL/src/intel_fpga_api_niosv.c.s
 
 HAL/src/intel_fpga_platform_api_niosv.obj: HAL/src/intel_fpga_platform_api_niosv.c.obj
@@ -2135,7 +2135,7 @@ HAL/src/intel_fpga_platform_api_niosv.obj: HAL/src/intel_fpga_platform_api_niosv
 
 # target to build an object file
 HAL/src/intel_fpga_platform_api_niosv.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.obj
 .PHONY : HAL/src/intel_fpga_platform_api_niosv.c.obj
 
 HAL/src/intel_fpga_platform_api_niosv.i: HAL/src/intel_fpga_platform_api_niosv.c.i
@@ -2143,7 +2143,7 @@ HAL/src/intel_fpga_platform_api_niosv.i: HAL/src/intel_fpga_platform_api_niosv.c
 
 # target to preprocess a source file
 HAL/src/intel_fpga_platform_api_niosv.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.i
 .PHONY : HAL/src/intel_fpga_platform_api_niosv.c.i
 
 HAL/src/intel_fpga_platform_api_niosv.s: HAL/src/intel_fpga_platform_api_niosv.c.s
@@ -2151,7 +2151,7 @@ HAL/src/intel_fpga_platform_api_niosv.s: HAL/src/intel_fpga_platform_api_niosv.c
 
 # target to generate assembly for a file
 HAL/src/intel_fpga_platform_api_niosv.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.s
 .PHONY : HAL/src/intel_fpga_platform_api_niosv.c.s
 
 HAL/src/intel_niosv_irq.obj: HAL/src/intel_niosv_irq.c.obj
@@ -2159,7 +2159,7 @@ HAL/src/intel_niosv_irq.obj: HAL/src/intel_niosv_irq.c.obj
 
 # target to build an object file
 HAL/src/intel_niosv_irq.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_niosv_irq.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_niosv_irq.c.obj
 .PHONY : HAL/src/intel_niosv_irq.c.obj
 
 HAL/src/intel_niosv_irq.i: HAL/src/intel_niosv_irq.c.i
@@ -2167,7 +2167,7 @@ HAL/src/intel_niosv_irq.i: HAL/src/intel_niosv_irq.c.i
 
 # target to preprocess a source file
 HAL/src/intel_niosv_irq.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_niosv_irq.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_niosv_irq.c.i
 .PHONY : HAL/src/intel_niosv_irq.c.i
 
 HAL/src/intel_niosv_irq.s: HAL/src/intel_niosv_irq.c.s
@@ -2175,7 +2175,7 @@ HAL/src/intel_niosv_irq.s: HAL/src/intel_niosv_irq.c.s
 
 # target to generate assembly for a file
 HAL/src/intel_niosv_irq.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_niosv_irq.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_niosv_irq.c.s
 .PHONY : HAL/src/intel_niosv_irq.c.s
 
 HAL/src/machine_trap.obj: HAL/src/machine_trap.S.obj
@@ -2183,7 +2183,7 @@ HAL/src/machine_trap.obj: HAL/src/machine_trap.S.obj
 
 # target to build an object file
 HAL/src/machine_trap.S.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/machine_trap.S.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/machine_trap.S.obj
 .PHONY : HAL/src/machine_trap.S.obj
 
 HAL/src/mtimer.obj: HAL/src/mtimer.c.obj
@@ -2191,7 +2191,7 @@ HAL/src/mtimer.obj: HAL/src/mtimer.c.obj
 
 # target to build an object file
 HAL/src/mtimer.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/mtimer.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/mtimer.c.obj
 .PHONY : HAL/src/mtimer.c.obj
 
 HAL/src/mtimer.i: HAL/src/mtimer.c.i
@@ -2199,7 +2199,7 @@ HAL/src/mtimer.i: HAL/src/mtimer.c.i
 
 # target to preprocess a source file
 HAL/src/mtimer.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/mtimer.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/mtimer.c.i
 .PHONY : HAL/src/mtimer.c.i
 
 HAL/src/mtimer.s: HAL/src/mtimer.c.s
@@ -2207,7 +2207,7 @@ HAL/src/mtimer.s: HAL/src/mtimer.c.s
 
 # target to generate assembly for a file
 HAL/src/mtimer.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/mtimer.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/mtimer.c.s
 .PHONY : HAL/src/mtimer.c.s
 
 HAL/src/os_cpu_c.obj: HAL/src/os_cpu_c.c.obj
@@ -2215,7 +2215,7 @@ HAL/src/os_cpu_c.obj: HAL/src/os_cpu_c.c.obj
 
 # target to build an object file
 HAL/src/os_cpu_c.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/os_cpu_c.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/os_cpu_c.c.obj
 .PHONY : HAL/src/os_cpu_c.c.obj
 
 HAL/src/os_cpu_c.i: HAL/src/os_cpu_c.c.i
@@ -2223,7 +2223,7 @@ HAL/src/os_cpu_c.i: HAL/src/os_cpu_c.c.i
 
 # target to preprocess a source file
 HAL/src/os_cpu_c.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/os_cpu_c.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/os_cpu_c.c.i
 .PHONY : HAL/src/os_cpu_c.c.i
 
 HAL/src/os_cpu_c.s: HAL/src/os_cpu_c.c.s
@@ -2231,7 +2231,7 @@ HAL/src/os_cpu_c.s: HAL/src/os_cpu_c.c.s
 
 # target to generate assembly for a file
 HAL/src/os_cpu_c.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/os_cpu_c.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/HAL/src/os_cpu_c.c.s
 .PHONY : HAL/src/os_cpu_c.c.s
 
 alt_sys_init.obj: alt_sys_init.c.obj
@@ -2239,7 +2239,7 @@ alt_sys_init.obj: alt_sys_init.c.obj
 
 # target to build an object file
 alt_sys_init.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/alt_sys_init.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/alt_sys_init.c.obj
 .PHONY : alt_sys_init.c.obj
 
 alt_sys_init.i: alt_sys_init.c.i
@@ -2247,7 +2247,7 @@ alt_sys_init.i: alt_sys_init.c.i
 
 # target to preprocess a source file
 alt_sys_init.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/alt_sys_init.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/alt_sys_init.c.i
 .PHONY : alt_sys_init.c.i
 
 alt_sys_init.s: alt_sys_init.c.s
@@ -2255,7 +2255,7 @@ alt_sys_init.s: alt_sys_init.c.s
 
 # target to generate assembly for a file
 alt_sys_init.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/alt_sys_init.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/alt_sys_init.c.s
 .PHONY : alt_sys_init.c.s
 
 drivers/src/altera_avalon_jtag_uart_fd.obj: drivers/src/altera_avalon_jtag_uart_fd.c.obj
@@ -2263,7 +2263,7 @@ drivers/src/altera_avalon_jtag_uart_fd.obj: drivers/src/altera_avalon_jtag_uart_
 
 # target to build an object file
 drivers/src/altera_avalon_jtag_uart_fd.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.obj
 .PHONY : drivers/src/altera_avalon_jtag_uart_fd.c.obj
 
 drivers/src/altera_avalon_jtag_uart_fd.i: drivers/src/altera_avalon_jtag_uart_fd.c.i
@@ -2271,7 +2271,7 @@ drivers/src/altera_avalon_jtag_uart_fd.i: drivers/src/altera_avalon_jtag_uart_fd
 
 # target to preprocess a source file
 drivers/src/altera_avalon_jtag_uart_fd.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.i
 .PHONY : drivers/src/altera_avalon_jtag_uart_fd.c.i
 
 drivers/src/altera_avalon_jtag_uart_fd.s: drivers/src/altera_avalon_jtag_uart_fd.c.s
@@ -2279,7 +2279,7 @@ drivers/src/altera_avalon_jtag_uart_fd.s: drivers/src/altera_avalon_jtag_uart_fd
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_jtag_uart_fd.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.s
 .PHONY : drivers/src/altera_avalon_jtag_uart_fd.c.s
 
 drivers/src/altera_avalon_jtag_uart_init.obj: drivers/src/altera_avalon_jtag_uart_init.c.obj
@@ -2287,7 +2287,7 @@ drivers/src/altera_avalon_jtag_uart_init.obj: drivers/src/altera_avalon_jtag_uar
 
 # target to build an object file
 drivers/src/altera_avalon_jtag_uart_init.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.obj
 .PHONY : drivers/src/altera_avalon_jtag_uart_init.c.obj
 
 drivers/src/altera_avalon_jtag_uart_init.i: drivers/src/altera_avalon_jtag_uart_init.c.i
@@ -2295,7 +2295,7 @@ drivers/src/altera_avalon_jtag_uart_init.i: drivers/src/altera_avalon_jtag_uart_
 
 # target to preprocess a source file
 drivers/src/altera_avalon_jtag_uart_init.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.i
 .PHONY : drivers/src/altera_avalon_jtag_uart_init.c.i
 
 drivers/src/altera_avalon_jtag_uart_init.s: drivers/src/altera_avalon_jtag_uart_init.c.s
@@ -2303,7 +2303,7 @@ drivers/src/altera_avalon_jtag_uart_init.s: drivers/src/altera_avalon_jtag_uart_
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_jtag_uart_init.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.s
 .PHONY : drivers/src/altera_avalon_jtag_uart_init.c.s
 
 drivers/src/altera_avalon_jtag_uart_ioctl.obj: drivers/src/altera_avalon_jtag_uart_ioctl.c.obj
@@ -2311,7 +2311,7 @@ drivers/src/altera_avalon_jtag_uart_ioctl.obj: drivers/src/altera_avalon_jtag_ua
 
 # target to build an object file
 drivers/src/altera_avalon_jtag_uart_ioctl.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.obj
 .PHONY : drivers/src/altera_avalon_jtag_uart_ioctl.c.obj
 
 drivers/src/altera_avalon_jtag_uart_ioctl.i: drivers/src/altera_avalon_jtag_uart_ioctl.c.i
@@ -2319,7 +2319,7 @@ drivers/src/altera_avalon_jtag_uart_ioctl.i: drivers/src/altera_avalon_jtag_uart
 
 # target to preprocess a source file
 drivers/src/altera_avalon_jtag_uart_ioctl.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.i
 .PHONY : drivers/src/altera_avalon_jtag_uart_ioctl.c.i
 
 drivers/src/altera_avalon_jtag_uart_ioctl.s: drivers/src/altera_avalon_jtag_uart_ioctl.c.s
@@ -2327,7 +2327,7 @@ drivers/src/altera_avalon_jtag_uart_ioctl.s: drivers/src/altera_avalon_jtag_uart
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_jtag_uart_ioctl.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.s
 .PHONY : drivers/src/altera_avalon_jtag_uart_ioctl.c.s
 
 drivers/src/altera_avalon_jtag_uart_read.obj: drivers/src/altera_avalon_jtag_uart_read.c.obj
@@ -2335,7 +2335,7 @@ drivers/src/altera_avalon_jtag_uart_read.obj: drivers/src/altera_avalon_jtag_uar
 
 # target to build an object file
 drivers/src/altera_avalon_jtag_uart_read.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.obj
 .PHONY : drivers/src/altera_avalon_jtag_uart_read.c.obj
 
 drivers/src/altera_avalon_jtag_uart_read.i: drivers/src/altera_avalon_jtag_uart_read.c.i
@@ -2343,7 +2343,7 @@ drivers/src/altera_avalon_jtag_uart_read.i: drivers/src/altera_avalon_jtag_uart_
 
 # target to preprocess a source file
 drivers/src/altera_avalon_jtag_uart_read.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.i
 .PHONY : drivers/src/altera_avalon_jtag_uart_read.c.i
 
 drivers/src/altera_avalon_jtag_uart_read.s: drivers/src/altera_avalon_jtag_uart_read.c.s
@@ -2351,7 +2351,7 @@ drivers/src/altera_avalon_jtag_uart_read.s: drivers/src/altera_avalon_jtag_uart_
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_jtag_uart_read.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.s
 .PHONY : drivers/src/altera_avalon_jtag_uart_read.c.s
 
 drivers/src/altera_avalon_jtag_uart_write.obj: drivers/src/altera_avalon_jtag_uart_write.c.obj
@@ -2359,7 +2359,7 @@ drivers/src/altera_avalon_jtag_uart_write.obj: drivers/src/altera_avalon_jtag_ua
 
 # target to build an object file
 drivers/src/altera_avalon_jtag_uart_write.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.obj
 .PHONY : drivers/src/altera_avalon_jtag_uart_write.c.obj
 
 drivers/src/altera_avalon_jtag_uart_write.i: drivers/src/altera_avalon_jtag_uart_write.c.i
@@ -2367,7 +2367,7 @@ drivers/src/altera_avalon_jtag_uart_write.i: drivers/src/altera_avalon_jtag_uart
 
 # target to preprocess a source file
 drivers/src/altera_avalon_jtag_uart_write.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.i
 .PHONY : drivers/src/altera_avalon_jtag_uart_write.c.i
 
 drivers/src/altera_avalon_jtag_uart_write.s: drivers/src/altera_avalon_jtag_uart_write.c.s
@@ -2375,7 +2375,7 @@ drivers/src/altera_avalon_jtag_uart_write.s: drivers/src/altera_avalon_jtag_uart
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_jtag_uart_write.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.s
 .PHONY : drivers/src/altera_avalon_jtag_uart_write.c.s
 
 drivers/src/altera_avalon_timer_sc.obj: drivers/src/altera_avalon_timer_sc.c.obj
@@ -2383,7 +2383,7 @@ drivers/src/altera_avalon_timer_sc.obj: drivers/src/altera_avalon_timer_sc.c.obj
 
 # target to build an object file
 drivers/src/altera_avalon_timer_sc.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_sc.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_sc.c.obj
 .PHONY : drivers/src/altera_avalon_timer_sc.c.obj
 
 drivers/src/altera_avalon_timer_sc.i: drivers/src/altera_avalon_timer_sc.c.i
@@ -2391,7 +2391,7 @@ drivers/src/altera_avalon_timer_sc.i: drivers/src/altera_avalon_timer_sc.c.i
 
 # target to preprocess a source file
 drivers/src/altera_avalon_timer_sc.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_sc.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_sc.c.i
 .PHONY : drivers/src/altera_avalon_timer_sc.c.i
 
 drivers/src/altera_avalon_timer_sc.s: drivers/src/altera_avalon_timer_sc.c.s
@@ -2399,7 +2399,7 @@ drivers/src/altera_avalon_timer_sc.s: drivers/src/altera_avalon_timer_sc.c.s
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_timer_sc.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_sc.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_sc.c.s
 .PHONY : drivers/src/altera_avalon_timer_sc.c.s
 
 drivers/src/altera_avalon_timer_ts.obj: drivers/src/altera_avalon_timer_ts.c.obj
@@ -2407,7 +2407,7 @@ drivers/src/altera_avalon_timer_ts.obj: drivers/src/altera_avalon_timer_ts.c.obj
 
 # target to build an object file
 drivers/src/altera_avalon_timer_ts.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_ts.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_ts.c.obj
 .PHONY : drivers/src/altera_avalon_timer_ts.c.obj
 
 drivers/src/altera_avalon_timer_ts.i: drivers/src/altera_avalon_timer_ts.c.i
@@ -2415,7 +2415,7 @@ drivers/src/altera_avalon_timer_ts.i: drivers/src/altera_avalon_timer_ts.c.i
 
 # target to preprocess a source file
 drivers/src/altera_avalon_timer_ts.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_ts.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_ts.c.i
 .PHONY : drivers/src/altera_avalon_timer_ts.c.i
 
 drivers/src/altera_avalon_timer_ts.s: drivers/src/altera_avalon_timer_ts.c.s
@@ -2423,7 +2423,7 @@ drivers/src/altera_avalon_timer_ts.s: drivers/src/altera_avalon_timer_ts.c.s
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_timer_ts.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_ts.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_ts.c.s
 .PHONY : drivers/src/altera_avalon_timer_ts.c.s
 
 drivers/src/altera_avalon_timer_vars.obj: drivers/src/altera_avalon_timer_vars.c.obj
@@ -2431,7 +2431,7 @@ drivers/src/altera_avalon_timer_vars.obj: drivers/src/altera_avalon_timer_vars.c
 
 # target to build an object file
 drivers/src/altera_avalon_timer_vars.c.obj:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_vars.c.obj
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_vars.c.obj
 .PHONY : drivers/src/altera_avalon_timer_vars.c.obj
 
 drivers/src/altera_avalon_timer_vars.i: drivers/src/altera_avalon_timer_vars.c.i
@@ -2439,7 +2439,7 @@ drivers/src/altera_avalon_timer_vars.i: drivers/src/altera_avalon_timer_vars.c.i
 
 # target to preprocess a source file
 drivers/src/altera_avalon_timer_vars.c.i:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_vars.c.i
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_vars.c.i
 .PHONY : drivers/src/altera_avalon_timer_vars.c.i
 
 drivers/src/altera_avalon_timer_vars.s: drivers/src/altera_avalon_timer_vars.c.s
@@ -2447,7 +2447,7 @@ drivers/src/altera_avalon_timer_vars.s: drivers/src/altera_avalon_timer_vars.c.s
 
 # target to generate assembly for a file
 drivers/src/altera_avalon_timer_vars.c.s:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_vars.c.s
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/drivers/src/altera_avalon_timer_vars.c.s
 .PHONY : drivers/src/altera_avalon_timer_vars.c.s
 
 # Help Target
@@ -2760,6 +2760,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

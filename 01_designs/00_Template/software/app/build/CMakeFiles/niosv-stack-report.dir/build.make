@@ -53,10 +53,10 @@ RM = C:/intelFPGA/23.1std/riscfree/build_tools/cmake/bin/cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app
+CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build
+CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build
 
 # Utility rule file for niosv-stack-report.
 
@@ -69,7 +69,7 @@ include CMakeFiles/niosv-stack-report.dir/progress.make
 CMakeFiles/niosv-stack-report: app.elf.stack_report
 
 app.elf.stack_report: app.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Reporting memory available for stack + heap in app.elf."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Reporting memory available for stack + heap in app.elf."
 	niosv-stack-report -p riscv32-unknown-elf- app.elf
 
 niosv-stack-report: CMakeFiles/niosv-stack-report
@@ -86,6 +86,6 @@ CMakeFiles/niosv-stack-report.dir/clean:
 .PHONY : CMakeFiles/niosv-stack-report.dir/clean
 
 CMakeFiles/niosv-stack-report.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles/niosv-stack-report.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles/niosv-stack-report.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/niosv-stack-report.dir/depend
 

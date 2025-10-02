@@ -1,5 +1,5 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_gettod.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_gettod.c \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\time.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_ansi.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\newlib.h \
@@ -34,8 +34,8 @@ bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_gettod.c.obj: \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\times.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\errno.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\errno.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_alarm.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_llist.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_alarm.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_syscall.h
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_alarm.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/priv/alt_alarm.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/os/alt_syscall.h

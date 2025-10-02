@@ -1,5 +1,5 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_busy_sleep.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_busy_sleep.c \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include-fixed\limits.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include-fixed\syslimits.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\limits.h \
@@ -10,10 +10,10 @@ bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_busy_sleep.c.obj: \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\features.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stddef.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\syslimits.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\system.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\linker.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_timestamp.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/intel_niosv.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_busy_sleep.h
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\system.h \
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\linker.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_timestamp.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/intel_niosv.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/priv/alt_busy_sleep.h

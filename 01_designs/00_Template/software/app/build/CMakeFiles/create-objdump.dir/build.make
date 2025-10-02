@@ -53,10 +53,10 @@ RM = C:/intelFPGA/23.1std/riscfree/build_tools/cmake/bin/cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app
+CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build
+CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build
 
 # Utility rule file for create-objdump.
 
@@ -69,7 +69,7 @@ include CMakeFiles/create-objdump.dir/progress.make
 CMakeFiles/create-objdump: app.elf.objdump
 
 app.elf.objdump: app.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creating app.elf.objdump."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creating app.elf.objdump."
 	riscv32-unknown-elf-objdump -Sdtx app.elf > app.elf.objdump
 
 create-objdump: CMakeFiles/create-objdump
@@ -86,6 +86,6 @@ CMakeFiles/create-objdump.dir/clean:
 .PHONY : CMakeFiles/create-objdump.dir/clean
 
 CMakeFiles/create-objdump.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles/create-objdump.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles/create-objdump.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/create-objdump.dir/depend
 

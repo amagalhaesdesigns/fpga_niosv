@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/main.c" "CMakeFiles/app.elf.dir/main.c.obj" "gcc" "CMakeFiles/app.elf.dir/main.c.obj.d"
+  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/main.c" "CMakeFiles/app.elf.dir/main.c.obj" "gcc" "CMakeFiles/app.elf.dir/main.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

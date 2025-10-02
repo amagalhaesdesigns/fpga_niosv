@@ -1,5 +1,5 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/alt_write.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_write.c \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\unistd.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\unistd.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\_ansi.h \
@@ -35,36 +35,36 @@ bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_write.c.obj: \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\lock.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\machine\time.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\_locale.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_errno.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_errno.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\errno.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\errno.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_warning.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_file.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_dev.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\system.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\linker.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_llist.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/priv/alt_dev_llist.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FREERTOS/inc/os/alt_sem.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FREERTOS/inc/priv/alt_sem_freertos.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/FreeRTOS.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_warning.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/priv/alt_file.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_dev.h \
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\system.h \
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\linker.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/priv/alt_dev_llist.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FREERTOS/inc/os/alt_sem.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FREERTOS/inc/priv/alt_sem_freertos.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/FreeRTOS.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stdint.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\stdint.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\_intsup.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FREERTOS/inc/FreeRTOSConfig.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_tls.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os_cpu.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/alt_types.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FREERTOS/inc/FreeRTOSConfig.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_tls.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/os_cpu.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/alt_types.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\reent.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/projdefs.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/portable.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/deprecated_definitions.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/portable/GCC/RISC-V/portmacro.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/mpu_wrappers.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/semphr.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/queue.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/task.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/FreeRTOS-Kernel/include/list.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/os/alt_syscall.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/alt_log_printf.h
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/projdefs.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/portable.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/deprecated_definitions.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/portable/GCC/RISC-V/portmacro.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/mpu_wrappers.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/semphr.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/queue.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/task.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/include/list.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/os/alt_syscall.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/alt_log_printf.h

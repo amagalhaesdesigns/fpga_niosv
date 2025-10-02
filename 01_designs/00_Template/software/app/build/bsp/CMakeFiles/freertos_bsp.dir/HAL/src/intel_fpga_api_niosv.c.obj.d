@@ -1,6 +1,6 @@
 bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.obj: \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/src/intel_fpga_api_niosv.c \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/intel_fpga_api_cmn_inf.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/intel_fpga_api_niosv.c \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/intel_fpga_api_cmn_inf.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stdbool.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stdint.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\stdint.h \
@@ -10,10 +10,10 @@ bsp/CMakeFiles/freertos_bsp.dir/HAL/src/intel_fpga_api_niosv.c.obj: \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\_intsup.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\riscv32-unknown-elf\include\sys\_stdint.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stdarg.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/intel_fpga_platform.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/intel_fpga_platform_niosv.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/intel_fpga_platform.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/intel_fpga_platform_niosv.h \
  c:\intelfpga\23.1std\riscfree\toolchain\riscv32-unknown-elf\lib\gcc\riscv32-unknown-elf\12.1.0\include\stddef.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/intel_fpga_platform_api_niosv.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\system.h \
- c:\projetos\estudos\niosv\01_designs\00_intro\software\bsp\linker.h \
- C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/HAL/inc/sys/intel_fpga_api_cmn_msg.h
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/intel_fpga_platform_api_niosv.h \
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\system.h \
+ c:\projetos\estudos\niosv\01_designs\00_template\software\bsp\linker.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/inc/sys/intel_fpga_api_cmn_msg.h

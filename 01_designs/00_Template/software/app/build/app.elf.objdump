@@ -43,19 +43,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  11 .debug_abbrev 000057cf  00000000  00000000  0003a8fe  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_line   00013e40  00000000  00000000  000400cd  2**0
+ 12 .debug_line   00013e49  00000000  00000000  000400cd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_frame  00002a8c  00000000  00000000  00053f10  2**2
+ 13 .debug_frame  00002a8c  00000000  00000000  00053f18  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_str    00003f3d  00000000  00000000  0005699c  2**0
+ 14 .debug_str    00003f49  00000000  00000000  000569a4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_line_str 00001c02  00000000  00000000  0005a8d9  2**0
+ 15 .debug_line_str 00001cce  00000000  00000000  0005a8ed  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000058  00000000  00000000  0005c4e0  2**3
+ 16 .debug_ranges 00000058  00000000  00000000  0005c5c0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_rnglists 00001efb  00000000  00000000  0005c538  2**0
+ 17 .debug_rnglists 00001efb  00000000  00000000  0005c618  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_loclists 0000e363  00000000  00000000  0005e433  2**0
+ 18 .debug_loclists 0000e363  00000000  00000000  0005e513  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -1156,10 +1156,10 @@ void alt_irq_handler (void)
 Disassembly of section .text:
 
 00000300 <Task1>:
-static void Task1 (void *parameters);
-static void Task2 (void *parameters);
-
-
+/**
+ * @brief Task 1 implementation. Prints a status message and delays.
+ * @param parameters Unused pointer.
+ */
 static void Task1 (void *parameters)
 {
      300:	fe010113          	addi	sp,sp,-32
@@ -1167,25 +1167,29 @@ static void Task1 (void *parameters)
      308:	00812c23          	sw	s0,24(sp)
      30c:	02010413          	addi	s0,sp,32
      310:	fea42623          	sw	a0,-20(s0)
-	while (1)
-	{
-		printf("Running task 1 \r\n");
+    (void) parameters;
+
+    while (1)
+    {
+        // Print message to the console
+        printf("Running task 1 \r\n");
      314:	000237b7          	lui	a5,0x23
      318:	45078513          	addi	a0,a5,1104 # 23450 <__flash_rodata_start>
      31c:	7bc0d0ef          	jal	ra,dad8 <puts>
 
-		vTaskDelay(1000 / portTICK_PERIOD_MS);
+        // Delay the task for 1000 milliseconds (1 second)
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
      320:	3e800513          	li	a0,1000
      324:	235000ef          	jal	ra,d58 <vTaskDelay>
-		printf("Running task 1 \r\n");
+        printf("Running task 1 \r\n");
      328:	00000013          	nop
      32c:	fe9ff06f          	j	314 <Task1+0x14>
 
 00000330 <Task2>:
-
-	vTaskDelete(NULL);	
-}
-
+/**
+ * @brief Task 2 implementation. Prints a status message and delays.
+ * @param parameters Unused pointer.
+ */
 static void Task2 (void *parameters)
 {
      330:	fe010113          	addi	sp,sp,-32
@@ -1193,37 +1197,46 @@ static void Task2 (void *parameters)
      338:	00812c23          	sw	s0,24(sp)
      33c:	02010413          	addi	s0,sp,32
      340:	fea42623          	sw	a0,-20(s0)
-	while (1)
-	{
-		printf("Running task 2 \r\n");
+    (void) parameters;
+    
+    while (1)
+    {
+        // Print message to the console
+        printf("Running task 2 \r\n");
      344:	000237b7          	lui	a5,0x23
      348:	46478513          	addi	a0,a5,1124 # 23464 <__flash_rodata_start+0x14>
      34c:	78c0d0ef          	jal	ra,dad8 <puts>
 
-		vTaskDelay(1000 / portTICK_PERIOD_MS);
+        // Delay the task for 1000 milliseconds (1 second)
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
      350:	3e800513          	li	a0,1000
      354:	205000ef          	jal	ra,d58 <vTaskDelay>
-		printf("Running task 2 \r\n");
+        printf("Running task 2 \r\n");
      358:	00000013          	nop
      35c:	fe9ff06f          	j	344 <Task2+0x14>
 
 00000360 <main>:
-
-	vTaskDelete(NULL);	
-}
-
+ * the scheduler.
+ *
+ * @return Returns 0 (unreachable in a typical embedded FreeRTOS application).
+ */
 int main (void)
 {
      360:	ff010113          	addi	sp,sp,-16
      364:	00112623          	sw	ra,12(sp)
      368:	00812423          	sw	s0,8(sp)
      36c:	01010413          	addi	s0,sp,16
-	printf("Starting NIOS V - FreeRTOS... \r\n");
+    // Initial message printed upon application start
+    printf("Starting NIOS V - FreeRTOS... \r\n");
      370:	000237b7          	lui	a5,0x23
      374:	47878513          	addi	a0,a5,1144 # 23478 <__flash_rodata_start+0x28>
      378:	7600d0ef          	jal	ra,dad8 <puts>
-
-	xTaskCreate(Task1, "Task1", 1024, NULL, 2, NULL);
+     * @param 1024 Stack depth in words
+     * @param NULL Task parameter (unused)
+     * @param 2 Priority (higher number means higher priority)
+     * @param NULL Task handle (unused)
+     */
+    xTaskCreate(Task1, "Task1", 1024, NULL, 2, NULL);
      37c:	00000793          	li	a5,0
      380:	00200713          	li	a4,2
      384:	00000693          	li	a3,0
@@ -1232,7 +1245,12 @@ int main (void)
      390:	49858593          	addi	a1,a1,1176 # 23498 <__flash_rodata_start+0x48>
      394:	30000513          	li	a0,768
      398:	0ec000ef          	jal	ra,484 <xTaskCreate>
-	xTaskCreate(Task2, "Task2", 1024, NULL, 2, NULL);
+     * @param 1024 Stack depth in words
+     * @param NULL Task parameter (unused)
+     * @param 2 Priority (same as Task1 for round-robin scheduling)
+     * @param NULL Task handle (unused)
+     */
+    xTaskCreate(Task2, "Task2", 1024, NULL, 2, NULL);
      39c:	00000793          	li	a5,0
      3a0:	00200713          	li	a4,2
      3a4:	00000693          	li	a3,0
@@ -1242,10 +1260,12 @@ int main (void)
      3b4:	33000513          	li	a0,816
      3b8:	0cc000ef          	jal	ra,484 <xTaskCreate>
 
-	vTaskStartScheduler();
+    // Start the FreeRTOS scheduler. This function will not return.
+    vTaskStartScheduler();
      3bc:	5b4010ef          	jal	ra,1970 <vTaskStartScheduler>
 
-	for( ;; );
+    // Loop forever in case the scheduler fails to start (should not happen)
+    for( ;; );
      3c0:	00000013          	nop
      3c4:	ffdff06f          	j	3c0 <main+0x60>
 

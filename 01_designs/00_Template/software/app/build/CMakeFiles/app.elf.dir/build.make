@@ -53,10 +53,10 @@ RM = C:/intelFPGA/23.1std/riscfree/build_tools/cmake/bin/cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app
+CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build
+CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/app.elf.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/app.elf.dir/progress.make
 include CMakeFiles/app.elf.dir/flags.make
 
 CMakeFiles/app.elf.dir/main.c.obj: CMakeFiles/app.elf.dir/flags.make
-CMakeFiles/app.elf.dir/main.c.obj: C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/main.c
+CMakeFiles/app.elf.dir/main.c.obj: C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/main.c
 CMakeFiles/app.elf.dir/main.c.obj: CMakeFiles/app.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/app.elf.dir/main.c.obj"
-	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.elf.dir/main.c.obj -MF CMakeFiles/app.elf.dir/main.c.obj.d -o CMakeFiles/app.elf.dir/main.c.obj -c C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/app.elf.dir/main.c.obj"
+	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.elf.dir/main.c.obj -MF CMakeFiles/app.elf.dir/main.c.obj.d -o CMakeFiles/app.elf.dir/main.c.obj -c C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/main.c
 
 CMakeFiles/app.elf.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.elf.dir/main.c.i"
-	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/main.c > CMakeFiles/app.elf.dir/main.c.i
+	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/main.c > CMakeFiles/app.elf.dir/main.c.i
 
 CMakeFiles/app.elf.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.elf.dir/main.c.s"
-	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/main.c -o CMakeFiles/app.elf.dir/main.c.s
+	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/main.c -o CMakeFiles/app.elf.dir/main.c.s
 
 # Object files for target app.elf
 app_elf_OBJECTS = \
@@ -92,10 +92,10 @@ app_elf_EXTERNAL_OBJECTS =
 
 app.elf: CMakeFiles/app.elf.dir/main.c.obj
 app.elf: CMakeFiles/app.elf.dir/build.make
-app.elf: C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/linker.x
+app.elf: C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/linker.x
 app.elf: bsp/libfreertos_bsp.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable app.elf"
-	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe -g -march=rv32ima_zicbom -mabi=ilp32 -nostdlib $(app_elf_OBJECTS) $(app_elf_EXTERNAL_OBJECTS) -o app.elf  -T C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/bsp/linker.x -nostdlib -Wl,--start-group bsp/libfreertos_bsp.a -lc -lstdc++ -lgcc -lm -Wl,--end-group 
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable app.elf"
+	C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe -g -march=rv32ima_zicbom -mabi=ilp32 -nostdlib $(app_elf_OBJECTS) $(app_elf_EXTERNAL_OBJECTS) -o app.elf  -T C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/linker.x -nostdlib -Wl,--start-group bsp/libfreertos_bsp.a -lc -lstdc++ -lgcc -lm -Wl,--end-group 
 
 # Rule to build all files generated by this target.
 CMakeFiles/app.elf.dir/build: app.elf
@@ -106,6 +106,6 @@ CMakeFiles/app.elf.dir/clean:
 .PHONY : CMakeFiles/app.elf.dir/clean
 
 CMakeFiles/app.elf.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Intro/software/app/build/CMakeFiles/app.elf.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/CMakeFiles/app.elf.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/app.elf.dir/depend
 
