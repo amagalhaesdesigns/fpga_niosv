@@ -40,7 +40,7 @@ static void Task1 (void *parameters)
     while (1)
     {
         // Print message to the console
-        printf("Running task 1 \r\n");
+        printf("Running Task 1. \r\n");
 
         // Delay the task for 1000 milliseconds (1 second)
         vTaskDelay(1000 / portTICK_PERIOD_MS);
@@ -63,7 +63,7 @@ static void Task2 (void *parameters)
     while (1)
     {
         // Print message to the console
-        printf("Running task 2 \r\n");
+        printf("Running Task 2. \r\n");
 
         // Delay the task for 1000 milliseconds (1 second)
         vTaskDelay(1000 / portTICK_PERIOD_MS);
