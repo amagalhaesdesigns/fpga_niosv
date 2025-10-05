@@ -1,0 +1,3 @@
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/build/Default/CMakeFiles/freertos_bsp.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/build/Default/CMakeFiles/edit_cache.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/build/Default/CMakeFiles/rebuild_cache.dir
