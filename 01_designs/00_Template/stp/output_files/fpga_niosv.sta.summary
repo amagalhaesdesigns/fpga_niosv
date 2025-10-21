@@ -1,0 +1,696 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : -3.094
+TNS   : -896.471
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.713
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.007
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'iClock'
+Slack : 5.177
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 8.465
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 8.597
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'iClock'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.436
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 0.493
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.530
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 1.835
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.732
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.068
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 1.134
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 7.363
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'iClock'
+Slack : 10.854
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 13.489
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 14.590
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 16.783
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.975
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'iClock'
+Slack : 1.130
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 1.225
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 1.280
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.327
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 1.477
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 1.524
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.832
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.836
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 1.111
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 2.253
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 2.498
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'iClock'
+Slack : 8.314
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 8.388
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.217
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 18.842
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : -3.194
+TNS   : -673.854
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 0.540
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.577
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.616
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.713
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.242
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'iClock'
+Slack : 5.535
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 8.576
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 8.798
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'iClock'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.475
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.739
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 1.732
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.888
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.252
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 1.421
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 7.665
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'iClock'
+Slack : 11.271
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 13.723
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 14.826
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 17.021
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.855
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'iClock'
+Slack : 1.013
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 1.151
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 1.208
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.214
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 1.300
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 1.339
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 1.430
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.839
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 1.111
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 2.201
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 2.507
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'iClock'
+Slack : 8.253
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 8.344
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.236
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 18.852
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 1.763
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 2.463
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 2.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 2.869
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 3.699
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 3.841
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'iClock'
+Slack : 12.660
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 13.028
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 14.783
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.156
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'iClock'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.684
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 0.736
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 3.717
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 3.878
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 3.925
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 10.398
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'iClock'
+Slack : 14.932
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 15.546
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 17.034
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 18.491
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'iClock'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 0.509
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.537
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.672
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 0.685
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.307
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 1.309
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 2.223
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 2.862
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 2.966
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'iClock'
+Slack : 8.804
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 8.891
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.158
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 19.521
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 1.787
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 2.810
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 2.837
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 2.887
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 3.910
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 4.106
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 13.434
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'iClock'
+Slack : 13.466
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 15.268
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'iClock'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 0.695
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 4.065
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 4.116
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 4.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 10.672
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'iClock'
+Slack : 15.571
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 15.690
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 17.424
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 18.657
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'iClock'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 0.488
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 0.524
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 0.572
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 0.598
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_write_clk'
+Slack : 1.301
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_dq_write_clk'
+Slack : 1.306
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_clk'
+Slack : 2.220
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_addr_cmd_clk'
+Slack : 2.856
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_afi_phy_clk'
+Slack : 2.962
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'iClock'
+Slack : 8.795
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_avl_clk'
+Slack : 8.891
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.184
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_niosv_inst|mem_if_ddr3_emif_fpga|pll0|pll_config_clk'
+Slack : 19.524
+TNS   : 0.000
+
+------------------------------------------------------------
+Info: see the "DDR report" for DDR timing results
+------------------------------------------------------------
+------------------------------------------------------------

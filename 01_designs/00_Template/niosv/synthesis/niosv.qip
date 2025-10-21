@@ -2,7 +2,7 @@ set_global_assignment -entity "niosv" -library "niosv" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_TOOL_VERSION "23.1"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "niosv" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../niosv.sopcinfo"]
-set_global_assignment -entity "niosv" -library "niosv" -name SLD_INFO "QSYS_NAME niosv HAS_SOPCINFO 1 GENERATION_ID 1760976891"
+set_global_assignment -entity "niosv" -library "niosv" -name SLD_INFO "QSYS_NAME niosv HAS_SOPCINFO 1 GENERATION_ID 1761038205"
 set_global_assignment -library "niosv" -name MISC_FILE [file join $::quartus(qip_path) "../niosv.cmp"]
 set_global_assignment -library "niosv" -name SLD_FILE [file join $::quartus(qip_path) "niosv.regmap"]
 set_global_assignment -library "niosv" -name SLD_FILE [file join $::quartus(qip_path) "niosv.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_DISPLA
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc2MDk3Njg5MQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc2MTAzODIwNQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTWEZDNkQ2RjMxQzhFUw==::QXV0byBERVZJQ0U="
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OF9INg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
