@@ -8,10 +8,40 @@ use IEEE.numeric_std.all;
 
 entity niosv is
 	port (
-		clk_50m_clk       : in  std_logic := '0'; --   clk_50m.clk
-		key_export        : in  std_logic := '0'; --       key.export
-		led_export        : out std_logic;        --       led.export
-		reset_50m_reset_n : in  std_logic := '0'  -- reset_50m.reset_n
+		clk_50m_clk                                                 : in    std_logic                     := '0';             --                           clk_50m.clk
+		key_export                                                  : in    std_logic                     := '0';             --                               key.export
+		led_export                                                  : out   std_logic;                                        --                               led.export
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_clk               : out   std_logic;                                        -- mem_if_ddr3_emif_fpga_pll_sharing.pll_mem_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk             : out   std_logic;                                        --                                  .pll_write_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_locked                : out   std_logic;                                        --                                  .pll_locked
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk_pre_phy_clk : out   std_logic;                                        --                                  .pll_write_clk_pre_phy_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_addr_cmd_clk          : out   std_logic;                                        --                                  .pll_addr_cmd_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_clk               : out   std_logic;                                        --                                  .pll_avl_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_config_clk            : out   std_logic;                                        --                                  .pll_config_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_phy_clk           : out   std_logic;                                        --                                  .pll_mem_phy_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_afi_phy_clk               : out   std_logic;                                        --                                  .afi_phy_clk
+		mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_phy_clk           : out   std_logic;                                        --                                  .pll_avl_phy_clk
+		mem_if_ddr3_emif_fpga_status_local_init_done                : out   std_logic;                                        --      mem_if_ddr3_emif_fpga_status.local_init_done
+		mem_if_ddr3_emif_fpga_status_local_cal_success              : out   std_logic;                                        --                                  .local_cal_success
+		mem_if_ddr3_emif_fpga_status_local_cal_fail                 : out   std_logic;                                        --                                  .local_cal_fail
+		memory_mem_a                                                : out   std_logic_vector(14 downto 0);                    --                            memory.mem_a
+		memory_mem_ba                                               : out   std_logic_vector(2 downto 0);                     --                                  .mem_ba
+		memory_mem_ck                                               : out   std_logic_vector(0 downto 0);                     --                                  .mem_ck
+		memory_mem_ck_n                                             : out   std_logic_vector(0 downto 0);                     --                                  .mem_ck_n
+		memory_mem_cke                                              : out   std_logic_vector(0 downto 0);                     --                                  .mem_cke
+		memory_mem_cs_n                                             : out   std_logic_vector(0 downto 0);                     --                                  .mem_cs_n
+		memory_mem_dm                                               : out   std_logic_vector(3 downto 0);                     --                                  .mem_dm
+		memory_mem_ras_n                                            : out   std_logic_vector(0 downto 0);                     --                                  .mem_ras_n
+		memory_mem_cas_n                                            : out   std_logic_vector(0 downto 0);                     --                                  .mem_cas_n
+		memory_mem_we_n                                             : out   std_logic_vector(0 downto 0);                     --                                  .mem_we_n
+		memory_mem_reset_n                                          : out   std_logic;                                        --                                  .mem_reset_n
+		memory_mem_dq                                               : inout std_logic_vector(31 downto 0) := (others => '0'); --                                  .mem_dq
+		memory_mem_dqs                                              : inout std_logic_vector(3 downto 0)  := (others => '0'); --                                  .mem_dqs
+		memory_mem_dqs_n                                            : inout std_logic_vector(3 downto 0)  := (others => '0'); --                                  .mem_dqs_n
+		memory_mem_odt                                              : out   std_logic_vector(0 downto 0);                     --                                  .mem_odt
+		oct_rzqin                                                   : in    std_logic                     := '0';             --                               oct.rzqin
+		pll_locked_export                                           : out   std_logic;                                        --                        pll_locked.export
+		reset_50m_reset_n                                           : in    std_logic                     := '0'              --                         reset_50m.reset_n
 	);
 end entity niosv;
 
@@ -53,6 +83,57 @@ architecture rtl of niosv is
 			out_port   : out std_logic                                         -- export
 		);
 	end component niosv_led;
+
+	component niosv_mem_if_ddr3_emif_fpga is
+		port (
+			pll_ref_clk               : in    std_logic                      := 'X';             -- clk
+			global_reset_n            : in    std_logic                      := 'X';             -- reset_n
+			soft_reset_n              : in    std_logic                      := 'X';             -- reset_n
+			afi_clk                   : out   std_logic;                                         -- clk
+			afi_half_clk              : out   std_logic;                                         -- clk
+			afi_reset_n               : out   std_logic;                                         -- reset_n
+			afi_reset_export_n        : out   std_logic;                                         -- reset_n
+			mem_a                     : out   std_logic_vector(14 downto 0);                     -- mem_a
+			mem_ba                    : out   std_logic_vector(2 downto 0);                      -- mem_ba
+			mem_ck                    : out   std_logic_vector(0 downto 0);                      -- mem_ck
+			mem_ck_n                  : out   std_logic_vector(0 downto 0);                      -- mem_ck_n
+			mem_cke                   : out   std_logic_vector(0 downto 0);                      -- mem_cke
+			mem_cs_n                  : out   std_logic_vector(0 downto 0);                      -- mem_cs_n
+			mem_dm                    : out   std_logic_vector(3 downto 0);                      -- mem_dm
+			mem_ras_n                 : out   std_logic_vector(0 downto 0);                      -- mem_ras_n
+			mem_cas_n                 : out   std_logic_vector(0 downto 0);                      -- mem_cas_n
+			mem_we_n                  : out   std_logic_vector(0 downto 0);                      -- mem_we_n
+			mem_reset_n               : out   std_logic;                                         -- mem_reset_n
+			mem_dq                    : inout std_logic_vector(31 downto 0)  := (others => 'X'); -- mem_dq
+			mem_dqs                   : inout std_logic_vector(3 downto 0)   := (others => 'X'); -- mem_dqs
+			mem_dqs_n                 : inout std_logic_vector(3 downto 0)   := (others => 'X'); -- mem_dqs_n
+			mem_odt                   : out   std_logic_vector(0 downto 0);                      -- mem_odt
+			avl_ready                 : out   std_logic;                                         -- waitrequest_n
+			avl_burstbegin            : in    std_logic                      := 'X';             -- beginbursttransfer
+			avl_addr                  : in    std_logic_vector(25 downto 0)  := (others => 'X'); -- address
+			avl_rdata_valid           : out   std_logic;                                         -- readdatavalid
+			avl_rdata                 : out   std_logic_vector(127 downto 0);                    -- readdata
+			avl_wdata                 : in    std_logic_vector(127 downto 0) := (others => 'X'); -- writedata
+			avl_be                    : in    std_logic_vector(15 downto 0)  := (others => 'X'); -- byteenable
+			avl_read_req              : in    std_logic                      := 'X';             -- read
+			avl_write_req             : in    std_logic                      := 'X';             -- write
+			avl_size                  : in    std_logic_vector(2 downto 0)   := (others => 'X'); -- burstcount
+			local_init_done           : out   std_logic;                                         -- local_init_done
+			local_cal_success         : out   std_logic;                                         -- local_cal_success
+			local_cal_fail            : out   std_logic;                                         -- local_cal_fail
+			oct_rzqin                 : in    std_logic                      := 'X';             -- rzqin
+			pll_mem_clk               : out   std_logic;                                         -- pll_mem_clk
+			pll_write_clk             : out   std_logic;                                         -- pll_write_clk
+			pll_locked                : out   std_logic;                                         -- pll_locked
+			pll_write_clk_pre_phy_clk : out   std_logic;                                         -- pll_write_clk_pre_phy_clk
+			pll_addr_cmd_clk          : out   std_logic;                                         -- pll_addr_cmd_clk
+			pll_avl_clk               : out   std_logic;                                         -- pll_avl_clk
+			pll_config_clk            : out   std_logic;                                         -- pll_config_clk
+			pll_mem_phy_clk           : out   std_logic;                                         -- pll_mem_phy_clk
+			afi_phy_clk               : out   std_logic;                                         -- afi_phy_clk
+			pll_avl_phy_clk           : out   std_logic                                          -- pll_avl_phy_clk
+		);
+	end component niosv_mem_if_ddr3_emif_fpga;
 
 	component niosv_niosv is
 		port (
@@ -131,21 +212,14 @@ architecture rtl of niosv is
 		);
 	end component niosv_niosv;
 
-	component niosv_onchip_memory2 is
+	component niosv_pll is
 		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			address    : in  std_logic_vector(15 downto 0) := (others => 'X'); -- address
-			clken      : in  std_logic                     := 'X';             -- clken
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			write      : in  std_logic                     := 'X';             -- write
-			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
-			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			byteenable : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
-			reset      : in  std_logic                     := 'X';             -- reset
-			reset_req  : in  std_logic                     := 'X';             -- reset_req
-			freeze     : in  std_logic                     := 'X'              -- freeze
+			refclk   : in  std_logic := 'X'; -- clk
+			rst      : in  std_logic := 'X'; -- reset
+			outclk_0 : out std_logic;        -- clk
+			locked   : out std_logic         -- export
 		);
-	end component niosv_onchip_memory2;
+	end component niosv_pll;
 
 	component niosv_sys_clk is
 		port (
@@ -162,102 +236,108 @@ architecture rtl of niosv is
 
 	component niosv_mm_interconnect_0 is
 		port (
-			niosv_data_manager_awaddr                   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- awaddr
-			niosv_data_manager_awlen                    : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- awlen
-			niosv_data_manager_awsize                   : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- awsize
-			niosv_data_manager_awprot                   : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- awprot
-			niosv_data_manager_awvalid                  : in  std_logic                     := 'X';             -- awvalid
-			niosv_data_manager_awready                  : out std_logic;                                        -- awready
-			niosv_data_manager_wdata                    : in  std_logic_vector(31 downto 0) := (others => 'X'); -- wdata
-			niosv_data_manager_wstrb                    : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- wstrb
-			niosv_data_manager_wlast                    : in  std_logic                     := 'X';             -- wlast
-			niosv_data_manager_wvalid                   : in  std_logic                     := 'X';             -- wvalid
-			niosv_data_manager_wready                   : out std_logic;                                        -- wready
-			niosv_data_manager_bresp                    : out std_logic_vector(1 downto 0);                     -- bresp
-			niosv_data_manager_bvalid                   : out std_logic;                                        -- bvalid
-			niosv_data_manager_bready                   : in  std_logic                     := 'X';             -- bready
-			niosv_data_manager_araddr                   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- araddr
-			niosv_data_manager_arlen                    : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- arlen
-			niosv_data_manager_arsize                   : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- arsize
-			niosv_data_manager_arprot                   : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- arprot
-			niosv_data_manager_arvalid                  : in  std_logic                     := 'X';             -- arvalid
-			niosv_data_manager_arready                  : out std_logic;                                        -- arready
-			niosv_data_manager_rdata                    : out std_logic_vector(31 downto 0);                    -- rdata
-			niosv_data_manager_rresp                    : out std_logic_vector(1 downto 0);                     -- rresp
-			niosv_data_manager_rlast                    : out std_logic;                                        -- rlast
-			niosv_data_manager_rvalid                   : out std_logic;                                        -- rvalid
-			niosv_data_manager_rready                   : in  std_logic                     := 'X';             -- rready
-			niosv_instruction_manager_awaddr            : in  std_logic_vector(31 downto 0) := (others => 'X'); -- awaddr
-			niosv_instruction_manager_awlen             : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- awlen
-			niosv_instruction_manager_awsize            : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- awsize
-			niosv_instruction_manager_awburst           : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- awburst
-			niosv_instruction_manager_awprot            : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- awprot
-			niosv_instruction_manager_awvalid           : in  std_logic                     := 'X';             -- awvalid
-			niosv_instruction_manager_awready           : out std_logic;                                        -- awready
-			niosv_instruction_manager_wdata             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- wdata
-			niosv_instruction_manager_wstrb             : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- wstrb
-			niosv_instruction_manager_wlast             : in  std_logic                     := 'X';             -- wlast
-			niosv_instruction_manager_wvalid            : in  std_logic                     := 'X';             -- wvalid
-			niosv_instruction_manager_wready            : out std_logic;                                        -- wready
-			niosv_instruction_manager_bresp             : out std_logic_vector(1 downto 0);                     -- bresp
-			niosv_instruction_manager_bvalid            : out std_logic;                                        -- bvalid
-			niosv_instruction_manager_bready            : in  std_logic                     := 'X';             -- bready
-			niosv_instruction_manager_araddr            : in  std_logic_vector(31 downto 0) := (others => 'X'); -- araddr
-			niosv_instruction_manager_arlen             : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- arlen
-			niosv_instruction_manager_arsize            : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- arsize
-			niosv_instruction_manager_arburst           : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- arburst
-			niosv_instruction_manager_arprot            : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- arprot
-			niosv_instruction_manager_arvalid           : in  std_logic                     := 'X';             -- arvalid
-			niosv_instruction_manager_arready           : out std_logic;                                        -- arready
-			niosv_instruction_manager_rdata             : out std_logic_vector(31 downto 0);                    -- rdata
-			niosv_instruction_manager_rresp             : out std_logic_vector(1 downto 0);                     -- rresp
-			niosv_instruction_manager_rlast             : out std_logic;                                        -- rlast
-			niosv_instruction_manager_rvalid            : out std_logic;                                        -- rvalid
-			niosv_instruction_manager_rready            : in  std_logic                     := 'X';             -- rready
-			clk_50m_clk_clk                             : in  std_logic                     := 'X';             -- clk
-			jtag_uart_reset_reset_bridge_in_reset_reset : in  std_logic                     := 'X';             -- reset
-			niosv_reset_reset_bridge_in_reset_reset     : in  std_logic                     := 'X';             -- reset
-			jtag_uart_avalon_jtag_slave_address         : out std_logic_vector(0 downto 0);                     -- address
-			jtag_uart_avalon_jtag_slave_write           : out std_logic;                                        -- write
-			jtag_uart_avalon_jtag_slave_read            : out std_logic;                                        -- read
-			jtag_uart_avalon_jtag_slave_readdata        : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			jtag_uart_avalon_jtag_slave_writedata       : out std_logic_vector(31 downto 0);                    -- writedata
-			jtag_uart_avalon_jtag_slave_waitrequest     : in  std_logic                     := 'X';             -- waitrequest
-			jtag_uart_avalon_jtag_slave_chipselect      : out std_logic;                                        -- chipselect
-			key_s1_address                              : out std_logic_vector(1 downto 0);                     -- address
-			key_s1_readdata                             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			led_s1_address                              : out std_logic_vector(2 downto 0);                     -- address
-			led_s1_write                                : out std_logic;                                        -- write
-			led_s1_readdata                             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			led_s1_writedata                            : out std_logic_vector(31 downto 0);                    -- writedata
-			led_s1_chipselect                           : out std_logic;                                        -- chipselect
-			niosv_dm_agent_address                      : out std_logic_vector(15 downto 0);                    -- address
-			niosv_dm_agent_write                        : out std_logic;                                        -- write
-			niosv_dm_agent_read                         : out std_logic;                                        -- read
-			niosv_dm_agent_readdata                     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			niosv_dm_agent_writedata                    : out std_logic_vector(31 downto 0);                    -- writedata
-			niosv_dm_agent_readdatavalid                : in  std_logic                     := 'X';             -- readdatavalid
-			niosv_dm_agent_waitrequest                  : in  std_logic                     := 'X';             -- waitrequest
-			niosv_timer_sw_agent_address                : out std_logic_vector(5 downto 0);                     -- address
-			niosv_timer_sw_agent_write                  : out std_logic;                                        -- write
-			niosv_timer_sw_agent_read                   : out std_logic;                                        -- read
-			niosv_timer_sw_agent_readdata               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			niosv_timer_sw_agent_writedata              : out std_logic_vector(31 downto 0);                    -- writedata
-			niosv_timer_sw_agent_byteenable             : out std_logic_vector(3 downto 0);                     -- byteenable
-			niosv_timer_sw_agent_readdatavalid          : in  std_logic                     := 'X';             -- readdatavalid
-			niosv_timer_sw_agent_waitrequest            : in  std_logic                     := 'X';             -- waitrequest
-			onchip_memory2_s1_address                   : out std_logic_vector(15 downto 0);                    -- address
-			onchip_memory2_s1_write                     : out std_logic;                                        -- write
-			onchip_memory2_s1_readdata                  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			onchip_memory2_s1_writedata                 : out std_logic_vector(31 downto 0);                    -- writedata
-			onchip_memory2_s1_byteenable                : out std_logic_vector(3 downto 0);                     -- byteenable
-			onchip_memory2_s1_chipselect                : out std_logic;                                        -- chipselect
-			onchip_memory2_s1_clken                     : out std_logic;                                        -- clken
-			sys_clk_s1_address                          : out std_logic_vector(2 downto 0);                     -- address
-			sys_clk_s1_write                            : out std_logic;                                        -- write
-			sys_clk_s1_readdata                         : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
-			sys_clk_s1_writedata                        : out std_logic_vector(15 downto 0);                    -- writedata
-			sys_clk_s1_chipselect                       : out std_logic                                         -- chipselect
+			niosv_data_manager_awaddr                                              : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- awaddr
+			niosv_data_manager_awlen                                               : in  std_logic_vector(7 downto 0)   := (others => 'X'); -- awlen
+			niosv_data_manager_awsize                                              : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- awsize
+			niosv_data_manager_awprot                                              : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- awprot
+			niosv_data_manager_awvalid                                             : in  std_logic                      := 'X';             -- awvalid
+			niosv_data_manager_awready                                             : out std_logic;                                         -- awready
+			niosv_data_manager_wdata                                               : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- wdata
+			niosv_data_manager_wstrb                                               : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- wstrb
+			niosv_data_manager_wlast                                               : in  std_logic                      := 'X';             -- wlast
+			niosv_data_manager_wvalid                                              : in  std_logic                      := 'X';             -- wvalid
+			niosv_data_manager_wready                                              : out std_logic;                                         -- wready
+			niosv_data_manager_bresp                                               : out std_logic_vector(1 downto 0);                      -- bresp
+			niosv_data_manager_bvalid                                              : out std_logic;                                         -- bvalid
+			niosv_data_manager_bready                                              : in  std_logic                      := 'X';             -- bready
+			niosv_data_manager_araddr                                              : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- araddr
+			niosv_data_manager_arlen                                               : in  std_logic_vector(7 downto 0)   := (others => 'X'); -- arlen
+			niosv_data_manager_arsize                                              : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- arsize
+			niosv_data_manager_arprot                                              : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- arprot
+			niosv_data_manager_arvalid                                             : in  std_logic                      := 'X';             -- arvalid
+			niosv_data_manager_arready                                             : out std_logic;                                         -- arready
+			niosv_data_manager_rdata                                               : out std_logic_vector(31 downto 0);                     -- rdata
+			niosv_data_manager_rresp                                               : out std_logic_vector(1 downto 0);                      -- rresp
+			niosv_data_manager_rlast                                               : out std_logic;                                         -- rlast
+			niosv_data_manager_rvalid                                              : out std_logic;                                         -- rvalid
+			niosv_data_manager_rready                                              : in  std_logic                      := 'X';             -- rready
+			niosv_instruction_manager_awaddr                                       : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- awaddr
+			niosv_instruction_manager_awlen                                        : in  std_logic_vector(7 downto 0)   := (others => 'X'); -- awlen
+			niosv_instruction_manager_awsize                                       : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- awsize
+			niosv_instruction_manager_awburst                                      : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- awburst
+			niosv_instruction_manager_awprot                                       : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- awprot
+			niosv_instruction_manager_awvalid                                      : in  std_logic                      := 'X';             -- awvalid
+			niosv_instruction_manager_awready                                      : out std_logic;                                         -- awready
+			niosv_instruction_manager_wdata                                        : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- wdata
+			niosv_instruction_manager_wstrb                                        : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- wstrb
+			niosv_instruction_manager_wlast                                        : in  std_logic                      := 'X';             -- wlast
+			niosv_instruction_manager_wvalid                                       : in  std_logic                      := 'X';             -- wvalid
+			niosv_instruction_manager_wready                                       : out std_logic;                                         -- wready
+			niosv_instruction_manager_bresp                                        : out std_logic_vector(1 downto 0);                      -- bresp
+			niosv_instruction_manager_bvalid                                       : out std_logic;                                         -- bvalid
+			niosv_instruction_manager_bready                                       : in  std_logic                      := 'X';             -- bready
+			niosv_instruction_manager_araddr                                       : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- araddr
+			niosv_instruction_manager_arlen                                        : in  std_logic_vector(7 downto 0)   := (others => 'X'); -- arlen
+			niosv_instruction_manager_arsize                                       : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- arsize
+			niosv_instruction_manager_arburst                                      : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- arburst
+			niosv_instruction_manager_arprot                                       : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- arprot
+			niosv_instruction_manager_arvalid                                      : in  std_logic                      := 'X';             -- arvalid
+			niosv_instruction_manager_arready                                      : out std_logic;                                         -- arready
+			niosv_instruction_manager_rdata                                        : out std_logic_vector(31 downto 0);                     -- rdata
+			niosv_instruction_manager_rresp                                        : out std_logic_vector(1 downto 0);                      -- rresp
+			niosv_instruction_manager_rlast                                        : out std_logic;                                         -- rlast
+			niosv_instruction_manager_rvalid                                       : out std_logic;                                         -- rvalid
+			niosv_instruction_manager_rready                                       : in  std_logic                      := 'X';             -- rready
+			mem_if_ddr3_emif_fpga_afi_clk_clk                                      : in  std_logic                      := 'X';             -- clk
+			pll_outclk0_clk                                                        : in  std_logic                      := 'X';             -- clk
+			jtag_uart_reset_reset_bridge_in_reset_reset                            : in  std_logic                      := 'X';             -- reset
+			mem_if_ddr3_emif_fpga_avl_translator_reset_reset_bridge_in_reset_reset : in  std_logic                      := 'X';             -- reset
+			mem_if_ddr3_emif_fpga_soft_reset_reset_bridge_in_reset_reset           : in  std_logic                      := 'X';             -- reset
+			niosv_reset_reset_bridge_in_reset_reset                                : in  std_logic                      := 'X';             -- reset
+			jtag_uart_avalon_jtag_slave_address                                    : out std_logic_vector(0 downto 0);                      -- address
+			jtag_uart_avalon_jtag_slave_write                                      : out std_logic;                                         -- write
+			jtag_uart_avalon_jtag_slave_read                                       : out std_logic;                                         -- read
+			jtag_uart_avalon_jtag_slave_readdata                                   : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- readdata
+			jtag_uart_avalon_jtag_slave_writedata                                  : out std_logic_vector(31 downto 0);                     -- writedata
+			jtag_uart_avalon_jtag_slave_waitrequest                                : in  std_logic                      := 'X';             -- waitrequest
+			jtag_uart_avalon_jtag_slave_chipselect                                 : out std_logic;                                         -- chipselect
+			key_s1_address                                                         : out std_logic_vector(1 downto 0);                      -- address
+			key_s1_readdata                                                        : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- readdata
+			led_s1_address                                                         : out std_logic_vector(2 downto 0);                      -- address
+			led_s1_write                                                           : out std_logic;                                         -- write
+			led_s1_readdata                                                        : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- readdata
+			led_s1_writedata                                                       : out std_logic_vector(31 downto 0);                     -- writedata
+			led_s1_chipselect                                                      : out std_logic;                                         -- chipselect
+			mem_if_ddr3_emif_fpga_avl_address                                      : out std_logic_vector(25 downto 0);                     -- address
+			mem_if_ddr3_emif_fpga_avl_write                                        : out std_logic;                                         -- write
+			mem_if_ddr3_emif_fpga_avl_read                                         : out std_logic;                                         -- read
+			mem_if_ddr3_emif_fpga_avl_readdata                                     : in  std_logic_vector(127 downto 0) := (others => 'X'); -- readdata
+			mem_if_ddr3_emif_fpga_avl_writedata                                    : out std_logic_vector(127 downto 0);                    -- writedata
+			mem_if_ddr3_emif_fpga_avl_beginbursttransfer                           : out std_logic;                                         -- beginbursttransfer
+			mem_if_ddr3_emif_fpga_avl_burstcount                                   : out std_logic_vector(2 downto 0);                      -- burstcount
+			mem_if_ddr3_emif_fpga_avl_byteenable                                   : out std_logic_vector(15 downto 0);                     -- byteenable
+			mem_if_ddr3_emif_fpga_avl_readdatavalid                                : in  std_logic                      := 'X';             -- readdatavalid
+			mem_if_ddr3_emif_fpga_avl_waitrequest                                  : in  std_logic                      := 'X';             -- waitrequest
+			niosv_dm_agent_address                                                 : out std_logic_vector(15 downto 0);                     -- address
+			niosv_dm_agent_write                                                   : out std_logic;                                         -- write
+			niosv_dm_agent_read                                                    : out std_logic;                                         -- read
+			niosv_dm_agent_readdata                                                : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- readdata
+			niosv_dm_agent_writedata                                               : out std_logic_vector(31 downto 0);                     -- writedata
+			niosv_dm_agent_readdatavalid                                           : in  std_logic                      := 'X';             -- readdatavalid
+			niosv_dm_agent_waitrequest                                             : in  std_logic                      := 'X';             -- waitrequest
+			niosv_timer_sw_agent_address                                           : out std_logic_vector(5 downto 0);                      -- address
+			niosv_timer_sw_agent_write                                             : out std_logic;                                         -- write
+			niosv_timer_sw_agent_read                                              : out std_logic;                                         -- read
+			niosv_timer_sw_agent_readdata                                          : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- readdata
+			niosv_timer_sw_agent_writedata                                         : out std_logic_vector(31 downto 0);                     -- writedata
+			niosv_timer_sw_agent_byteenable                                        : out std_logic_vector(3 downto 0);                      -- byteenable
+			niosv_timer_sw_agent_readdatavalid                                     : in  std_logic                      := 'X';             -- readdatavalid
+			niosv_timer_sw_agent_waitrequest                                       : in  std_logic                      := 'X';             -- waitrequest
+			sys_clk_s1_address                                                     : out std_logic_vector(2 downto 0);                      -- address
+			sys_clk_s1_write                                                       : out std_logic;                                         -- write
+			sys_clk_s1_readdata                                                    : in  std_logic_vector(15 downto 0)  := (others => 'X'); -- readdata
+			sys_clk_s1_writedata                                                   : out std_logic_vector(15 downto 0);                     -- writedata
+			sys_clk_s1_chipselect                                                  : out std_logic                                          -- chipselect
 		);
 	end component niosv_mm_interconnect_0;
 
@@ -302,7 +382,6 @@ architecture rtl of niosv is
 			reset_in0      : in  std_logic := 'X'; -- reset_in0.reset
 			clk            : in  std_logic := 'X'; --       clk.clk
 			reset_out      : out std_logic;        -- reset_out.reset
-			reset_req      : out std_logic;        --          .reset_req
 			reset_in1      : in  std_logic := 'X';
 			reset_in10     : in  std_logic := 'X';
 			reset_in11     : in  std_logic := 'X';
@@ -318,6 +397,7 @@ architecture rtl of niosv is
 			reset_in7      : in  std_logic := 'X';
 			reset_in8      : in  std_logic := 'X';
 			reset_in9      : in  std_logic := 'X';
+			reset_req      : out std_logic;
 			reset_req_in0  : in  std_logic := 'X';
 			reset_req_in1  : in  std_logic := 'X';
 			reset_req_in10 : in  std_logic := 'X';
@@ -403,118 +483,124 @@ architecture rtl of niosv is
 		);
 	end component niosv_rst_controller_001;
 
-	signal niosv_data_manager_arlen                                      : std_logic_vector(7 downto 0);  -- niosv:data_manager_arlen -> mm_interconnect_0:niosv_data_manager_arlen
-	signal niosv_data_manager_wstrb                                      : std_logic_vector(3 downto 0);  -- niosv:data_manager_wstrb -> mm_interconnect_0:niosv_data_manager_wstrb
-	signal niosv_data_manager_wready                                     : std_logic;                     -- mm_interconnect_0:niosv_data_manager_wready -> niosv:data_manager_wready
-	signal niosv_data_manager_rready                                     : std_logic;                     -- niosv:data_manager_rready -> mm_interconnect_0:niosv_data_manager_rready
-	signal niosv_data_manager_awlen                                      : std_logic_vector(7 downto 0);  -- niosv:data_manager_awlen -> mm_interconnect_0:niosv_data_manager_awlen
-	signal niosv_data_manager_wvalid                                     : std_logic;                     -- niosv:data_manager_wvalid -> mm_interconnect_0:niosv_data_manager_wvalid
-	signal niosv_data_manager_araddr                                     : std_logic_vector(31 downto 0); -- niosv:data_manager_araddr -> mm_interconnect_0:niosv_data_manager_araddr
-	signal niosv_data_manager_arprot                                     : std_logic_vector(2 downto 0);  -- niosv:data_manager_arprot -> mm_interconnect_0:niosv_data_manager_arprot
-	signal niosv_data_manager_awprot                                     : std_logic_vector(2 downto 0);  -- niosv:data_manager_awprot -> mm_interconnect_0:niosv_data_manager_awprot
-	signal niosv_data_manager_wdata                                      : std_logic_vector(31 downto 0); -- niosv:data_manager_wdata -> mm_interconnect_0:niosv_data_manager_wdata
-	signal niosv_data_manager_arvalid                                    : std_logic;                     -- niosv:data_manager_arvalid -> mm_interconnect_0:niosv_data_manager_arvalid
-	signal niosv_data_manager_awaddr                                     : std_logic_vector(31 downto 0); -- niosv:data_manager_awaddr -> mm_interconnect_0:niosv_data_manager_awaddr
-	signal niosv_data_manager_bresp                                      : std_logic_vector(1 downto 0);  -- mm_interconnect_0:niosv_data_manager_bresp -> niosv:data_manager_bresp
-	signal niosv_data_manager_arready                                    : std_logic;                     -- mm_interconnect_0:niosv_data_manager_arready -> niosv:data_manager_arready
-	signal niosv_data_manager_rdata                                      : std_logic_vector(31 downto 0); -- mm_interconnect_0:niosv_data_manager_rdata -> niosv:data_manager_rdata
-	signal niosv_data_manager_awready                                    : std_logic;                     -- mm_interconnect_0:niosv_data_manager_awready -> niosv:data_manager_awready
-	signal niosv_data_manager_arsize                                     : std_logic_vector(2 downto 0);  -- niosv:data_manager_arsize -> mm_interconnect_0:niosv_data_manager_arsize
-	signal niosv_data_manager_bready                                     : std_logic;                     -- niosv:data_manager_bready -> mm_interconnect_0:niosv_data_manager_bready
-	signal niosv_data_manager_rlast                                      : std_logic;                     -- mm_interconnect_0:niosv_data_manager_rlast -> niosv:data_manager_rlast
-	signal niosv_data_manager_wlast                                      : std_logic;                     -- niosv:data_manager_wlast -> mm_interconnect_0:niosv_data_manager_wlast
-	signal niosv_data_manager_rresp                                      : std_logic_vector(1 downto 0);  -- mm_interconnect_0:niosv_data_manager_rresp -> niosv:data_manager_rresp
-	signal niosv_data_manager_bvalid                                     : std_logic;                     -- mm_interconnect_0:niosv_data_manager_bvalid -> niosv:data_manager_bvalid
-	signal niosv_data_manager_awsize                                     : std_logic_vector(2 downto 0);  -- niosv:data_manager_awsize -> mm_interconnect_0:niosv_data_manager_awsize
-	signal niosv_data_manager_awvalid                                    : std_logic;                     -- niosv:data_manager_awvalid -> mm_interconnect_0:niosv_data_manager_awvalid
-	signal niosv_data_manager_rvalid                                     : std_logic;                     -- mm_interconnect_0:niosv_data_manager_rvalid -> niosv:data_manager_rvalid
-	signal niosv_instruction_manager_awburst                             : std_logic_vector(1 downto 0);  -- niosv:instruction_manager_awburst -> mm_interconnect_0:niosv_instruction_manager_awburst
-	signal niosv_instruction_manager_arlen                               : std_logic_vector(7 downto 0);  -- niosv:instruction_manager_arlen -> mm_interconnect_0:niosv_instruction_manager_arlen
-	signal niosv_instruction_manager_wstrb                               : std_logic_vector(3 downto 0);  -- niosv:instruction_manager_wstrb -> mm_interconnect_0:niosv_instruction_manager_wstrb
-	signal niosv_instruction_manager_wready                              : std_logic;                     -- mm_interconnect_0:niosv_instruction_manager_wready -> niosv:instruction_manager_wready
-	signal niosv_instruction_manager_rready                              : std_logic;                     -- niosv:instruction_manager_rready -> mm_interconnect_0:niosv_instruction_manager_rready
-	signal niosv_instruction_manager_awlen                               : std_logic_vector(7 downto 0);  -- niosv:instruction_manager_awlen -> mm_interconnect_0:niosv_instruction_manager_awlen
-	signal niosv_instruction_manager_wvalid                              : std_logic;                     -- niosv:instruction_manager_wvalid -> mm_interconnect_0:niosv_instruction_manager_wvalid
-	signal niosv_instruction_manager_araddr                              : std_logic_vector(31 downto 0); -- niosv:instruction_manager_araddr -> mm_interconnect_0:niosv_instruction_manager_araddr
-	signal niosv_instruction_manager_arprot                              : std_logic_vector(2 downto 0);  -- niosv:instruction_manager_arprot -> mm_interconnect_0:niosv_instruction_manager_arprot
-	signal niosv_instruction_manager_awprot                              : std_logic_vector(2 downto 0);  -- niosv:instruction_manager_awprot -> mm_interconnect_0:niosv_instruction_manager_awprot
-	signal niosv_instruction_manager_wdata                               : std_logic_vector(31 downto 0); -- niosv:instruction_manager_wdata -> mm_interconnect_0:niosv_instruction_manager_wdata
-	signal niosv_instruction_manager_arvalid                             : std_logic;                     -- niosv:instruction_manager_arvalid -> mm_interconnect_0:niosv_instruction_manager_arvalid
-	signal niosv_instruction_manager_awaddr                              : std_logic_vector(31 downto 0); -- niosv:instruction_manager_awaddr -> mm_interconnect_0:niosv_instruction_manager_awaddr
-	signal niosv_instruction_manager_bresp                               : std_logic_vector(1 downto 0);  -- mm_interconnect_0:niosv_instruction_manager_bresp -> niosv:instruction_manager_bresp
-	signal niosv_instruction_manager_arready                             : std_logic;                     -- mm_interconnect_0:niosv_instruction_manager_arready -> niosv:instruction_manager_arready
-	signal niosv_instruction_manager_rdata                               : std_logic_vector(31 downto 0); -- mm_interconnect_0:niosv_instruction_manager_rdata -> niosv:instruction_manager_rdata
-	signal niosv_instruction_manager_awready                             : std_logic;                     -- mm_interconnect_0:niosv_instruction_manager_awready -> niosv:instruction_manager_awready
-	signal niosv_instruction_manager_arburst                             : std_logic_vector(1 downto 0);  -- niosv:instruction_manager_arburst -> mm_interconnect_0:niosv_instruction_manager_arburst
-	signal niosv_instruction_manager_arsize                              : std_logic_vector(2 downto 0);  -- niosv:instruction_manager_arsize -> mm_interconnect_0:niosv_instruction_manager_arsize
-	signal niosv_instruction_manager_bready                              : std_logic;                     -- niosv:instruction_manager_bready -> mm_interconnect_0:niosv_instruction_manager_bready
-	signal niosv_instruction_manager_rlast                               : std_logic;                     -- mm_interconnect_0:niosv_instruction_manager_rlast -> niosv:instruction_manager_rlast
-	signal niosv_instruction_manager_wlast                               : std_logic;                     -- niosv:instruction_manager_wlast -> mm_interconnect_0:niosv_instruction_manager_wlast
-	signal niosv_instruction_manager_rresp                               : std_logic_vector(1 downto 0);  -- mm_interconnect_0:niosv_instruction_manager_rresp -> niosv:instruction_manager_rresp
-	signal niosv_instruction_manager_bvalid                              : std_logic;                     -- mm_interconnect_0:niosv_instruction_manager_bvalid -> niosv:instruction_manager_bvalid
-	signal niosv_instruction_manager_awsize                              : std_logic_vector(2 downto 0);  -- niosv:instruction_manager_awsize -> mm_interconnect_0:niosv_instruction_manager_awsize
-	signal niosv_instruction_manager_awvalid                             : std_logic;                     -- niosv:instruction_manager_awvalid -> mm_interconnect_0:niosv_instruction_manager_awvalid
-	signal niosv_instruction_manager_rvalid                              : std_logic;                     -- mm_interconnect_0:niosv_instruction_manager_rvalid -> niosv:instruction_manager_rvalid
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect      : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_chipselect -> jtag_uart:av_chipselect
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata        : std_logic_vector(31 downto 0); -- jtag_uart:av_readdata -> mm_interconnect_0:jtag_uart_avalon_jtag_slave_readdata
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest     : std_logic;                     -- jtag_uart:av_waitrequest -> mm_interconnect_0:jtag_uart_avalon_jtag_slave_waitrequest
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_address         : std_logic_vector(0 downto 0);  -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_address -> jtag_uart:av_address
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read            : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_read -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:in
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write           : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_write -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:in
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata       : std_logic_vector(31 downto 0); -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_writedata -> jtag_uart:av_writedata
-	signal mm_interconnect_0_niosv_dm_agent_readdata                     : std_logic_vector(31 downto 0); -- niosv:dm_agent_readdata -> mm_interconnect_0:niosv_dm_agent_readdata
-	signal mm_interconnect_0_niosv_dm_agent_waitrequest                  : std_logic;                     -- niosv:dm_agent_waitrequest -> mm_interconnect_0:niosv_dm_agent_waitrequest
-	signal mm_interconnect_0_niosv_dm_agent_address                      : std_logic_vector(15 downto 0); -- mm_interconnect_0:niosv_dm_agent_address -> niosv:dm_agent_address
-	signal mm_interconnect_0_niosv_dm_agent_read                         : std_logic;                     -- mm_interconnect_0:niosv_dm_agent_read -> niosv:dm_agent_read
-	signal mm_interconnect_0_niosv_dm_agent_readdatavalid                : std_logic;                     -- niosv:dm_agent_readdatavalid -> mm_interconnect_0:niosv_dm_agent_readdatavalid
-	signal mm_interconnect_0_niosv_dm_agent_write                        : std_logic;                     -- mm_interconnect_0:niosv_dm_agent_write -> niosv:dm_agent_write
-	signal mm_interconnect_0_niosv_dm_agent_writedata                    : std_logic_vector(31 downto 0); -- mm_interconnect_0:niosv_dm_agent_writedata -> niosv:dm_agent_writedata
-	signal mm_interconnect_0_onchip_memory2_s1_chipselect                : std_logic;                     -- mm_interconnect_0:onchip_memory2_s1_chipselect -> onchip_memory2:chipselect
-	signal mm_interconnect_0_onchip_memory2_s1_readdata                  : std_logic_vector(31 downto 0); -- onchip_memory2:readdata -> mm_interconnect_0:onchip_memory2_s1_readdata
-	signal mm_interconnect_0_onchip_memory2_s1_address                   : std_logic_vector(15 downto 0); -- mm_interconnect_0:onchip_memory2_s1_address -> onchip_memory2:address
-	signal mm_interconnect_0_onchip_memory2_s1_byteenable                : std_logic_vector(3 downto 0);  -- mm_interconnect_0:onchip_memory2_s1_byteenable -> onchip_memory2:byteenable
-	signal mm_interconnect_0_onchip_memory2_s1_write                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_s1_write -> onchip_memory2:write
-	signal mm_interconnect_0_onchip_memory2_s1_writedata                 : std_logic_vector(31 downto 0); -- mm_interconnect_0:onchip_memory2_s1_writedata -> onchip_memory2:writedata
-	signal mm_interconnect_0_onchip_memory2_s1_clken                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_s1_clken -> onchip_memory2:clken
-	signal mm_interconnect_0_led_s1_chipselect                           : std_logic;                     -- mm_interconnect_0:led_s1_chipselect -> led:chipselect
-	signal mm_interconnect_0_led_s1_readdata                             : std_logic_vector(31 downto 0); -- led:readdata -> mm_interconnect_0:led_s1_readdata
-	signal mm_interconnect_0_led_s1_address                              : std_logic_vector(2 downto 0);  -- mm_interconnect_0:led_s1_address -> led:address
-	signal mm_interconnect_0_led_s1_write                                : std_logic;                     -- mm_interconnect_0:led_s1_write -> mm_interconnect_0_led_s1_write:in
-	signal mm_interconnect_0_led_s1_writedata                            : std_logic_vector(31 downto 0); -- mm_interconnect_0:led_s1_writedata -> led:writedata
-	signal mm_interconnect_0_key_s1_readdata                             : std_logic_vector(31 downto 0); -- key:readdata -> mm_interconnect_0:key_s1_readdata
-	signal mm_interconnect_0_key_s1_address                              : std_logic_vector(1 downto 0);  -- mm_interconnect_0:key_s1_address -> key:address
-	signal mm_interconnect_0_sys_clk_s1_chipselect                       : std_logic;                     -- mm_interconnect_0:sys_clk_s1_chipselect -> sys_clk:chipselect
-	signal mm_interconnect_0_sys_clk_s1_readdata                         : std_logic_vector(15 downto 0); -- sys_clk:readdata -> mm_interconnect_0:sys_clk_s1_readdata
-	signal mm_interconnect_0_sys_clk_s1_address                          : std_logic_vector(2 downto 0);  -- mm_interconnect_0:sys_clk_s1_address -> sys_clk:address
-	signal mm_interconnect_0_sys_clk_s1_write                            : std_logic;                     -- mm_interconnect_0:sys_clk_s1_write -> mm_interconnect_0_sys_clk_s1_write:in
-	signal mm_interconnect_0_sys_clk_s1_writedata                        : std_logic_vector(15 downto 0); -- mm_interconnect_0:sys_clk_s1_writedata -> sys_clk:writedata
-	signal mm_interconnect_0_niosv_timer_sw_agent_readdata               : std_logic_vector(31 downto 0); -- niosv:timer_sw_agent_readdata -> mm_interconnect_0:niosv_timer_sw_agent_readdata
-	signal mm_interconnect_0_niosv_timer_sw_agent_waitrequest            : std_logic;                     -- niosv:timer_sw_agent_waitrequest -> mm_interconnect_0:niosv_timer_sw_agent_waitrequest
-	signal mm_interconnect_0_niosv_timer_sw_agent_address                : std_logic_vector(5 downto 0);  -- mm_interconnect_0:niosv_timer_sw_agent_address -> niosv:timer_sw_agent_address
-	signal mm_interconnect_0_niosv_timer_sw_agent_read                   : std_logic;                     -- mm_interconnect_0:niosv_timer_sw_agent_read -> niosv:timer_sw_agent_read
-	signal mm_interconnect_0_niosv_timer_sw_agent_byteenable             : std_logic_vector(3 downto 0);  -- mm_interconnect_0:niosv_timer_sw_agent_byteenable -> niosv:timer_sw_agent_byteenable
-	signal mm_interconnect_0_niosv_timer_sw_agent_readdatavalid          : std_logic;                     -- niosv:timer_sw_agent_readdatavalid -> mm_interconnect_0:niosv_timer_sw_agent_readdatavalid
-	signal mm_interconnect_0_niosv_timer_sw_agent_write                  : std_logic;                     -- mm_interconnect_0:niosv_timer_sw_agent_write -> niosv:timer_sw_agent_write
-	signal mm_interconnect_0_niosv_timer_sw_agent_writedata              : std_logic_vector(31 downto 0); -- mm_interconnect_0:niosv_timer_sw_agent_writedata -> niosv:timer_sw_agent_writedata
-	signal irq_mapper_receiver0_irq                                      : std_logic;                     -- jtag_uart:av_irq -> irq_mapper:receiver0_irq
-	signal irq_mapper_receiver1_irq                                      : std_logic;                     -- sys_clk:irq -> irq_mapper:receiver1_irq
-	signal niosv_platform_irq_rx_irq                                     : std_logic_vector(15 downto 0); -- irq_mapper:sender_irq -> niosv:platform_irq_rx_irq
-	signal rst_controller_reset_out_reset                                : std_logic;                     -- rst_controller:reset_out -> [mm_interconnect_0:jtag_uart_reset_reset_bridge_in_reset_reset, niosv:ndm_reset_in_reset, onchip_memory2:reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
-	signal rst_controller_reset_out_reset_req                            : std_logic;                     -- rst_controller:reset_req -> [onchip_memory2:reset_req, rst_translator:reset_req_in]
-	signal rst_controller_001_reset_out_reset                            : std_logic;                     -- rst_controller_001:reset_out -> [irq_mapper:reset, mm_interconnect_0:niosv_reset_reset_bridge_in_reset_reset, niosv:reset_reset]
-	signal niosv_dbg_reset_out_reset                                     : std_logic;                     -- niosv:dbg_reset_out_reset -> rst_controller_001:reset_in1
-	signal reset_50m_reset_n_ports_inv                                   : std_logic;                     -- reset_50m_reset_n:inv -> [rst_controller:reset_in0, rst_controller_001:reset_in0]
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv  : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> jtag_uart:av_read_n
-	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> jtag_uart:av_write_n
-	signal mm_interconnect_0_led_s1_write_ports_inv                      : std_logic;                     -- mm_interconnect_0_led_s1_write:inv -> led:write_n
-	signal mm_interconnect_0_sys_clk_s1_write_ports_inv                  : std_logic;                     -- mm_interconnect_0_sys_clk_s1_write:inv -> sys_clk:write_n
-	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [jtag_uart:rst_n, key:reset_n, led:reset_n, sys_clk:reset_n]
+	signal pll_outclk0_clk                                                : std_logic;                      -- pll:outclk_0 -> [irq_mapper:clk, jtag_uart:clk, key:clk, led:clk, mem_if_ddr3_emif_fpga:pll_ref_clk, mm_interconnect_0:pll_outclk0_clk, niosv:clk, rst_controller:clk, rst_controller_001:clk, sys_clk:clk]
+	signal niosv_data_manager_arlen                                       : std_logic_vector(7 downto 0);   -- niosv:data_manager_arlen -> mm_interconnect_0:niosv_data_manager_arlen
+	signal niosv_data_manager_wstrb                                       : std_logic_vector(3 downto 0);   -- niosv:data_manager_wstrb -> mm_interconnect_0:niosv_data_manager_wstrb
+	signal niosv_data_manager_wready                                      : std_logic;                      -- mm_interconnect_0:niosv_data_manager_wready -> niosv:data_manager_wready
+	signal niosv_data_manager_rready                                      : std_logic;                      -- niosv:data_manager_rready -> mm_interconnect_0:niosv_data_manager_rready
+	signal niosv_data_manager_awlen                                       : std_logic_vector(7 downto 0);   -- niosv:data_manager_awlen -> mm_interconnect_0:niosv_data_manager_awlen
+	signal niosv_data_manager_wvalid                                      : std_logic;                      -- niosv:data_manager_wvalid -> mm_interconnect_0:niosv_data_manager_wvalid
+	signal niosv_data_manager_araddr                                      : std_logic_vector(31 downto 0);  -- niosv:data_manager_araddr -> mm_interconnect_0:niosv_data_manager_araddr
+	signal niosv_data_manager_arprot                                      : std_logic_vector(2 downto 0);   -- niosv:data_manager_arprot -> mm_interconnect_0:niosv_data_manager_arprot
+	signal niosv_data_manager_awprot                                      : std_logic_vector(2 downto 0);   -- niosv:data_manager_awprot -> mm_interconnect_0:niosv_data_manager_awprot
+	signal niosv_data_manager_wdata                                       : std_logic_vector(31 downto 0);  -- niosv:data_manager_wdata -> mm_interconnect_0:niosv_data_manager_wdata
+	signal niosv_data_manager_arvalid                                     : std_logic;                      -- niosv:data_manager_arvalid -> mm_interconnect_0:niosv_data_manager_arvalid
+	signal niosv_data_manager_awaddr                                      : std_logic_vector(31 downto 0);  -- niosv:data_manager_awaddr -> mm_interconnect_0:niosv_data_manager_awaddr
+	signal niosv_data_manager_bresp                                       : std_logic_vector(1 downto 0);   -- mm_interconnect_0:niosv_data_manager_bresp -> niosv:data_manager_bresp
+	signal niosv_data_manager_arready                                     : std_logic;                      -- mm_interconnect_0:niosv_data_manager_arready -> niosv:data_manager_arready
+	signal niosv_data_manager_rdata                                       : std_logic_vector(31 downto 0);  -- mm_interconnect_0:niosv_data_manager_rdata -> niosv:data_manager_rdata
+	signal niosv_data_manager_awready                                     : std_logic;                      -- mm_interconnect_0:niosv_data_manager_awready -> niosv:data_manager_awready
+	signal niosv_data_manager_arsize                                      : std_logic_vector(2 downto 0);   -- niosv:data_manager_arsize -> mm_interconnect_0:niosv_data_manager_arsize
+	signal niosv_data_manager_bready                                      : std_logic;                      -- niosv:data_manager_bready -> mm_interconnect_0:niosv_data_manager_bready
+	signal niosv_data_manager_rlast                                       : std_logic;                      -- mm_interconnect_0:niosv_data_manager_rlast -> niosv:data_manager_rlast
+	signal niosv_data_manager_wlast                                       : std_logic;                      -- niosv:data_manager_wlast -> mm_interconnect_0:niosv_data_manager_wlast
+	signal niosv_data_manager_rresp                                       : std_logic_vector(1 downto 0);   -- mm_interconnect_0:niosv_data_manager_rresp -> niosv:data_manager_rresp
+	signal niosv_data_manager_bvalid                                      : std_logic;                      -- mm_interconnect_0:niosv_data_manager_bvalid -> niosv:data_manager_bvalid
+	signal niosv_data_manager_awsize                                      : std_logic_vector(2 downto 0);   -- niosv:data_manager_awsize -> mm_interconnect_0:niosv_data_manager_awsize
+	signal niosv_data_manager_awvalid                                     : std_logic;                      -- niosv:data_manager_awvalid -> mm_interconnect_0:niosv_data_manager_awvalid
+	signal niosv_data_manager_rvalid                                      : std_logic;                      -- mm_interconnect_0:niosv_data_manager_rvalid -> niosv:data_manager_rvalid
+	signal niosv_instruction_manager_awburst                              : std_logic_vector(1 downto 0);   -- niosv:instruction_manager_awburst -> mm_interconnect_0:niosv_instruction_manager_awburst
+	signal niosv_instruction_manager_arlen                                : std_logic_vector(7 downto 0);   -- niosv:instruction_manager_arlen -> mm_interconnect_0:niosv_instruction_manager_arlen
+	signal niosv_instruction_manager_wstrb                                : std_logic_vector(3 downto 0);   -- niosv:instruction_manager_wstrb -> mm_interconnect_0:niosv_instruction_manager_wstrb
+	signal niosv_instruction_manager_wready                               : std_logic;                      -- mm_interconnect_0:niosv_instruction_manager_wready -> niosv:instruction_manager_wready
+	signal niosv_instruction_manager_rready                               : std_logic;                      -- niosv:instruction_manager_rready -> mm_interconnect_0:niosv_instruction_manager_rready
+	signal niosv_instruction_manager_awlen                                : std_logic_vector(7 downto 0);   -- niosv:instruction_manager_awlen -> mm_interconnect_0:niosv_instruction_manager_awlen
+	signal niosv_instruction_manager_wvalid                               : std_logic;                      -- niosv:instruction_manager_wvalid -> mm_interconnect_0:niosv_instruction_manager_wvalid
+	signal niosv_instruction_manager_araddr                               : std_logic_vector(31 downto 0);  -- niosv:instruction_manager_araddr -> mm_interconnect_0:niosv_instruction_manager_araddr
+	signal niosv_instruction_manager_arprot                               : std_logic_vector(2 downto 0);   -- niosv:instruction_manager_arprot -> mm_interconnect_0:niosv_instruction_manager_arprot
+	signal niosv_instruction_manager_awprot                               : std_logic_vector(2 downto 0);   -- niosv:instruction_manager_awprot -> mm_interconnect_0:niosv_instruction_manager_awprot
+	signal niosv_instruction_manager_wdata                                : std_logic_vector(31 downto 0);  -- niosv:instruction_manager_wdata -> mm_interconnect_0:niosv_instruction_manager_wdata
+	signal niosv_instruction_manager_arvalid                              : std_logic;                      -- niosv:instruction_manager_arvalid -> mm_interconnect_0:niosv_instruction_manager_arvalid
+	signal niosv_instruction_manager_awaddr                               : std_logic_vector(31 downto 0);  -- niosv:instruction_manager_awaddr -> mm_interconnect_0:niosv_instruction_manager_awaddr
+	signal niosv_instruction_manager_bresp                                : std_logic_vector(1 downto 0);   -- mm_interconnect_0:niosv_instruction_manager_bresp -> niosv:instruction_manager_bresp
+	signal niosv_instruction_manager_arready                              : std_logic;                      -- mm_interconnect_0:niosv_instruction_manager_arready -> niosv:instruction_manager_arready
+	signal niosv_instruction_manager_rdata                                : std_logic_vector(31 downto 0);  -- mm_interconnect_0:niosv_instruction_manager_rdata -> niosv:instruction_manager_rdata
+	signal niosv_instruction_manager_awready                              : std_logic;                      -- mm_interconnect_0:niosv_instruction_manager_awready -> niosv:instruction_manager_awready
+	signal niosv_instruction_manager_arburst                              : std_logic_vector(1 downto 0);   -- niosv:instruction_manager_arburst -> mm_interconnect_0:niosv_instruction_manager_arburst
+	signal niosv_instruction_manager_arsize                               : std_logic_vector(2 downto 0);   -- niosv:instruction_manager_arsize -> mm_interconnect_0:niosv_instruction_manager_arsize
+	signal niosv_instruction_manager_bready                               : std_logic;                      -- niosv:instruction_manager_bready -> mm_interconnect_0:niosv_instruction_manager_bready
+	signal niosv_instruction_manager_rlast                                : std_logic;                      -- mm_interconnect_0:niosv_instruction_manager_rlast -> niosv:instruction_manager_rlast
+	signal niosv_instruction_manager_wlast                                : std_logic;                      -- niosv:instruction_manager_wlast -> mm_interconnect_0:niosv_instruction_manager_wlast
+	signal niosv_instruction_manager_rresp                                : std_logic_vector(1 downto 0);   -- mm_interconnect_0:niosv_instruction_manager_rresp -> niosv:instruction_manager_rresp
+	signal niosv_instruction_manager_bvalid                               : std_logic;                      -- mm_interconnect_0:niosv_instruction_manager_bvalid -> niosv:instruction_manager_bvalid
+	signal niosv_instruction_manager_awsize                               : std_logic_vector(2 downto 0);   -- niosv:instruction_manager_awsize -> mm_interconnect_0:niosv_instruction_manager_awsize
+	signal niosv_instruction_manager_awvalid                              : std_logic;                      -- niosv:instruction_manager_awvalid -> mm_interconnect_0:niosv_instruction_manager_awvalid
+	signal niosv_instruction_manager_rvalid                               : std_logic;                      -- mm_interconnect_0:niosv_instruction_manager_rvalid -> niosv:instruction_manager_rvalid
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect       : std_logic;                      -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_chipselect -> jtag_uart:av_chipselect
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata         : std_logic_vector(31 downto 0);  -- jtag_uart:av_readdata -> mm_interconnect_0:jtag_uart_avalon_jtag_slave_readdata
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest      : std_logic;                      -- jtag_uart:av_waitrequest -> mm_interconnect_0:jtag_uart_avalon_jtag_slave_waitrequest
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_address          : std_logic_vector(0 downto 0);   -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_address -> jtag_uart:av_address
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read             : std_logic;                      -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_read -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:in
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write            : std_logic;                      -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_write -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:in
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata        : std_logic_vector(31 downto 0);  -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_writedata -> jtag_uart:av_writedata
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_beginbursttransfer : std_logic;                      -- mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_beginbursttransfer -> mem_if_ddr3_emif_fpga:avl_burstbegin
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_readdata           : std_logic_vector(127 downto 0); -- mem_if_ddr3_emif_fpga:avl_rdata -> mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_readdata
+	signal mem_if_ddr3_emif_fpga_avl_waitrequest                          : std_logic;                      -- mem_if_ddr3_emif_fpga:avl_ready -> mem_if_ddr3_emif_fpga_avl_waitrequest:in
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_address            : std_logic_vector(25 downto 0);  -- mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_address -> mem_if_ddr3_emif_fpga:avl_addr
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_read               : std_logic;                      -- mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_read -> mem_if_ddr3_emif_fpga:avl_read_req
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_byteenable         : std_logic_vector(15 downto 0);  -- mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_byteenable -> mem_if_ddr3_emif_fpga:avl_be
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_readdatavalid      : std_logic;                      -- mem_if_ddr3_emif_fpga:avl_rdata_valid -> mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_readdatavalid
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_write              : std_logic;                      -- mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_write -> mem_if_ddr3_emif_fpga:avl_write_req
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_writedata          : std_logic_vector(127 downto 0); -- mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_writedata -> mem_if_ddr3_emif_fpga:avl_wdata
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_burstcount         : std_logic_vector(2 downto 0);   -- mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_burstcount -> mem_if_ddr3_emif_fpga:avl_size
+	signal mem_if_ddr3_emif_fpga_afi_clk_clk                              : std_logic;                      -- mem_if_ddr3_emif_fpga:afi_clk -> [mm_interconnect_0:mem_if_ddr3_emif_fpga_afi_clk_clk, rst_controller_002:clk]
+	signal mm_interconnect_0_niosv_dm_agent_readdata                      : std_logic_vector(31 downto 0);  -- niosv:dm_agent_readdata -> mm_interconnect_0:niosv_dm_agent_readdata
+	signal mm_interconnect_0_niosv_dm_agent_waitrequest                   : std_logic;                      -- niosv:dm_agent_waitrequest -> mm_interconnect_0:niosv_dm_agent_waitrequest
+	signal mm_interconnect_0_niosv_dm_agent_address                       : std_logic_vector(15 downto 0);  -- mm_interconnect_0:niosv_dm_agent_address -> niosv:dm_agent_address
+	signal mm_interconnect_0_niosv_dm_agent_read                          : std_logic;                      -- mm_interconnect_0:niosv_dm_agent_read -> niosv:dm_agent_read
+	signal mm_interconnect_0_niosv_dm_agent_readdatavalid                 : std_logic;                      -- niosv:dm_agent_readdatavalid -> mm_interconnect_0:niosv_dm_agent_readdatavalid
+	signal mm_interconnect_0_niosv_dm_agent_write                         : std_logic;                      -- mm_interconnect_0:niosv_dm_agent_write -> niosv:dm_agent_write
+	signal mm_interconnect_0_niosv_dm_agent_writedata                     : std_logic_vector(31 downto 0);  -- mm_interconnect_0:niosv_dm_agent_writedata -> niosv:dm_agent_writedata
+	signal mm_interconnect_0_led_s1_chipselect                            : std_logic;                      -- mm_interconnect_0:led_s1_chipselect -> led:chipselect
+	signal mm_interconnect_0_led_s1_readdata                              : std_logic_vector(31 downto 0);  -- led:readdata -> mm_interconnect_0:led_s1_readdata
+	signal mm_interconnect_0_led_s1_address                               : std_logic_vector(2 downto 0);   -- mm_interconnect_0:led_s1_address -> led:address
+	signal mm_interconnect_0_led_s1_write                                 : std_logic;                      -- mm_interconnect_0:led_s1_write -> mm_interconnect_0_led_s1_write:in
+	signal mm_interconnect_0_led_s1_writedata                             : std_logic_vector(31 downto 0);  -- mm_interconnect_0:led_s1_writedata -> led:writedata
+	signal mm_interconnect_0_key_s1_readdata                              : std_logic_vector(31 downto 0);  -- key:readdata -> mm_interconnect_0:key_s1_readdata
+	signal mm_interconnect_0_key_s1_address                               : std_logic_vector(1 downto 0);   -- mm_interconnect_0:key_s1_address -> key:address
+	signal mm_interconnect_0_sys_clk_s1_chipselect                        : std_logic;                      -- mm_interconnect_0:sys_clk_s1_chipselect -> sys_clk:chipselect
+	signal mm_interconnect_0_sys_clk_s1_readdata                          : std_logic_vector(15 downto 0);  -- sys_clk:readdata -> mm_interconnect_0:sys_clk_s1_readdata
+	signal mm_interconnect_0_sys_clk_s1_address                           : std_logic_vector(2 downto 0);   -- mm_interconnect_0:sys_clk_s1_address -> sys_clk:address
+	signal mm_interconnect_0_sys_clk_s1_write                             : std_logic;                      -- mm_interconnect_0:sys_clk_s1_write -> mm_interconnect_0_sys_clk_s1_write:in
+	signal mm_interconnect_0_sys_clk_s1_writedata                         : std_logic_vector(15 downto 0);  -- mm_interconnect_0:sys_clk_s1_writedata -> sys_clk:writedata
+	signal mm_interconnect_0_niosv_timer_sw_agent_readdata                : std_logic_vector(31 downto 0);  -- niosv:timer_sw_agent_readdata -> mm_interconnect_0:niosv_timer_sw_agent_readdata
+	signal mm_interconnect_0_niosv_timer_sw_agent_waitrequest             : std_logic;                      -- niosv:timer_sw_agent_waitrequest -> mm_interconnect_0:niosv_timer_sw_agent_waitrequest
+	signal mm_interconnect_0_niosv_timer_sw_agent_address                 : std_logic_vector(5 downto 0);   -- mm_interconnect_0:niosv_timer_sw_agent_address -> niosv:timer_sw_agent_address
+	signal mm_interconnect_0_niosv_timer_sw_agent_read                    : std_logic;                      -- mm_interconnect_0:niosv_timer_sw_agent_read -> niosv:timer_sw_agent_read
+	signal mm_interconnect_0_niosv_timer_sw_agent_byteenable              : std_logic_vector(3 downto 0);   -- mm_interconnect_0:niosv_timer_sw_agent_byteenable -> niosv:timer_sw_agent_byteenable
+	signal mm_interconnect_0_niosv_timer_sw_agent_readdatavalid           : std_logic;                      -- niosv:timer_sw_agent_readdatavalid -> mm_interconnect_0:niosv_timer_sw_agent_readdatavalid
+	signal mm_interconnect_0_niosv_timer_sw_agent_write                   : std_logic;                      -- mm_interconnect_0:niosv_timer_sw_agent_write -> niosv:timer_sw_agent_write
+	signal mm_interconnect_0_niosv_timer_sw_agent_writedata               : std_logic_vector(31 downto 0);  -- mm_interconnect_0:niosv_timer_sw_agent_writedata -> niosv:timer_sw_agent_writedata
+	signal irq_mapper_receiver0_irq                                       : std_logic;                      -- jtag_uart:av_irq -> irq_mapper:receiver0_irq
+	signal irq_mapper_receiver1_irq                                       : std_logic;                      -- sys_clk:irq -> irq_mapper:receiver1_irq
+	signal niosv_platform_irq_rx_irq                                      : std_logic_vector(15 downto 0);  -- irq_mapper:sender_irq -> niosv:platform_irq_rx_irq
+	signal rst_controller_reset_out_reset                                 : std_logic;                      -- rst_controller:reset_out -> [mm_interconnect_0:jtag_uart_reset_reset_bridge_in_reset_reset, niosv:ndm_reset_in_reset, rst_controller_reset_out_reset:in]
+	signal rst_controller_001_reset_out_reset                             : std_logic;                      -- rst_controller_001:reset_out -> [irq_mapper:reset, mm_interconnect_0:niosv_reset_reset_bridge_in_reset_reset, niosv:reset_reset]
+	signal niosv_dbg_reset_out_reset                                      : std_logic;                      -- niosv:dbg_reset_out_reset -> rst_controller_001:reset_in1
+	signal rst_controller_002_reset_out_reset                             : std_logic;                      -- rst_controller_002:reset_out -> [mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_translator_reset_reset_bridge_in_reset_reset, mm_interconnect_0:mem_if_ddr3_emif_fpga_soft_reset_reset_bridge_in_reset_reset]
+	signal reset_50m_reset_n_ports_inv                                    : std_logic;                      -- reset_50m_reset_n:inv -> [pll:rst, rst_controller:reset_in0, rst_controller_001:reset_in0, rst_controller_002:reset_in0]
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv   : std_logic;                      -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> jtag_uart:av_read_n
+	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv  : std_logic;                      -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> jtag_uart:av_write_n
+	signal mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_inv                : std_logic;                      -- mem_if_ddr3_emif_fpga_avl_waitrequest:inv -> mm_interconnect_0:mem_if_ddr3_emif_fpga_avl_waitrequest
+	signal mm_interconnect_0_led_s1_write_ports_inv                       : std_logic;                      -- mm_interconnect_0_led_s1_write:inv -> led:write_n
+	signal mm_interconnect_0_sys_clk_s1_write_ports_inv                   : std_logic;                      -- mm_interconnect_0_sys_clk_s1_write:inv -> sys_clk:write_n
+	signal rst_controller_reset_out_reset_ports_inv                       : std_logic;                      -- rst_controller_reset_out_reset:inv -> [jtag_uart:rst_n, key:reset_n, led:reset_n, sys_clk:reset_n]
 
 begin
 
 	jtag_uart : component niosv_jtag_uart
 		port map (
-			clk            => clk_50m_clk,                                                   --               clk.clk
+			clk            => pll_outclk0_clk,                                               --               clk.clk
 			rst_n          => rst_controller_reset_out_reset_ports_inv,                      --             reset.reset_n
 			av_chipselect  => mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect,      -- avalon_jtag_slave.chipselect
 			av_address     => mm_interconnect_0_jtag_uart_avalon_jtag_slave_address(0),      --                  .address
@@ -528,7 +614,7 @@ begin
 
 	key : component niosv_key
 		port map (
-			clk      => clk_50m_clk,                              --                 clk.clk
+			clk      => pll_outclk0_clk,                          --                 clk.clk
 			reset_n  => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
 			address  => mm_interconnect_0_key_s1_address,         --                  s1.address
 			readdata => mm_interconnect_0_key_s1_readdata,        --                    .readdata
@@ -537,7 +623,7 @@ begin
 
 	led : component niosv_led
 		port map (
-			clk        => clk_50m_clk,                              --                 clk.clk
+			clk        => pll_outclk0_clk,                          --                 clk.clk
 			reset_n    => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
 			address    => mm_interconnect_0_led_s1_address,         --                  s1.address
 			write_n    => mm_interconnect_0_led_s1_write_ports_inv, --                    .write_n
@@ -547,9 +633,59 @@ begin
 			out_port   => led_export                                -- external_connection.export
 		);
 
+	mem_if_ddr3_emif_fpga : component niosv_mem_if_ddr3_emif_fpga
+		port map (
+			pll_ref_clk               => pll_outclk0_clk,                                                --      pll_ref_clk.clk
+			global_reset_n            => reset_50m_reset_n,                                              --     global_reset.reset_n
+			soft_reset_n              => reset_50m_reset_n,                                              --       soft_reset.reset_n
+			afi_clk                   => mem_if_ddr3_emif_fpga_afi_clk_clk,                              --          afi_clk.clk
+			afi_half_clk              => open,                                                           --     afi_half_clk.clk
+			afi_reset_n               => open,                                                           --        afi_reset.reset_n
+			afi_reset_export_n        => open,                                                           -- afi_reset_export.reset_n
+			mem_a                     => memory_mem_a,                                                   --           memory.mem_a
+			mem_ba                    => memory_mem_ba,                                                  --                 .mem_ba
+			mem_ck                    => memory_mem_ck,                                                  --                 .mem_ck
+			mem_ck_n                  => memory_mem_ck_n,                                                --                 .mem_ck_n
+			mem_cke                   => memory_mem_cke,                                                 --                 .mem_cke
+			mem_cs_n                  => memory_mem_cs_n,                                                --                 .mem_cs_n
+			mem_dm                    => memory_mem_dm,                                                  --                 .mem_dm
+			mem_ras_n                 => memory_mem_ras_n,                                               --                 .mem_ras_n
+			mem_cas_n                 => memory_mem_cas_n,                                               --                 .mem_cas_n
+			mem_we_n                  => memory_mem_we_n,                                                --                 .mem_we_n
+			mem_reset_n               => memory_mem_reset_n,                                             --                 .mem_reset_n
+			mem_dq                    => memory_mem_dq,                                                  --                 .mem_dq
+			mem_dqs                   => memory_mem_dqs,                                                 --                 .mem_dqs
+			mem_dqs_n                 => memory_mem_dqs_n,                                               --                 .mem_dqs_n
+			mem_odt                   => memory_mem_odt,                                                 --                 .mem_odt
+			avl_ready                 => mem_if_ddr3_emif_fpga_avl_waitrequest,                          --              avl.waitrequest_n
+			avl_burstbegin            => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_beginbursttransfer, --                 .beginbursttransfer
+			avl_addr                  => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_address,            --                 .address
+			avl_rdata_valid           => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_readdatavalid,      --                 .readdatavalid
+			avl_rdata                 => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_readdata,           --                 .readdata
+			avl_wdata                 => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_writedata,          --                 .writedata
+			avl_be                    => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_byteenable,         --                 .byteenable
+			avl_read_req              => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_read,               --                 .read
+			avl_write_req             => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_write,              --                 .write
+			avl_size                  => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_burstcount,         --                 .burstcount
+			local_init_done           => mem_if_ddr3_emif_fpga_status_local_init_done,                   --           status.local_init_done
+			local_cal_success         => mem_if_ddr3_emif_fpga_status_local_cal_success,                 --                 .local_cal_success
+			local_cal_fail            => mem_if_ddr3_emif_fpga_status_local_cal_fail,                    --                 .local_cal_fail
+			oct_rzqin                 => oct_rzqin,                                                      --              oct.rzqin
+			pll_mem_clk               => mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_clk,                  --      pll_sharing.pll_mem_clk
+			pll_write_clk             => mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk,                --                 .pll_write_clk
+			pll_locked                => mem_if_ddr3_emif_fpga_pll_sharing_pll_locked,                   --                 .pll_locked
+			pll_write_clk_pre_phy_clk => mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk_pre_phy_clk,    --                 .pll_write_clk_pre_phy_clk
+			pll_addr_cmd_clk          => mem_if_ddr3_emif_fpga_pll_sharing_pll_addr_cmd_clk,             --                 .pll_addr_cmd_clk
+			pll_avl_clk               => mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_clk,                  --                 .pll_avl_clk
+			pll_config_clk            => mem_if_ddr3_emif_fpga_pll_sharing_pll_config_clk,               --                 .pll_config_clk
+			pll_mem_phy_clk           => mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_phy_clk,              --                 .pll_mem_phy_clk
+			afi_phy_clk               => mem_if_ddr3_emif_fpga_pll_sharing_afi_phy_clk,                  --                 .afi_phy_clk
+			pll_avl_phy_clk           => mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_phy_clk               --                 .pll_avl_phy_clk
+		);
+
 	niosv : component niosv_niosv
 		port map (
-			clk                          => clk_50m_clk,                                          --                 clk.clk
+			clk                          => pll_outclk0_clk,                                      --                 clk.clk
 			reset_reset                  => rst_controller_001_reset_out_reset,                   --               reset.reset
 			platform_irq_rx_irq          => niosv_platform_irq_rx_irq,                            --     platform_irq_rx.irq
 			instruction_manager_awaddr   => niosv_instruction_manager_awaddr,                     -- instruction_manager.awaddr
@@ -623,24 +759,17 @@ begin
 			dbg_reset_out_reset          => niosv_dbg_reset_out_reset                             --       dbg_reset_out.reset
 		);
 
-	onchip_memory2 : component niosv_onchip_memory2
+	pll : component niosv_pll
 		port map (
-			clk        => clk_50m_clk,                                    --   clk1.clk
-			address    => mm_interconnect_0_onchip_memory2_s1_address,    --     s1.address
-			clken      => mm_interconnect_0_onchip_memory2_s1_clken,      --       .clken
-			chipselect => mm_interconnect_0_onchip_memory2_s1_chipselect, --       .chipselect
-			write      => mm_interconnect_0_onchip_memory2_s1_write,      --       .write
-			readdata   => mm_interconnect_0_onchip_memory2_s1_readdata,   --       .readdata
-			writedata  => mm_interconnect_0_onchip_memory2_s1_writedata,  --       .writedata
-			byteenable => mm_interconnect_0_onchip_memory2_s1_byteenable, --       .byteenable
-			reset      => rst_controller_reset_out_reset,                 -- reset1.reset
-			reset_req  => rst_controller_reset_out_reset_req,             --       .reset_req
-			freeze     => '0'                                             -- (terminated)
+			refclk   => clk_50m_clk,                 --  refclk.clk
+			rst      => reset_50m_reset_n_ports_inv, --   reset.reset
+			outclk_0 => pll_outclk0_clk,             -- outclk0.clk
+			locked   => pll_locked_export            --  locked.export
 		);
 
 	sys_clk : component niosv_sys_clk
 		port map (
-			clk        => clk_50m_clk,                                  --   clk.clk
+			clk        => pll_outclk0_clk,                              --   clk.clk
 			reset_n    => rst_controller_reset_out_reset_ports_inv,     -- reset.reset_n
 			address    => mm_interconnect_0_sys_clk_s1_address,         --    s1.address
 			writedata  => mm_interconnect_0_sys_clk_s1_writedata,       --      .writedata
@@ -652,107 +781,113 @@ begin
 
 	mm_interconnect_0 : component niosv_mm_interconnect_0
 		port map (
-			niosv_data_manager_awaddr                   => niosv_data_manager_awaddr,                                 --                    niosv_data_manager.awaddr
-			niosv_data_manager_awlen                    => niosv_data_manager_awlen,                                  --                                      .awlen
-			niosv_data_manager_awsize                   => niosv_data_manager_awsize,                                 --                                      .awsize
-			niosv_data_manager_awprot                   => niosv_data_manager_awprot,                                 --                                      .awprot
-			niosv_data_manager_awvalid                  => niosv_data_manager_awvalid,                                --                                      .awvalid
-			niosv_data_manager_awready                  => niosv_data_manager_awready,                                --                                      .awready
-			niosv_data_manager_wdata                    => niosv_data_manager_wdata,                                  --                                      .wdata
-			niosv_data_manager_wstrb                    => niosv_data_manager_wstrb,                                  --                                      .wstrb
-			niosv_data_manager_wlast                    => niosv_data_manager_wlast,                                  --                                      .wlast
-			niosv_data_manager_wvalid                   => niosv_data_manager_wvalid,                                 --                                      .wvalid
-			niosv_data_manager_wready                   => niosv_data_manager_wready,                                 --                                      .wready
-			niosv_data_manager_bresp                    => niosv_data_manager_bresp,                                  --                                      .bresp
-			niosv_data_manager_bvalid                   => niosv_data_manager_bvalid,                                 --                                      .bvalid
-			niosv_data_manager_bready                   => niosv_data_manager_bready,                                 --                                      .bready
-			niosv_data_manager_araddr                   => niosv_data_manager_araddr,                                 --                                      .araddr
-			niosv_data_manager_arlen                    => niosv_data_manager_arlen,                                  --                                      .arlen
-			niosv_data_manager_arsize                   => niosv_data_manager_arsize,                                 --                                      .arsize
-			niosv_data_manager_arprot                   => niosv_data_manager_arprot,                                 --                                      .arprot
-			niosv_data_manager_arvalid                  => niosv_data_manager_arvalid,                                --                                      .arvalid
-			niosv_data_manager_arready                  => niosv_data_manager_arready,                                --                                      .arready
-			niosv_data_manager_rdata                    => niosv_data_manager_rdata,                                  --                                      .rdata
-			niosv_data_manager_rresp                    => niosv_data_manager_rresp,                                  --                                      .rresp
-			niosv_data_manager_rlast                    => niosv_data_manager_rlast,                                  --                                      .rlast
-			niosv_data_manager_rvalid                   => niosv_data_manager_rvalid,                                 --                                      .rvalid
-			niosv_data_manager_rready                   => niosv_data_manager_rready,                                 --                                      .rready
-			niosv_instruction_manager_awaddr            => niosv_instruction_manager_awaddr,                          --             niosv_instruction_manager.awaddr
-			niosv_instruction_manager_awlen             => niosv_instruction_manager_awlen,                           --                                      .awlen
-			niosv_instruction_manager_awsize            => niosv_instruction_manager_awsize,                          --                                      .awsize
-			niosv_instruction_manager_awburst           => niosv_instruction_manager_awburst,                         --                                      .awburst
-			niosv_instruction_manager_awprot            => niosv_instruction_manager_awprot,                          --                                      .awprot
-			niosv_instruction_manager_awvalid           => niosv_instruction_manager_awvalid,                         --                                      .awvalid
-			niosv_instruction_manager_awready           => niosv_instruction_manager_awready,                         --                                      .awready
-			niosv_instruction_manager_wdata             => niosv_instruction_manager_wdata,                           --                                      .wdata
-			niosv_instruction_manager_wstrb             => niosv_instruction_manager_wstrb,                           --                                      .wstrb
-			niosv_instruction_manager_wlast             => niosv_instruction_manager_wlast,                           --                                      .wlast
-			niosv_instruction_manager_wvalid            => niosv_instruction_manager_wvalid,                          --                                      .wvalid
-			niosv_instruction_manager_wready            => niosv_instruction_manager_wready,                          --                                      .wready
-			niosv_instruction_manager_bresp             => niosv_instruction_manager_bresp,                           --                                      .bresp
-			niosv_instruction_manager_bvalid            => niosv_instruction_manager_bvalid,                          --                                      .bvalid
-			niosv_instruction_manager_bready            => niosv_instruction_manager_bready,                          --                                      .bready
-			niosv_instruction_manager_araddr            => niosv_instruction_manager_araddr,                          --                                      .araddr
-			niosv_instruction_manager_arlen             => niosv_instruction_manager_arlen,                           --                                      .arlen
-			niosv_instruction_manager_arsize            => niosv_instruction_manager_arsize,                          --                                      .arsize
-			niosv_instruction_manager_arburst           => niosv_instruction_manager_arburst,                         --                                      .arburst
-			niosv_instruction_manager_arprot            => niosv_instruction_manager_arprot,                          --                                      .arprot
-			niosv_instruction_manager_arvalid           => niosv_instruction_manager_arvalid,                         --                                      .arvalid
-			niosv_instruction_manager_arready           => niosv_instruction_manager_arready,                         --                                      .arready
-			niosv_instruction_manager_rdata             => niosv_instruction_manager_rdata,                           --                                      .rdata
-			niosv_instruction_manager_rresp             => niosv_instruction_manager_rresp,                           --                                      .rresp
-			niosv_instruction_manager_rlast             => niosv_instruction_manager_rlast,                           --                                      .rlast
-			niosv_instruction_manager_rvalid            => niosv_instruction_manager_rvalid,                          --                                      .rvalid
-			niosv_instruction_manager_rready            => niosv_instruction_manager_rready,                          --                                      .rready
-			clk_50m_clk_clk                             => clk_50m_clk,                                               --                           clk_50m_clk.clk
-			jtag_uart_reset_reset_bridge_in_reset_reset => rst_controller_reset_out_reset,                            -- jtag_uart_reset_reset_bridge_in_reset.reset
-			niosv_reset_reset_bridge_in_reset_reset     => rst_controller_001_reset_out_reset,                        --     niosv_reset_reset_bridge_in_reset.reset
-			jtag_uart_avalon_jtag_slave_address         => mm_interconnect_0_jtag_uart_avalon_jtag_slave_address,     --           jtag_uart_avalon_jtag_slave.address
-			jtag_uart_avalon_jtag_slave_write           => mm_interconnect_0_jtag_uart_avalon_jtag_slave_write,       --                                      .write
-			jtag_uart_avalon_jtag_slave_read            => mm_interconnect_0_jtag_uart_avalon_jtag_slave_read,        --                                      .read
-			jtag_uart_avalon_jtag_slave_readdata        => mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata,    --                                      .readdata
-			jtag_uart_avalon_jtag_slave_writedata       => mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata,   --                                      .writedata
-			jtag_uart_avalon_jtag_slave_waitrequest     => mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest, --                                      .waitrequest
-			jtag_uart_avalon_jtag_slave_chipselect      => mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect,  --                                      .chipselect
-			key_s1_address                              => mm_interconnect_0_key_s1_address,                          --                                key_s1.address
-			key_s1_readdata                             => mm_interconnect_0_key_s1_readdata,                         --                                      .readdata
-			led_s1_address                              => mm_interconnect_0_led_s1_address,                          --                                led_s1.address
-			led_s1_write                                => mm_interconnect_0_led_s1_write,                            --                                      .write
-			led_s1_readdata                             => mm_interconnect_0_led_s1_readdata,                         --                                      .readdata
-			led_s1_writedata                            => mm_interconnect_0_led_s1_writedata,                        --                                      .writedata
-			led_s1_chipselect                           => mm_interconnect_0_led_s1_chipselect,                       --                                      .chipselect
-			niosv_dm_agent_address                      => mm_interconnect_0_niosv_dm_agent_address,                  --                        niosv_dm_agent.address
-			niosv_dm_agent_write                        => mm_interconnect_0_niosv_dm_agent_write,                    --                                      .write
-			niosv_dm_agent_read                         => mm_interconnect_0_niosv_dm_agent_read,                     --                                      .read
-			niosv_dm_agent_readdata                     => mm_interconnect_0_niosv_dm_agent_readdata,                 --                                      .readdata
-			niosv_dm_agent_writedata                    => mm_interconnect_0_niosv_dm_agent_writedata,                --                                      .writedata
-			niosv_dm_agent_readdatavalid                => mm_interconnect_0_niosv_dm_agent_readdatavalid,            --                                      .readdatavalid
-			niosv_dm_agent_waitrequest                  => mm_interconnect_0_niosv_dm_agent_waitrequest,              --                                      .waitrequest
-			niosv_timer_sw_agent_address                => mm_interconnect_0_niosv_timer_sw_agent_address,            --                  niosv_timer_sw_agent.address
-			niosv_timer_sw_agent_write                  => mm_interconnect_0_niosv_timer_sw_agent_write,              --                                      .write
-			niosv_timer_sw_agent_read                   => mm_interconnect_0_niosv_timer_sw_agent_read,               --                                      .read
-			niosv_timer_sw_agent_readdata               => mm_interconnect_0_niosv_timer_sw_agent_readdata,           --                                      .readdata
-			niosv_timer_sw_agent_writedata              => mm_interconnect_0_niosv_timer_sw_agent_writedata,          --                                      .writedata
-			niosv_timer_sw_agent_byteenable             => mm_interconnect_0_niosv_timer_sw_agent_byteenable,         --                                      .byteenable
-			niosv_timer_sw_agent_readdatavalid          => mm_interconnect_0_niosv_timer_sw_agent_readdatavalid,      --                                      .readdatavalid
-			niosv_timer_sw_agent_waitrequest            => mm_interconnect_0_niosv_timer_sw_agent_waitrequest,        --                                      .waitrequest
-			onchip_memory2_s1_address                   => mm_interconnect_0_onchip_memory2_s1_address,               --                     onchip_memory2_s1.address
-			onchip_memory2_s1_write                     => mm_interconnect_0_onchip_memory2_s1_write,                 --                                      .write
-			onchip_memory2_s1_readdata                  => mm_interconnect_0_onchip_memory2_s1_readdata,              --                                      .readdata
-			onchip_memory2_s1_writedata                 => mm_interconnect_0_onchip_memory2_s1_writedata,             --                                      .writedata
-			onchip_memory2_s1_byteenable                => mm_interconnect_0_onchip_memory2_s1_byteenable,            --                                      .byteenable
-			onchip_memory2_s1_chipselect                => mm_interconnect_0_onchip_memory2_s1_chipselect,            --                                      .chipselect
-			onchip_memory2_s1_clken                     => mm_interconnect_0_onchip_memory2_s1_clken,                 --                                      .clken
-			sys_clk_s1_address                          => mm_interconnect_0_sys_clk_s1_address,                      --                            sys_clk_s1.address
-			sys_clk_s1_write                            => mm_interconnect_0_sys_clk_s1_write,                        --                                      .write
-			sys_clk_s1_readdata                         => mm_interconnect_0_sys_clk_s1_readdata,                     --                                      .readdata
-			sys_clk_s1_writedata                        => mm_interconnect_0_sys_clk_s1_writedata,                    --                                      .writedata
-			sys_clk_s1_chipselect                       => mm_interconnect_0_sys_clk_s1_chipselect                    --                                      .chipselect
+			niosv_data_manager_awaddr                                              => niosv_data_manager_awaddr,                                      --                                               niosv_data_manager.awaddr
+			niosv_data_manager_awlen                                               => niosv_data_manager_awlen,                                       --                                                                 .awlen
+			niosv_data_manager_awsize                                              => niosv_data_manager_awsize,                                      --                                                                 .awsize
+			niosv_data_manager_awprot                                              => niosv_data_manager_awprot,                                      --                                                                 .awprot
+			niosv_data_manager_awvalid                                             => niosv_data_manager_awvalid,                                     --                                                                 .awvalid
+			niosv_data_manager_awready                                             => niosv_data_manager_awready,                                     --                                                                 .awready
+			niosv_data_manager_wdata                                               => niosv_data_manager_wdata,                                       --                                                                 .wdata
+			niosv_data_manager_wstrb                                               => niosv_data_manager_wstrb,                                       --                                                                 .wstrb
+			niosv_data_manager_wlast                                               => niosv_data_manager_wlast,                                       --                                                                 .wlast
+			niosv_data_manager_wvalid                                              => niosv_data_manager_wvalid,                                      --                                                                 .wvalid
+			niosv_data_manager_wready                                              => niosv_data_manager_wready,                                      --                                                                 .wready
+			niosv_data_manager_bresp                                               => niosv_data_manager_bresp,                                       --                                                                 .bresp
+			niosv_data_manager_bvalid                                              => niosv_data_manager_bvalid,                                      --                                                                 .bvalid
+			niosv_data_manager_bready                                              => niosv_data_manager_bready,                                      --                                                                 .bready
+			niosv_data_manager_araddr                                              => niosv_data_manager_araddr,                                      --                                                                 .araddr
+			niosv_data_manager_arlen                                               => niosv_data_manager_arlen,                                       --                                                                 .arlen
+			niosv_data_manager_arsize                                              => niosv_data_manager_arsize,                                      --                                                                 .arsize
+			niosv_data_manager_arprot                                              => niosv_data_manager_arprot,                                      --                                                                 .arprot
+			niosv_data_manager_arvalid                                             => niosv_data_manager_arvalid,                                     --                                                                 .arvalid
+			niosv_data_manager_arready                                             => niosv_data_manager_arready,                                     --                                                                 .arready
+			niosv_data_manager_rdata                                               => niosv_data_manager_rdata,                                       --                                                                 .rdata
+			niosv_data_manager_rresp                                               => niosv_data_manager_rresp,                                       --                                                                 .rresp
+			niosv_data_manager_rlast                                               => niosv_data_manager_rlast,                                       --                                                                 .rlast
+			niosv_data_manager_rvalid                                              => niosv_data_manager_rvalid,                                      --                                                                 .rvalid
+			niosv_data_manager_rready                                              => niosv_data_manager_rready,                                      --                                                                 .rready
+			niosv_instruction_manager_awaddr                                       => niosv_instruction_manager_awaddr,                               --                                        niosv_instruction_manager.awaddr
+			niosv_instruction_manager_awlen                                        => niosv_instruction_manager_awlen,                                --                                                                 .awlen
+			niosv_instruction_manager_awsize                                       => niosv_instruction_manager_awsize,                               --                                                                 .awsize
+			niosv_instruction_manager_awburst                                      => niosv_instruction_manager_awburst,                              --                                                                 .awburst
+			niosv_instruction_manager_awprot                                       => niosv_instruction_manager_awprot,                               --                                                                 .awprot
+			niosv_instruction_manager_awvalid                                      => niosv_instruction_manager_awvalid,                              --                                                                 .awvalid
+			niosv_instruction_manager_awready                                      => niosv_instruction_manager_awready,                              --                                                                 .awready
+			niosv_instruction_manager_wdata                                        => niosv_instruction_manager_wdata,                                --                                                                 .wdata
+			niosv_instruction_manager_wstrb                                        => niosv_instruction_manager_wstrb,                                --                                                                 .wstrb
+			niosv_instruction_manager_wlast                                        => niosv_instruction_manager_wlast,                                --                                                                 .wlast
+			niosv_instruction_manager_wvalid                                       => niosv_instruction_manager_wvalid,                               --                                                                 .wvalid
+			niosv_instruction_manager_wready                                       => niosv_instruction_manager_wready,                               --                                                                 .wready
+			niosv_instruction_manager_bresp                                        => niosv_instruction_manager_bresp,                                --                                                                 .bresp
+			niosv_instruction_manager_bvalid                                       => niosv_instruction_manager_bvalid,                               --                                                                 .bvalid
+			niosv_instruction_manager_bready                                       => niosv_instruction_manager_bready,                               --                                                                 .bready
+			niosv_instruction_manager_araddr                                       => niosv_instruction_manager_araddr,                               --                                                                 .araddr
+			niosv_instruction_manager_arlen                                        => niosv_instruction_manager_arlen,                                --                                                                 .arlen
+			niosv_instruction_manager_arsize                                       => niosv_instruction_manager_arsize,                               --                                                                 .arsize
+			niosv_instruction_manager_arburst                                      => niosv_instruction_manager_arburst,                              --                                                                 .arburst
+			niosv_instruction_manager_arprot                                       => niosv_instruction_manager_arprot,                               --                                                                 .arprot
+			niosv_instruction_manager_arvalid                                      => niosv_instruction_manager_arvalid,                              --                                                                 .arvalid
+			niosv_instruction_manager_arready                                      => niosv_instruction_manager_arready,                              --                                                                 .arready
+			niosv_instruction_manager_rdata                                        => niosv_instruction_manager_rdata,                                --                                                                 .rdata
+			niosv_instruction_manager_rresp                                        => niosv_instruction_manager_rresp,                                --                                                                 .rresp
+			niosv_instruction_manager_rlast                                        => niosv_instruction_manager_rlast,                                --                                                                 .rlast
+			niosv_instruction_manager_rvalid                                       => niosv_instruction_manager_rvalid,                               --                                                                 .rvalid
+			niosv_instruction_manager_rready                                       => niosv_instruction_manager_rready,                               --                                                                 .rready
+			mem_if_ddr3_emif_fpga_afi_clk_clk                                      => mem_if_ddr3_emif_fpga_afi_clk_clk,                              --                                    mem_if_ddr3_emif_fpga_afi_clk.clk
+			pll_outclk0_clk                                                        => pll_outclk0_clk,                                                --                                                      pll_outclk0.clk
+			jtag_uart_reset_reset_bridge_in_reset_reset                            => rst_controller_reset_out_reset,                                 --                            jtag_uart_reset_reset_bridge_in_reset.reset
+			mem_if_ddr3_emif_fpga_avl_translator_reset_reset_bridge_in_reset_reset => rst_controller_002_reset_out_reset,                             -- mem_if_ddr3_emif_fpga_avl_translator_reset_reset_bridge_in_reset.reset
+			mem_if_ddr3_emif_fpga_soft_reset_reset_bridge_in_reset_reset           => rst_controller_002_reset_out_reset,                             --           mem_if_ddr3_emif_fpga_soft_reset_reset_bridge_in_reset.reset
+			niosv_reset_reset_bridge_in_reset_reset                                => rst_controller_001_reset_out_reset,                             --                                niosv_reset_reset_bridge_in_reset.reset
+			jtag_uart_avalon_jtag_slave_address                                    => mm_interconnect_0_jtag_uart_avalon_jtag_slave_address,          --                                      jtag_uart_avalon_jtag_slave.address
+			jtag_uart_avalon_jtag_slave_write                                      => mm_interconnect_0_jtag_uart_avalon_jtag_slave_write,            --                                                                 .write
+			jtag_uart_avalon_jtag_slave_read                                       => mm_interconnect_0_jtag_uart_avalon_jtag_slave_read,             --                                                                 .read
+			jtag_uart_avalon_jtag_slave_readdata                                   => mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata,         --                                                                 .readdata
+			jtag_uart_avalon_jtag_slave_writedata                                  => mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata,        --                                                                 .writedata
+			jtag_uart_avalon_jtag_slave_waitrequest                                => mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest,      --                                                                 .waitrequest
+			jtag_uart_avalon_jtag_slave_chipselect                                 => mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect,       --                                                                 .chipselect
+			key_s1_address                                                         => mm_interconnect_0_key_s1_address,                               --                                                           key_s1.address
+			key_s1_readdata                                                        => mm_interconnect_0_key_s1_readdata,                              --                                                                 .readdata
+			led_s1_address                                                         => mm_interconnect_0_led_s1_address,                               --                                                           led_s1.address
+			led_s1_write                                                           => mm_interconnect_0_led_s1_write,                                 --                                                                 .write
+			led_s1_readdata                                                        => mm_interconnect_0_led_s1_readdata,                              --                                                                 .readdata
+			led_s1_writedata                                                       => mm_interconnect_0_led_s1_writedata,                             --                                                                 .writedata
+			led_s1_chipselect                                                      => mm_interconnect_0_led_s1_chipselect,                            --                                                                 .chipselect
+			mem_if_ddr3_emif_fpga_avl_address                                      => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_address,            --                                        mem_if_ddr3_emif_fpga_avl.address
+			mem_if_ddr3_emif_fpga_avl_write                                        => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_write,              --                                                                 .write
+			mem_if_ddr3_emif_fpga_avl_read                                         => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_read,               --                                                                 .read
+			mem_if_ddr3_emif_fpga_avl_readdata                                     => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_readdata,           --                                                                 .readdata
+			mem_if_ddr3_emif_fpga_avl_writedata                                    => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_writedata,          --                                                                 .writedata
+			mem_if_ddr3_emif_fpga_avl_beginbursttransfer                           => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_beginbursttransfer, --                                                                 .beginbursttransfer
+			mem_if_ddr3_emif_fpga_avl_burstcount                                   => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_burstcount,         --                                                                 .burstcount
+			mem_if_ddr3_emif_fpga_avl_byteenable                                   => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_byteenable,         --                                                                 .byteenable
+			mem_if_ddr3_emif_fpga_avl_readdatavalid                                => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_readdatavalid,      --                                                                 .readdatavalid
+			mem_if_ddr3_emif_fpga_avl_waitrequest                                  => mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_inv,                --                                                                 .waitrequest
+			niosv_dm_agent_address                                                 => mm_interconnect_0_niosv_dm_agent_address,                       --                                                   niosv_dm_agent.address
+			niosv_dm_agent_write                                                   => mm_interconnect_0_niosv_dm_agent_write,                         --                                                                 .write
+			niosv_dm_agent_read                                                    => mm_interconnect_0_niosv_dm_agent_read,                          --                                                                 .read
+			niosv_dm_agent_readdata                                                => mm_interconnect_0_niosv_dm_agent_readdata,                      --                                                                 .readdata
+			niosv_dm_agent_writedata                                               => mm_interconnect_0_niosv_dm_agent_writedata,                     --                                                                 .writedata
+			niosv_dm_agent_readdatavalid                                           => mm_interconnect_0_niosv_dm_agent_readdatavalid,                 --                                                                 .readdatavalid
+			niosv_dm_agent_waitrequest                                             => mm_interconnect_0_niosv_dm_agent_waitrequest,                   --                                                                 .waitrequest
+			niosv_timer_sw_agent_address                                           => mm_interconnect_0_niosv_timer_sw_agent_address,                 --                                             niosv_timer_sw_agent.address
+			niosv_timer_sw_agent_write                                             => mm_interconnect_0_niosv_timer_sw_agent_write,                   --                                                                 .write
+			niosv_timer_sw_agent_read                                              => mm_interconnect_0_niosv_timer_sw_agent_read,                    --                                                                 .read
+			niosv_timer_sw_agent_readdata                                          => mm_interconnect_0_niosv_timer_sw_agent_readdata,                --                                                                 .readdata
+			niosv_timer_sw_agent_writedata                                         => mm_interconnect_0_niosv_timer_sw_agent_writedata,               --                                                                 .writedata
+			niosv_timer_sw_agent_byteenable                                        => mm_interconnect_0_niosv_timer_sw_agent_byteenable,              --                                                                 .byteenable
+			niosv_timer_sw_agent_readdatavalid                                     => mm_interconnect_0_niosv_timer_sw_agent_readdatavalid,           --                                                                 .readdatavalid
+			niosv_timer_sw_agent_waitrequest                                       => mm_interconnect_0_niosv_timer_sw_agent_waitrequest,             --                                                                 .waitrequest
+			sys_clk_s1_address                                                     => mm_interconnect_0_sys_clk_s1_address,                           --                                                       sys_clk_s1.address
+			sys_clk_s1_write                                                       => mm_interconnect_0_sys_clk_s1_write,                             --                                                                 .write
+			sys_clk_s1_readdata                                                    => mm_interconnect_0_sys_clk_s1_readdata,                          --                                                                 .readdata
+			sys_clk_s1_writedata                                                   => mm_interconnect_0_sys_clk_s1_writedata,                         --                                                                 .writedata
+			sys_clk_s1_chipselect                                                  => mm_interconnect_0_sys_clk_s1_chipselect                         --                                                                 .chipselect
 		);
 
 	irq_mapper : component niosv_irq_mapper
 		port map (
-			clk           => clk_50m_clk,                        --       clk.clk
+			clk           => pll_outclk0_clk,                    --       clk.clk
 			reset         => rst_controller_001_reset_out_reset, -- clk_reset.reset
 			receiver0_irq => irq_mapper_receiver0_irq,           -- receiver0.irq
 			receiver1_irq => irq_mapper_receiver1_irq,           -- receiver1.irq
@@ -764,7 +899,7 @@ begin
 			NUM_RESET_INPUTS          => 1,
 			OUTPUT_RESET_SYNC_EDGES   => "deassert",
 			SYNC_DEPTH                => 2,
-			RESET_REQUEST_PRESENT     => 1,
+			RESET_REQUEST_PRESENT     => 0,
 			RESET_REQ_WAIT_TIME       => 1,
 			MIN_RST_ASSERTION_TIME    => 3,
 			RESET_REQ_EARLY_DSRT_TIME => 1,
@@ -787,41 +922,41 @@ begin
 			ADAPT_RESET_REQUEST       => 0
 		)
 		port map (
-			reset_in0      => reset_50m_reset_n_ports_inv,        -- reset_in0.reset
-			clk            => clk_50m_clk,                        --       clk.clk
-			reset_out      => rst_controller_reset_out_reset,     -- reset_out.reset
-			reset_req      => rst_controller_reset_out_reset_req, --          .reset_req
-			reset_req_in0  => '0',                                -- (terminated)
-			reset_in1      => '0',                                -- (terminated)
-			reset_req_in1  => '0',                                -- (terminated)
-			reset_in2      => '0',                                -- (terminated)
-			reset_req_in2  => '0',                                -- (terminated)
-			reset_in3      => '0',                                -- (terminated)
-			reset_req_in3  => '0',                                -- (terminated)
-			reset_in4      => '0',                                -- (terminated)
-			reset_req_in4  => '0',                                -- (terminated)
-			reset_in5      => '0',                                -- (terminated)
-			reset_req_in5  => '0',                                -- (terminated)
-			reset_in6      => '0',                                -- (terminated)
-			reset_req_in6  => '0',                                -- (terminated)
-			reset_in7      => '0',                                -- (terminated)
-			reset_req_in7  => '0',                                -- (terminated)
-			reset_in8      => '0',                                -- (terminated)
-			reset_req_in8  => '0',                                -- (terminated)
-			reset_in9      => '0',                                -- (terminated)
-			reset_req_in9  => '0',                                -- (terminated)
-			reset_in10     => '0',                                -- (terminated)
-			reset_req_in10 => '0',                                -- (terminated)
-			reset_in11     => '0',                                -- (terminated)
-			reset_req_in11 => '0',                                -- (terminated)
-			reset_in12     => '0',                                -- (terminated)
-			reset_req_in12 => '0',                                -- (terminated)
-			reset_in13     => '0',                                -- (terminated)
-			reset_req_in13 => '0',                                -- (terminated)
-			reset_in14     => '0',                                -- (terminated)
-			reset_req_in14 => '0',                                -- (terminated)
-			reset_in15     => '0',                                -- (terminated)
-			reset_req_in15 => '0'                                 -- (terminated)
+			reset_in0      => reset_50m_reset_n_ports_inv,    -- reset_in0.reset
+			clk            => pll_outclk0_clk,                --       clk.clk
+			reset_out      => rst_controller_reset_out_reset, -- reset_out.reset
+			reset_req      => open,                           -- (terminated)
+			reset_req_in0  => '0',                            -- (terminated)
+			reset_in1      => '0',                            -- (terminated)
+			reset_req_in1  => '0',                            -- (terminated)
+			reset_in2      => '0',                            -- (terminated)
+			reset_req_in2  => '0',                            -- (terminated)
+			reset_in3      => '0',                            -- (terminated)
+			reset_req_in3  => '0',                            -- (terminated)
+			reset_in4      => '0',                            -- (terminated)
+			reset_req_in4  => '0',                            -- (terminated)
+			reset_in5      => '0',                            -- (terminated)
+			reset_req_in5  => '0',                            -- (terminated)
+			reset_in6      => '0',                            -- (terminated)
+			reset_req_in6  => '0',                            -- (terminated)
+			reset_in7      => '0',                            -- (terminated)
+			reset_req_in7  => '0',                            -- (terminated)
+			reset_in8      => '0',                            -- (terminated)
+			reset_req_in8  => '0',                            -- (terminated)
+			reset_in9      => '0',                            -- (terminated)
+			reset_req_in9  => '0',                            -- (terminated)
+			reset_in10     => '0',                            -- (terminated)
+			reset_req_in10 => '0',                            -- (terminated)
+			reset_in11     => '0',                            -- (terminated)
+			reset_req_in11 => '0',                            -- (terminated)
+			reset_in12     => '0',                            -- (terminated)
+			reset_req_in12 => '0',                            -- (terminated)
+			reset_in13     => '0',                            -- (terminated)
+			reset_req_in13 => '0',                            -- (terminated)
+			reset_in14     => '0',                            -- (terminated)
+			reset_req_in14 => '0',                            -- (terminated)
+			reset_in15     => '0',                            -- (terminated)
+			reset_req_in15 => '0'                             -- (terminated)
 		);
 
 	rst_controller_001 : component niosv_rst_controller_001
@@ -854,10 +989,75 @@ begin
 		port map (
 			reset_in0      => reset_50m_reset_n_ports_inv,        -- reset_in0.reset
 			reset_in1      => niosv_dbg_reset_out_reset,          -- reset_in1.reset
-			clk            => clk_50m_clk,                        --       clk.clk
+			clk            => pll_outclk0_clk,                    --       clk.clk
 			reset_out      => rst_controller_001_reset_out_reset, -- reset_out.reset
 			reset_req      => open,                               -- (terminated)
 			reset_req_in0  => '0',                                -- (terminated)
+			reset_req_in1  => '0',                                -- (terminated)
+			reset_in2      => '0',                                -- (terminated)
+			reset_req_in2  => '0',                                -- (terminated)
+			reset_in3      => '0',                                -- (terminated)
+			reset_req_in3  => '0',                                -- (terminated)
+			reset_in4      => '0',                                -- (terminated)
+			reset_req_in4  => '0',                                -- (terminated)
+			reset_in5      => '0',                                -- (terminated)
+			reset_req_in5  => '0',                                -- (terminated)
+			reset_in6      => '0',                                -- (terminated)
+			reset_req_in6  => '0',                                -- (terminated)
+			reset_in7      => '0',                                -- (terminated)
+			reset_req_in7  => '0',                                -- (terminated)
+			reset_in8      => '0',                                -- (terminated)
+			reset_req_in8  => '0',                                -- (terminated)
+			reset_in9      => '0',                                -- (terminated)
+			reset_req_in9  => '0',                                -- (terminated)
+			reset_in10     => '0',                                -- (terminated)
+			reset_req_in10 => '0',                                -- (terminated)
+			reset_in11     => '0',                                -- (terminated)
+			reset_req_in11 => '0',                                -- (terminated)
+			reset_in12     => '0',                                -- (terminated)
+			reset_req_in12 => '0',                                -- (terminated)
+			reset_in13     => '0',                                -- (terminated)
+			reset_req_in13 => '0',                                -- (terminated)
+			reset_in14     => '0',                                -- (terminated)
+			reset_req_in14 => '0',                                -- (terminated)
+			reset_in15     => '0',                                -- (terminated)
+			reset_req_in15 => '0'                                 -- (terminated)
+		);
+
+	rst_controller_002 : component niosv_rst_controller
+		generic map (
+			NUM_RESET_INPUTS          => 1,
+			OUTPUT_RESET_SYNC_EDGES   => "deassert",
+			SYNC_DEPTH                => 2,
+			RESET_REQUEST_PRESENT     => 0,
+			RESET_REQ_WAIT_TIME       => 1,
+			MIN_RST_ASSERTION_TIME    => 3,
+			RESET_REQ_EARLY_DSRT_TIME => 1,
+			USE_RESET_REQUEST_IN0     => 0,
+			USE_RESET_REQUEST_IN1     => 0,
+			USE_RESET_REQUEST_IN2     => 0,
+			USE_RESET_REQUEST_IN3     => 0,
+			USE_RESET_REQUEST_IN4     => 0,
+			USE_RESET_REQUEST_IN5     => 0,
+			USE_RESET_REQUEST_IN6     => 0,
+			USE_RESET_REQUEST_IN7     => 0,
+			USE_RESET_REQUEST_IN8     => 0,
+			USE_RESET_REQUEST_IN9     => 0,
+			USE_RESET_REQUEST_IN10    => 0,
+			USE_RESET_REQUEST_IN11    => 0,
+			USE_RESET_REQUEST_IN12    => 0,
+			USE_RESET_REQUEST_IN13    => 0,
+			USE_RESET_REQUEST_IN14    => 0,
+			USE_RESET_REQUEST_IN15    => 0,
+			ADAPT_RESET_REQUEST       => 0
+		)
+		port map (
+			reset_in0      => reset_50m_reset_n_ports_inv,        -- reset_in0.reset
+			clk            => mem_if_ddr3_emif_fpga_afi_clk_clk,  --       clk.clk
+			reset_out      => rst_controller_002_reset_out_reset, -- reset_out.reset
+			reset_req      => open,                               -- (terminated)
+			reset_req_in0  => '0',                                -- (terminated)
+			reset_in1      => '0',                                -- (terminated)
 			reset_req_in1  => '0',                                -- (terminated)
 			reset_in2      => '0',                                -- (terminated)
 			reset_req_in2  => '0',                                -- (terminated)
@@ -894,6 +1094,8 @@ begin
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_read;
 
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_write;
+
+	mm_interconnect_0_mem_if_ddr3_emif_fpga_avl_inv <= not mem_if_ddr3_emif_fpga_avl_waitrequest;
 
 	mm_interconnect_0_led_s1_write_ports_inv <= not mm_interconnect_0_led_s1_write;
 

@@ -44,19 +44,19 @@
 
 module niosv_mm_interconnect_0_router_002_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 1,
+     parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 5 
+               DEFAULT_DESTID = 3 
    )
-  (output [109 - 107 : 0] default_destination_id,
+  (output [111 - 109 : 0] default_destination_id,
    output [7-1 : 0] default_wr_channel,
    output [7-1 : 0] default_rd_channel,
    output [7-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[109 - 107 : 0];
+    DEFAULT_DESTID[111 - 109 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
@@ -93,7 +93,7 @@ module niosv_mm_interconnect_0_router_002
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [123-1 : 0]    sink_data,
+    input  [125-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,7 +102,7 @@ module niosv_mm_interconnect_0_router_002
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [123-1    : 0] src_data,
+    output reg [125-1    : 0] src_data,
     output reg [7-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -114,11 +114,11 @@ module niosv_mm_interconnect_0_router_002
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 109;
-    localparam PKT_DEST_ID_L = 107;
-    localparam PKT_PROTECTION_H = 113;
-    localparam PKT_PROTECTION_L = 111;
-    localparam ST_DATA_W = 123;
+    localparam PKT_DEST_ID_H = 111;
+    localparam PKT_DEST_ID_L = 109;
+    localparam PKT_PROTECTION_H = 115;
+    localparam PKT_PROTECTION_L = 113;
+    localparam ST_DATA_W = 125;
     localparam ST_CHANNEL_W = 7;
     localparam DECODER_TYPE = 0;
 
@@ -134,14 +134,14 @@ module niosv_mm_interconnect_0_router_002
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h40000 - 64'h0); 
-    localparam PAD1 = log2ceil(64'h50000 - 64'h40000); 
+    localparam PAD0 = log2ceil(64'h40000000 - 64'h0); 
+    localparam PAD1 = log2ceil(64'h40010000 - 64'h40000000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h50000;
+    localparam ADDR_RANGE = 64'h40010000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -189,16 +189,16 @@ module niosv_mm_interconnect_0_router_002
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x0 .. 0x40000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h0   ) begin
-            src_channel = 7'b10;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
-    end
-
-    // ( 0x40000 .. 0x50000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h40000   ) begin
+    // ( 0x0 .. 0x40000000 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 31'h0   ) begin
             src_channel = 7'b01;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+    end
+
+    // ( 0x40000000 .. 0x40010000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 31'h40000000   ) begin
+            src_channel = 7'b10;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
 end

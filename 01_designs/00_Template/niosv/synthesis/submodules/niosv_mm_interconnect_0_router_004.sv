@@ -49,14 +49,14 @@ module niosv_mm_interconnect_0_router_004_default_decode
                DEFAULT_RD_CHANNEL = 1,
                DEFAULT_DESTID = 0 
    )
-  (output [109 - 107 : 0] default_destination_id,
+  (output [111 - 109 : 0] default_destination_id,
    output [7-1 : 0] default_wr_channel,
    output [7-1 : 0] default_rd_channel,
    output [7-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[109 - 107 : 0];
+    DEFAULT_DESTID[111 - 109 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
@@ -93,7 +93,7 @@ module niosv_mm_interconnect_0_router_004
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [123-1 : 0]    sink_data,
+    input  [125-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,7 +102,7 @@ module niosv_mm_interconnect_0_router_004
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [123-1    : 0] src_data,
+    output reg [125-1    : 0] src_data,
     output reg [7-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -114,11 +114,11 @@ module niosv_mm_interconnect_0_router_004
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 109;
-    localparam PKT_DEST_ID_L = 107;
-    localparam PKT_PROTECTION_H = 113;
-    localparam PKT_PROTECTION_L = 111;
-    localparam ST_DATA_W = 123;
+    localparam PKT_DEST_ID_H = 111;
+    localparam PKT_DEST_ID_L = 109;
+    localparam PKT_PROTECTION_H = 115;
+    localparam PKT_PROTECTION_L = 113;
+    localparam ST_DATA_W = 125;
     localparam ST_CHANNEL_W = 7;
     localparam DECODER_TYPE = 1;
 

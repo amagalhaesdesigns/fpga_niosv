@@ -28,9 +28,9 @@
  -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.1V).
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
- --                  Bank 3A:       3.3V
- --                  Bank 3B:       2.5V
- --                  Bank 4A:       2.5V
+ --                  Bank 3A:       2.5V
+ --                  Bank 3B:       1.5V
+ --                  Bank 4A:       1.5V
  --                  Bank 5A:       3.3V
  --                  Bank 5B:       2.5V
  --                  Bank 6B:       2.5V
@@ -117,15 +117,15 @@ GND                          : AA6       : gnd    :                   :         
 DNU                          : AA7       :        :                   :         :           :                
 VCCA_FPLL                    : AA8       : power  :                   : 2.5V    :           :                
 GND                          : AA9       : gnd    :                   :         :           :                
-VCCPD3A                      : AA10      : power  :                   : 3.3V    : 3A        :                
+VCCPD3A                      : AA10      : power  :                   : 2.5V    : 3A        :                
 GND                          : AA11      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 3B        :                
+DDR3_CK_p[0]                 : AA14      : output : Differential 1.5-V SSTL Class I :         : 3B        : Y              
+DDR3_CK_n[0]                 : AA15      : output : Differential 1.5-V SSTL Class I :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA16      :        :                   :         : 4A        :                
-VCCIO4A                      : AA17      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 4A        :                
+VCCIO4A                      : AA17      : power  :                   : 1.5V    : 4A        :                
+DDR3_DQS_n[2]                : AA18      : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 4A        :                
@@ -146,13 +146,13 @@ GND                          : AB5       : gnd    :                   :         
 VCCH_GXBL                    : AB6       : power  :                   : 2.5V    :           :                
 GND                          : AB7       : gnd    :                   :         :           :                
 nCSO, DATA4                  : AB8       :        :                   :         : 3A        :                
-altera_reserved_tdo          : AB9       : output : 3.3-V LVTTL       :         : 3A        : N              
+altera_reserved_tdo          : AB9       : output : 2.5 V             :         : 3A        : N              
 VCCPGM                       : AB10      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 VCC_AUX                      : AB11      : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 3B        :                
-VCCIO3B                      : AB14      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 3B        :                
+VCCIO3B                      : AB14      : power  :                   : 1.5V    : 3B        :                
+DDR3_CS_n[0]                 : AB15      : output : SSTL-15 Class I   :         : 3B        : Y              
 VCC_AUX                      : AB16      : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4A        :                
 VCCPD3B4A                    : AB18      : power  :                   : 2.5V    : 3B, 4A    :                
@@ -172,13 +172,13 @@ GND                          : AC1       :        :                   :         
 GND                          : AC2       :        :                   :         : B0L       :                
 GND                          : AC3       : gnd    :                   :         :           :                
 GND                          : AC4       : gnd    :                   :         :           :                
-altera_reserved_tck          : AC5       : input  : 3.3-V LVTTL       :         : 3A        : N              
+altera_reserved_tck          : AC5       : input  : 2.5 V             :         : 3A        : N              
 GND                          : AC6       : gnd    :                   :         :           :                
 AS_DATA3, DATA3              : AC7       :        :                   :         : 3A        :                
 GND                          : AC8       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC9       :        :                   :         : 3A        :                
-VCCPD3A                      : AC10      : power  :                   : 3.3V    : 3A        :                
-VCCIO3A                      : AC11      : power  :                   : 3.3V    : 3A        :                
+VCCPD3A                      : AC10      : power  :                   : 2.5V    : 3A        :                
+VCCIO3A                      : AC11      : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC12      :        :                   :         : 3A        :                
 VCCPD3B4A                    : AC13      : power  :                   : 2.5V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC14      :        :                   :         : 3B        :                
@@ -187,8 +187,8 @@ GND                          : AC16      : gnd    :                   :         
 VCCPD3B4A                    : AC17      : power  :                   : 2.5V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC18      :        :                   :         : 4A        :                
 VCCPD3B4A                    : AC19      : power  :                   : 2.5V    : 3B, 4A    :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC20      :        :                   :         : 4A        :                
-VCCIO4A                      : AC21      : power  :                   : 2.5V    : 4A        :                
+DDR3_DQS_p[3]                : AC20      : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
+VCCIO4A                      : AC21      : power  :                   : 1.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC23      :        :                   :         : 4A        :                
 VREFB5AN0                    : AC24      : power  :                   :         : 5A        :                
@@ -205,18 +205,18 @@ GXB_NC                       : AD4       :        :                   :         
 GND                          : AD5       : gnd    :                   :         :           :                
 VREFB3AN0                    : AD6       : power  :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD7       :        :                   :         : 3A        :                
-VCCIO3A                      : AD8       : power  :                   : 3.3V    : 3A        :                
+VCCIO3A                      : AD8       : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD9       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD10      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3A        :                
-VCCIO3B                      : AD13      : power  :                   : 2.5V    : 3B        :                
+VCCIO3B                      : AD13      : power  :                   : 1.5V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD14      :        :                   :         : 3B        :                
 DNU                          : AD15      :        :                   :         :           :                
 VCCPD3B4A                    : AD16      : power  :                   : 2.5V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 4A        :                
-VCCIO4A                      : AD18      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4A        :                
+VCCIO4A                      : AD18      : power  :                   : 1.5V    : 4A        :                
+DDR3_DQS_n[3]                : AD19      : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 4A        :                
 VCC_AUX                      : AD22      : power  :                   : 2.5V    :           :                
@@ -236,23 +236,23 @@ AS_DATA1, DATA1              : AE5       :        :                   :         
 AS_DATA0, ASDO, DATA0        : AE6       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE7       :        :                   :         : 3A        :                
 AS_DATA2, DATA2              : AE8       :        :                   :         : 3A        :                
-iKey                         : AE9       : input  : 3.3-V LVCMOS      :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE9       :        :                   :         : 3A        :                
 GND                          : AE10      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE11      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE13      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE14      :        :                   :         : 3B        :                
-VCCIO3B                      : AE15      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE16      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE18      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4A        :                
+VCCIO3B                      : AE15      : power  :                   : 1.5V    : 3B        :                
+DDR3_ODT[0]                  : AE16      : output : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[1]                   : AE17      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[17]                  : AE18      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[16]                  : AE19      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 GND                          : AE20      : gnd    :                   :         :           :                
 VCCPD3B4A                    : AE21      : power  :                   : 2.5V    : 3B, 4A    :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4A        :                
+DDR3_DQ[29]                  : AE22      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[28]                  : AE23      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE24      :        :                   :         : 4A        :                
-VCCIO4A                      : AE25      : power  :                   : 2.5V    : 4A        :                
+VCCIO4A                      : AE25      : power  :                   : 1.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE26      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5A        :                
@@ -264,24 +264,24 @@ GND                          : AF3       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF4       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF5       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF6       :        :                   :         : 3A        :                
-VCCIO3A                      : AF7       : power  :                   : 3.3V    : 3A        :                
+VCCIO3A                      : AF7       : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF8       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :         : 3A        :                
-oLed                         : AF10      : output : 3.3-V LVCMOS      :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF11      :        :                   :         : 3B        :                
 GND                          : AF12      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF14      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF15      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF16      :        :                   :         : 4A        :                
+DDR3_DQ[3]                   : AF16      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 GND                          : AF17      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF18      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF19      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF20      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4A        :                
-VCCIO4A                      : AF22      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF23      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF24      :        :                   :         : 4A        :                
+DDR3_DQ[0]                   : AF18      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[13]                  : AF19      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[21]                  : AF20      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[20]                  : AF21      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+VCCIO4A                      : AF22      : power  :                   : 1.5V    : 4A        :                
+DDR3_DQ[25]                  : AF23      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[24]                  : AF24      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF25      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 4A        :                
 GND                          : AF27      : gnd    :                   :         :           :                
@@ -291,7 +291,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF30      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG1       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG2       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG3       :        :                   :         : 3A        :                
-VCCIO3A                      : AG4       : power  :                   : 3.3V    : 3A        :                
+VCCIO3A                      : AG4       : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG5       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG6       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG7       :        :                   :         : 3A        :                
@@ -299,20 +299,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :      
 GND                          : AG9       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG10      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG12      :        :                   :         : 3B        :                
+DDR3_A[14]                   : AG12      : output : SSTL-15 Class I   :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 3B        :                
 GND                          : AG14      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG15      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG16      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG17      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG18      :        :                   :         : 4A        :                
-VCCIO4A                      : AG19      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG20      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG21      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG22      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4A        :                
+DDR3_A[4]                    : AG15      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_DQ[2]                   : AG16      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_RZQ                     : AG17      : input  : SSTL-15           :         : 4A        : Y              
+DDR3_DQ[10]                  : AG18      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+VCCIO4A                      : AG19      : power  :                   : 1.5V    : 4A        :                
+DDR3_DQ[12]                  : AG20      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[5]                   : AG21      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[18]                  : AG22      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DM[1]                   : AG23      : output : SSTL-15 Class I   :         : 4A        : Y              
 GND                          : AG24      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
+DDR3_DQ[30]                  : AG25      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG27      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG28      :        :                   :         : 5A        :                
@@ -324,26 +324,26 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH3       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH4       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH5       :        :                   :         : 3A        :                
 GND                          : AH6       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 3B        :                
+DDR3_CAS_n[0]                : AH7       : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_RAS_n[0]                : AH8       : output : 1.5 V             :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH9       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH10      :        :                   :         : 3B        :                
+DDR3_BA[0]                   : AH10      : output : SSTL-15 Class I   :         : 3B        : Y              
 GND                          : AH11      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH13      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH14      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH15      :        :                   :         : 3B        :                
-VCCIO4A                      : AH16      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH17      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH18      :        :                   :         : 4A        :                
+DDR3_A[2]                    : AH12      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[8]                    : AH13      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[9]                    : AH14      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[5]                    : AH15      : output : SSTL-15 Class I   :         : 3B        : Y              
+VCCIO4A                      : AH16      : power  :                   : 1.5V    : 4A        :                
+DDR3_DM[0]                   : AH17      : output : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[7]                   : AH18      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH19      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH20      :        :                   :         : 4A        :                
+DDR3_DQ[4]                   : AH20      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 GND                          : AH21      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH22      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH23      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH24      :        :                   :         : 4A        :                
+DDR3_DQ[22]                  : AH23      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[15]                  : AH24      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4A        :                
-VCCIO4A                      : AH26      : power  :                   : 2.5V    : 4A        :                
+VCCIO4A                      : AH26      : power  :                   : 1.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH27      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH28      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH29      :        :                   :         : 5A        :                
@@ -353,28 +353,28 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AJ2       :        :                   :      
 GND                          : AJ3       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ4       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ5       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ6       :        :                   :         : 3B        :                
+DDR3_WE_n[0]                 : AJ6       : output : SSTL-15 Class I   :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ7       :        :                   :         : 3B        :                
-VCCIO3B                      : AJ8       : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ9       :        :                   :         : 3B        :                
+VCCIO3B                      : AJ8       : power  :                   : 1.5V    : 3B        :                
+DDR3_A[10]                   : AJ9       : output : SSTL-15 Class I   :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ10      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ12      :        :                   :         : 3B        :                
-VCCIO3B                      : AJ13      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ14      :        :                   :         : 3B        :                
+DDR3_BA[1]                   : AJ11      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[3]                    : AJ12      : output : SSTL-15 Class I   :         : 3B        : Y              
+VCCIO3B                      : AJ13      : power  :                   : 1.5V    : 3B        :                
+DDR3_A[0]                    : AJ14      : output : SSTL-15 Class I   :         : 3B        : Y              
 VREFB3BN0                    : AJ15      : power  :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ16      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ17      :        :                   :         : 4A        :                
+DDR3_DQ[6]                   : AJ16      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[9]                   : AJ17      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 GND                          : AJ18      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ19      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ20      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ21      :        :                   :         : 4A        :                
+DDR3_DQ[14]                  : AJ20      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_CKE[0]                  : AJ21      : output : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ22      :        :                   :         : 4A        :                
-VCCIO4A                      : AJ23      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ24      :        :                   :         : 4A        :                
+VCCIO4A                      : AJ23      : power  :                   : 1.5V    : 4A        :                
+DDR3_DQ[26]                  : AJ24      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ25      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ26      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ27      :        :                   :         : 4A        :                
+DDR3_DM[3]                   : AJ27      : output : SSTL-15 Class I   :         : 4A        : Y              
 GND                          : AJ28      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ29      :        :                   :         : 5A        :                
 GND                          : AJ30      : gnd    :                   :         :           :                
@@ -383,27 +383,27 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AK3       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK4       :        :                   :         : 3B        :                
 GND                          : AK5       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK6       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK7       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK8       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK9       :        :                   :         : 3B        :                
-VCCIO3B                      : AK10      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK12      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK13      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK14      :        :                   :         : 3B        :                
+DDR3_A[12]                   : AK7       : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[13]                   : AK8       : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[11]                   : AK9       : output : SSTL-15 Class I   :         : 3B        : Y              
+VCCIO3B                      : AK10      : power  :                   : 1.5V    : 3B        :                
+DDR3_BA[2]                   : AK11      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[6]                    : AK12      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[7]                    : AK13      : output : SSTL-15 Class I   :         : 3B        : Y              
+DDR3_A[1]                    : AK14      : output : SSTL-15 Class I   :         : 3B        : Y              
 GND                          : AK15      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK16      :        :                   :         : 4A        :                
-VREFB4AN0                    : AK17      : power  :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK18      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK19      :        :                   :         : 4A        :                
-VCCIO4A                      : AK20      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK21      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK22      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK23      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK24      :        :                   :         : 4A        :                
+VREFB4AN0                    : AK17      : power  :                   : 0.75V   : 4A        :                
+DDR3_DQ[8]                   : AK18      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[11]                  : AK19      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+VCCIO4A                      : AK20      : power  :                   : 1.5V    : 4A        :                
+DDR3_RESET_n                 : AK21      : output : 1.5 V             :         : 4A        : Y              
+DDR3_DQ[19]                  : AK22      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DM[2]                   : AK23      : output : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[23]                  : AK24      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 GND                          : AK25      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK26      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK27      :        :                   :         : 4A        :                
+DDR3_DQ[27]                  : AK26      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
+DDR3_DQ[31]                  : AK27      : bidir  : SSTL-15 Class I   :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK28      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK29      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 8A        :                
@@ -863,7 +863,7 @@ GND                          : U4        : gnd    :                   :         
 VCCE_GXBL                    : U5        : power  :                   : 1.1V    :           :                
 GND                          : U6        : gnd    :                   :         :           :                
 DCLK                         : U7        :        :                   :         : 3A        :                
-altera_reserved_tdi          : U8        : input  : 3.3-V LVTTL       :         : 3A        : N              
+altera_reserved_tdi          : U8        : input  : 2.5 V             :         : 3A        : N              
 GND                          : U9        : gnd    :                   :         :           :                
 VCC                          : U10       : power  :                   : 1.1V    :           :                
 GND                          : U11       : gnd    :                   :         :           :                
@@ -894,15 +894,15 @@ GND                          : V5        : gnd    :                   :         
 VCCH_GXBL                    : V6        : power  :                   : 2.5V    :           :                
 GND                          : V7        : gnd    :                   :         :           :                
 VCCA_FPLL                    : V8        : power  :                   : 2.5V    :           :                
-altera_reserved_tms          : V9        : input  : 3.3-V LVTTL       :         : 3A        : N              
+altera_reserved_tms          : V9        : input  : 2.5 V             :         : 3A        : N              
 GND                          : V10       : gnd    :                   :         :           :                
 VCC                          : V11       : power  :                   : 1.1V    :           :                
 GND                          : V12       : gnd    :                   :         :           :                
 VCC                          : V13       : power  :                   : 1.1V    :           :                
 GND                          : V14       : gnd    :                   :         :           :                
 VCC                          : V15       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V16       :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V17       :        :                   :         : 4A        :                
+DDR3_DQS_p[0]                : V16       : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
+DDR3_DQS_p[1]                : V17       : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V18       :        :                   :         : 4A        :                
 GND                          : V19       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 6B        :                
@@ -931,8 +931,8 @@ VCC                          : W12       : power  :                   : 1.1V    
 GND                          : W13       : gnd    :                   :         :           :                
 VCC                          : W14       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4A        :                
+DDR3_DQS_n[0]                : W16       : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
+DDR3_DQS_n[1]                : W17       : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
 GND                          : W18       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5A        :                
@@ -962,7 +962,7 @@ VCC                          : Y13       : power  :                   : 1.1V    
 GND                          : Y14       : gnd    :                   :         :           :                
 GND                          : Y15       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :         : 4A        :                
+DDR3_DQS_p[2]                : Y17       : bidir  : Differential 1.5-V SSTL Class I :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y18       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y19       :        :                   :         : 4A        :                
 GND                          : Y20       : gnd    :                   :         :           :                

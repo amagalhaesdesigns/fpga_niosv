@@ -567,7 +567,7 @@ always_comb
     assign s0_rdata        =     m0_rdata;
     assign s0_rvalid       =     m0_rvalid;
     assign m0_rready       =     s0_rready;
-    // Avoid QIS warning, master address will be always same or larger than slave
+    // Avoid QIS warning, master address will be always same or larger than slave
     // so only assign enough bit width from master to slave
     assign m0_awaddr       =     s0_awaddr[M0_ADDR_WIDTH-1 :0];
     assign m0_araddr       =     s0_araddr[M0_ADDR_WIDTH-1 :0];
