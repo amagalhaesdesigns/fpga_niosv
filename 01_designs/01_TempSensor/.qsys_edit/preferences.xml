@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="207" />
+   <irq preferredWidth="34" />
+   <export preferredWidth="270" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Processors and Peripherals/Peripherals,Library/Basic Functions/On Chip Memory,Library/Memory Interfaces and Controllers,Library/University Program/Generic IO,Library/Processors and Peripherals,Project,Library,Library/Basic Functions,Library/University Program,Library/Interface Protocols,Library/Interface Protocols/Serial,Library/Memory Interfaces and Controllers/Flash" />
+ <window width="1938" height="1038" x="-9" y="-9" />
+ <generation synthesis="VHDL" path="niosv" />
+ <hdlexample language="VHDL" />
+</preferences>

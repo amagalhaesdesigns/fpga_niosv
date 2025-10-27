@@ -1,0 +1,8 @@
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/CMakeFiles/main.elf.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/CMakeFiles/create-objdump.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/CMakeFiles/niosv-stack-report.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/CMakeFiles/edit_cache.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/CMakeFiles/rebuild_cache.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/bsp/CMakeFiles/freertos_bsp.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/bsp/CMakeFiles/edit_cache.dir
+C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debugg/bsp/CMakeFiles/rebuild_cache.dir

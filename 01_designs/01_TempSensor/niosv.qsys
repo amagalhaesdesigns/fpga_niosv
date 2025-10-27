@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element adt7301
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element adt7301.spi_control_port
+   {
+      datum baseAddress
+      {
+         value = "1073807424";
+         type = "String";
+      }
+   }
+   element clk_50m
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element jtag_uart
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element jtag_uart.avalon_jtag_slave
+   {
+      datum baseAddress
+      {
+         value = "1073807488";
+         type = "String";
+      }
+   }
+   element mem_if_ddr3_emif_fpga
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element mem_if_ddr3_emif_fpga.avl
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
+      }
+   }
+   element niosv
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element niosv.data_manager
+   {
+      datum color
+      {
+         value = "-13421569";
+         type = "int";
+      }
+   }
+   element niosv.dm_agent
+   {
+      datum baseAddress
+      {
+         value = "1073741824";
+         type = "String";
+      }
+   }
+   element niosv.timer_sw_agent
+   {
+      datum baseAddress
+      {
+         value = "1073807360";
+         type = "String";
+      }
+   }
+   element pll
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element sys_clk
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element sys_clk.s1
+   {
+      datum baseAddress
+      {
+         value = "1073807456";
+         type = "String";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6D6F31C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="fpga_niosv.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="adt7301" internal="adt7301.external" type="conduit" dir="end" />
+ <interface name="clk_50m" internal="clk_50m.clk_in" type="clock" dir="end" />
+ <interface
+   name="mem_if_ddr3_emif_fpga_pll_sharing"
+   internal="mem_if_ddr3_emif_fpga.pll_sharing"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="mem_if_ddr3_emif_fpga_status"
+   internal="mem_if_ddr3_emif_fpga.status"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="memory"
+   internal="mem_if_ddr3_emif_fpga.memory"
+   type="conduit"
+   dir="end" />
+ <interface name="niosv_cpu_ecc_status" internal="niosv.cpu_ecc_status" />
+ <interface
+   name="oct"
+   internal="mem_if_ddr3_emif_fpga.oct"
+   type="conduit"
+   dir="end" />
+ <interface name="pll_locked" internal="pll.locked" type="conduit" dir="end" />
+ <interface
+   name="reset_50m"
+   internal="clk_50m.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <module name="adt7301" kind="altera_avalon_spi" version="23.1" enabled="1">
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="clockPhase" value="1" />
+  <parameter name="clockPolarity" value="1" />
+  <parameter name="dataWidth" value="8" />
+  <parameter name="disableAvalonFlowControl" value="false" />
+  <parameter name="inputClockRate" value="50000000" />
+  <parameter name="insertDelayBetweenSlaveSelectAndSClk" value="false" />
+  <parameter name="insertSync" value="false" />
+  <parameter name="lsbOrderedFirst" value="false" />
+  <parameter name="masterSPI" value="true" />
+  <parameter name="numberOfSlaves" value="1" />
+  <parameter name="syncRegDepth" value="2" />
+  <parameter name="targetClockRate" value="500000" />
+  <parameter name="targetSlaveSelectToSClkDelay" value="0.0" />
+ </module>
+ <module name="clk_50m" kind="clock_source" version="23.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="jtag_uart"
+   kind="altera_avalon_jtag_uart"
+   version="23.1"
+   enabled="1">
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="clkFreq" value="50000000" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="simInteractiveOptions">NO_INTERACTIVE_WINDOWS</parameter>
+  <parameter name="useRegistersForReadBuffer" value="false" />
+  <parameter name="useRegistersForWriteBuffer" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="writeIRQThreshold" value="8" />
+ </module>
+ <module
+   name="mem_if_ddr3_emif_fpga"
+   kind="altera_mem_if_ddr3_emif"
+   version="23.1"
+   enabled="1">
+  <parameter name="ABSTRACT_REAL_COMPARE_TEST" value="false" />
+  <parameter name="ABS_RAM_MEM_INIT_FILENAME" value="meminit" />
+  <parameter name="ACV_PHY_CLK_ADD_FR_PHASE" value="0.0" />
+  <parameter name="AC_PACKAGE_DESKEW" value="false" />
+  <parameter name="AC_ROM_USER_ADD_0" value="0_0000_0000_0000" />
+  <parameter name="AC_ROM_USER_ADD_1" value="0_0000_0000_1000" />
+  <parameter name="ADDR_ORDER" value="0" />
+  <parameter name="ADD_EFFICIENCY_MONITOR" value="false" />
+  <parameter name="ADD_EXTERNAL_SEQ_DEBUG_NIOS" value="false" />
+  <parameter name="ADVANCED_CK_PHASES" value="false" />
+  <parameter name="ADVERTIZE_SEQUENCER_SW_BUILD_FILES" value="false" />
+  <parameter name="AFI_DEBUG_INFO_WIDTH" value="32" />
+  <parameter name="ALTMEMPHY_COMPATIBLE_MODE" value="false" />
+  <parameter name="AP_MODE" value="false" />
+  <parameter name="AP_MODE_EN" value="0" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6D6F31C8ES" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8_H6" />
+  <parameter name="AUTO_PD_CYCLES" value="0" />
+  <parameter name="AUTO_POWERDN_EN" value="false" />
+  <parameter name="AVL_DATA_WIDTH_PORT" value="32,32,32,32,32,32" />
+  <parameter name="AVL_MAX_SIZE" value="4" />
+  <parameter name="BYTE_ENABLE" value="true" />
+  <parameter name="C2P_WRITE_CLOCK_ADD_PHASE" value="0.0" />
+  <parameter name="CALIBRATION_MODE" value="Full" />
+  <parameter name="CALIB_REG_WIDTH" value="8" />
+  <parameter name="CFG_DATA_REORDERING_TYPE" value="INTER_BANK" />
+  <parameter name="CFG_REORDER_DATA" value="true" />
+  <parameter name="CFG_TCCD_NS" value="2.5" />
+  <parameter name="COMMAND_PHASE" value="0.0" />
+  <parameter name="CONTROLLER_LATENCY" value="5" />
+  <parameter name="CORE_DEBUG_CONNECTION" value="EXPORT" />
+  <parameter name="CPORT_TYPE_PORT">Bidirectional,Bidirectional,Bidirectional,Bidirectional,Bidirectional,Bidirectional</parameter>
+  <parameter name="CTL_AUTOPCH_EN" value="false" />
+  <parameter name="CTL_CMD_QUEUE_DEPTH" value="8" />
+  <parameter name="CTL_CSR_CONNECTION" value="INTERNAL_JTAG" />
+  <parameter name="CTL_CSR_ENABLED" value="false" />
+  <parameter name="CTL_CSR_READ_ONLY" value="1" />
+  <parameter name="CTL_DEEP_POWERDN_EN" value="false" />
+  <parameter name="CTL_DYNAMIC_BANK_ALLOCATION" value="false" />
+  <parameter name="CTL_DYNAMIC_BANK_NUM" value="4" />
+  <parameter name="CTL_ECC_AUTO_CORRECTION_ENABLED" value="false" />
+  <parameter name="CTL_ECC_ENABLED" value="false" />
+  <parameter name="CTL_ENABLE_BURST_INTERRUPT" value="false" />
+  <parameter name="CTL_ENABLE_BURST_TERMINATE" value="false" />
+  <parameter name="CTL_HRB_ENABLED" value="false" />
+  <parameter name="CTL_LOOK_AHEAD_DEPTH" value="4" />
+  <parameter name="CTL_SELF_REFRESH_EN" value="false" />
+  <parameter name="CTL_USR_REFRESH_EN" value="false" />
+  <parameter name="CTL_ZQCAL_EN" value="false" />
+  <parameter name="CUT_NEW_FAMILY_TIMING" value="true" />
+  <parameter name="DAT_DATA_WIDTH" value="32" />
+  <parameter name="DEBUG_MODE" value="false" />
+  <parameter name="DEVICE_DEPTH" value="1" />
+  <parameter name="DEVICE_FAMILY_PARAM" value="" />
+  <parameter name="DISABLE_CHILD_MESSAGING" value="false" />
+  <parameter name="DISCRETE_FLY_BY" value="true" />
+  <parameter name="DLL_SHARING_MODE" value="None" />
+  <parameter name="DQS_DQSN_MODE" value="DIFFERENTIAL" />
+  <parameter name="DQ_INPUT_REG_USE_CLKN" value="false" />
+  <parameter name="DUPLICATE_AC" value="false" />
+  <parameter name="ED_EXPORT_SEQ_DEBUG" value="false" />
+  <parameter name="ENABLE_ABS_RAM_MEM_INIT" value="false" />
+  <parameter name="ENABLE_BONDING" value="false" />
+  <parameter name="ENABLE_BURST_MERGE" value="false" />
+  <parameter name="ENABLE_CTRL_AVALON_INTERFACE" value="true" />
+  <parameter name="ENABLE_DELAY_CHAIN_WRITE" value="false" />
+  <parameter name="ENABLE_EMIT_BFM_MASTER" value="false" />
+  <parameter name="ENABLE_EXPORT_SEQ_DEBUG_BRIDGE" value="false" />
+  <parameter name="ENABLE_EXTRA_REPORTING" value="false" />
+  <parameter name="ENABLE_ISS_PROBES" value="false" />
+  <parameter name="ENABLE_NON_DESTRUCTIVE_CALIB" value="false" />
+  <parameter name="ENABLE_NON_DES_CAL" value="false" />
+  <parameter name="ENABLE_NON_DES_CAL_TEST" value="false" />
+  <parameter name="ENABLE_SEQUENCER_MARGINING_ON_BY_DEFAULT" value="false" />
+  <parameter name="ENABLE_USER_ECC" value="false" />
+  <parameter name="EXPORT_AFI_HALF_CLK" value="false" />
+  <parameter name="EXTRA_SETTINGS" value="" />
+  <parameter name="FIX_READ_LATENCY" value="8" />
+  <parameter name="FORCED_NON_LDC_ADDR_CMD_MEM_CK_INVERT" value="false" />
+  <parameter name="FORCED_NUM_WRITE_FR_CYCLE_SHIFTS" value="0" />
+  <parameter name="FORCE_DQS_TRACKING" value="AUTO" />
+  <parameter name="FORCE_MAX_LATENCY_COUNT_WIDTH" value="0" />
+  <parameter name="FORCE_SEQUENCER_TCL_DEBUG_MODE" value="false" />
+  <parameter name="FORCE_SHADOW_REGS" value="AUTO" />
+  <parameter name="FORCE_SYNTHESIS_LANGUAGE" value="" />
+  <parameter name="HARD_EMIF" value="false" />
+  <parameter name="HCX_COMPAT_MODE" value="false" />
+  <parameter name="HHP_HPS" value="false" />
+  <parameter name="HHP_HPS_SIMULATION" value="false" />
+  <parameter name="HHP_HPS_VERIFICATION" value="false" />
+  <parameter name="HPS_PROTOCOL" value="DEFAULT" />
+  <parameter name="INCLUDE_BOARD_DELAY_MODEL" value="false" />
+  <parameter name="INCLUDE_MULTIRANK_BOARD_DELAY_MODEL" value="false" />
+  <parameter name="IS_ES_DEVICE" value="false" />
+  <parameter name="LOCAL_ID_WIDTH" value="8" />
+  <parameter name="LRDIMM_EXTENDED_CONFIG">0x000000000000000000</parameter>
+  <parameter name="MARGIN_VARIATION_TEST" value="false" />
+  <parameter name="MAX_PENDING_RD_CMD" value="32" />
+  <parameter name="MAX_PENDING_WR_CMD" value="16" />
+  <parameter name="MEM_ASR" value="Manual" />
+  <parameter name="MEM_ATCL" value="Disabled" />
+  <parameter name="MEM_AUTO_LEVELING_MODE" value="true" />
+  <parameter name="MEM_BANKADDR_WIDTH" value="3" />
+  <parameter name="MEM_BL" value="OTF" />
+  <parameter name="MEM_BT" value="Sequential" />
+  <parameter name="MEM_CK_PHASE" value="0.0" />
+  <parameter name="MEM_CK_WIDTH" value="1" />
+  <parameter name="MEM_CLK_EN_WIDTH" value="1" />
+  <parameter name="MEM_CLK_FREQ" value="300.0" />
+  <parameter name="MEM_CLK_FREQ_MAX" value="400.0" />
+  <parameter name="MEM_COL_ADDR_WIDTH" value="10" />
+  <parameter name="MEM_CS_WIDTH" value="1" />
+  <parameter name="MEM_DEVICE" value="MISSING_MODEL" />
+  <parameter name="MEM_DLL_EN" value="true" />
+  <parameter name="MEM_DQ_PER_DQS" value="8" />
+  <parameter name="MEM_DQ_WIDTH" value="32" />
+  <parameter name="MEM_DRV_STR" value="RZQ/7" />
+  <parameter name="MEM_FORMAT" value="DISCRETE" />
+  <parameter name="MEM_GUARANTEED_WRITE_INIT" value="false" />
+  <parameter name="MEM_IF_BOARD_BASE_DELAY" value="10" />
+  <parameter name="MEM_IF_DM_PINS_EN" value="true" />
+  <parameter name="MEM_IF_DQSN_EN" value="true" />
+  <parameter name="MEM_IF_SIM_VALID_WINDOW" value="0" />
+  <parameter name="MEM_INIT_EN" value="false" />
+  <parameter name="MEM_INIT_FILE" value="" />
+  <parameter name="MEM_MIRROR_ADDRESSING" value="0" />
+  <parameter name="MEM_NUMBER_OF_DIMMS" value="1" />
+  <parameter name="MEM_NUMBER_OF_RANKS_PER_DEVICE" value="1" />
+  <parameter name="MEM_NUMBER_OF_RANKS_PER_DIMM" value="1" />
+  <parameter name="MEM_PD" value="DLL off" />
+  <parameter name="MEM_RANK_MULTIPLICATION_FACTOR" value="1" />
+  <parameter name="MEM_ROW_ADDR_WIDTH" value="15" />
+  <parameter name="MEM_RTT_NOM" value="RZQ/6" />
+  <parameter name="MEM_RTT_WR" value="RZQ/4" />
+  <parameter name="MEM_SRT" value="Normal" />
+  <parameter name="MEM_TCL" value="6" />
+  <parameter name="MEM_TFAW_NS" value="50.0" />
+  <parameter name="MEM_TINIT_US" value="500" />
+  <parameter name="MEM_TMRD_CK" value="4" />
+  <parameter name="MEM_TRAS_NS" value="37.5" />
+  <parameter name="MEM_TRCD_NS" value="15.0" />
+  <parameter name="MEM_TREFI_US" value="7.8" />
+  <parameter name="MEM_TRFC_NS" value="300.0" />
+  <parameter name="MEM_TRP_NS" value="15.0" />
+  <parameter name="MEM_TRRD_NS" value="13.2" />
+  <parameter name="MEM_TRTP_NS" value="13.2" />
+  <parameter name="MEM_TWR_NS" value="15.0" />
+  <parameter name="MEM_TWTR" value="4" />
+  <parameter name="MEM_USER_LEVELING_MODE" value="Leveling" />
+  <parameter name="MEM_VENDOR" value="JEDEC" />
+  <parameter name="MEM_VERBOSE" value="true" />
+  <parameter name="MEM_VOLTAGE" value="1.5V DDR3" />
+  <parameter name="MEM_WTCL" value="5" />
+  <parameter name="MRS_MIRROR_PING_PONG_ATSO" value="false" />
+  <parameter name="MULTICAST_EN" value="false" />
+  <parameter name="NEXTGEN" value="true" />
+  <parameter name="NIOS_ROM_DATA_WIDTH" value="32" />
+  <parameter name="NUM_DLL_SHARING_INTERFACES" value="1" />
+  <parameter name="NUM_EXTRA_REPORT_PATH" value="10" />
+  <parameter name="NUM_OCT_SHARING_INTERFACES" value="1" />
+  <parameter name="NUM_OF_PORTS" value="1" />
+  <parameter name="NUM_PLL_SHARING_INTERFACES" value="1" />
+  <parameter name="OCT_SHARING_MODE" value="None" />
+  <parameter name="P2C_READ_CLOCK_ADD_PHASE" value="0.0" />
+  <parameter name="PACKAGE_DESKEW" value="false" />
+  <parameter name="PARSE_FRIENDLY_DEVICE_FAMILY_PARAM" value="" />
+  <parameter name="PARSE_FRIENDLY_DEVICE_FAMILY_PARAM_VALID" value="false" />
+  <parameter name="PHY_CSR_CONNECTION" value="INTERNAL_JTAG" />
+  <parameter name="PHY_CSR_ENABLED" value="false" />
+  <parameter name="PHY_ONLY" value="false" />
+  <parameter name="PINGPONGPHY_EN" value="false" />
+  <parameter name="PLL_ADDR_CMD_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_ADDR_CMD_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_ADDR_CMD_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_ADDR_CMD_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_ADDR_CMD_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_ADDR_CMD_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_AFI_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_AFI_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_AFI_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_AFI_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_AFI_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_AFI_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_AFI_HALF_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_AFI_HALF_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_AFI_HALF_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_AFI_HALF_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_AFI_HALF_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_AFI_HALF_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_AFI_PHY_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_AFI_PHY_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_AFI_PHY_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_AFI_PHY_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_AFI_PHY_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_AFI_PHY_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_C2P_WRITE_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_C2P_WRITE_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_C2P_WRITE_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_C2P_WRITE_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_C2P_WRITE_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_C2P_WRITE_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_CLK_PARAM_VALID" value="false" />
+  <parameter name="PLL_CONFIG_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_CONFIG_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_CONFIG_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_CONFIG_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_CONFIG_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_CONFIG_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_DR_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_DR_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_DR_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_DR_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_DR_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_DR_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_HR_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_HR_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_HR_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_HR_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_HR_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_HR_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_LOCATION" value="Top_Bottom" />
+  <parameter name="PLL_MEM_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_MEM_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_MEM_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_MEM_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_MEM_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_MEM_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_NIOS_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_NIOS_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_NIOS_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_NIOS_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_NIOS_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_NIOS_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_P2C_READ_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_P2C_READ_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_P2C_READ_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_P2C_READ_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_P2C_READ_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_P2C_READ_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_SHARING_MODE" value="None" />
+  <parameter name="PLL_WRITE_CLK_DIV_PARAM" value="0" />
+  <parameter name="PLL_WRITE_CLK_FREQ_PARAM" value="0.0" />
+  <parameter name="PLL_WRITE_CLK_FREQ_SIM_STR_PARAM" value="" />
+  <parameter name="PLL_WRITE_CLK_MULT_PARAM" value="0" />
+  <parameter name="PLL_WRITE_CLK_PHASE_PS_PARAM" value="0" />
+  <parameter name="PLL_WRITE_CLK_PHASE_PS_SIM_STR_PARAM" value="" />
+  <parameter name="POWER_OF_TWO_BUS" value="false" />
+  <parameter name="PRIORITY_PORT" value="1,1,1,1,1,1" />
+  <parameter name="RATE" value="Half" />
+  <parameter name="RDIMM_CONFIG" value="0000000000000000" />
+  <parameter name="READ_DQ_DQS_CLOCK_SOURCE" value="INVERTED_DQS_BUS" />
+  <parameter name="READ_FIFO_SIZE" value="8" />
+  <parameter name="REFRESH_BURST_VALIDATION" value="false" />
+  <parameter name="REFRESH_INTERVAL" value="15000" />
+  <parameter name="REF_CLK_FREQ" value="50.0" />
+  <parameter name="REF_CLK_FREQ_MAX_PARAM" value="0.0" />
+  <parameter name="REF_CLK_FREQ_MIN_PARAM" value="0.0" />
+  <parameter name="REF_CLK_FREQ_PARAM_VALID" value="false" />
+  <parameter name="SEQUENCER_TYPE" value="NIOS" />
+  <parameter name="SEQ_MODE" value="0" />
+  <parameter name="SKIP_MEM_INIT" value="true" />
+  <parameter name="SOPC_COMPAT_RESET" value="false" />
+  <parameter name="SPEED_GRADE" value="8" />
+  <parameter name="STARVE_LIMIT" value="10" />
+  <parameter name="SYS_INFO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="TIMING_BOARD_AC_EYE_REDUCTION_H" value="0.0" />
+  <parameter name="TIMING_BOARD_AC_EYE_REDUCTION_SU" value="0.0" />
+  <parameter name="TIMING_BOARD_AC_SKEW" value="0.02" />
+  <parameter name="TIMING_BOARD_AC_SLEW_RATE" value="1.0" />
+  <parameter name="TIMING_BOARD_AC_TO_CK_SKEW" value="0.0" />
+  <parameter name="TIMING_BOARD_CK_CKN_SLEW_RATE" value="2.0" />
+  <parameter name="TIMING_BOARD_DELTA_DQS_ARRIVAL_TIME" value="0.0" />
+  <parameter name="TIMING_BOARD_DELTA_READ_DQS_ARRIVAL_TIME" value="0.0" />
+  <parameter name="TIMING_BOARD_DERATE_METHOD" value="AUTO" />
+  <parameter name="TIMING_BOARD_DQS_DQSN_SLEW_RATE" value="2.0" />
+  <parameter name="TIMING_BOARD_DQ_EYE_REDUCTION" value="0.0" />
+  <parameter name="TIMING_BOARD_DQ_SLEW_RATE" value="1.0" />
+  <parameter name="TIMING_BOARD_DQ_TO_DQS_SKEW" value="0.0" />
+  <parameter name="TIMING_BOARD_ISI_METHOD" value="AUTO" />
+  <parameter name="TIMING_BOARD_MAX_CK_DELAY" value="0.6" />
+  <parameter name="TIMING_BOARD_MAX_DQS_DELAY" value="0.6" />
+  <parameter name="TIMING_BOARD_READ_DQ_EYE_REDUCTION" value="0.0" />
+  <parameter name="TIMING_BOARD_SKEW_BETWEEN_DIMMS" value="0.05" />
+  <parameter name="TIMING_BOARD_SKEW_BETWEEN_DQS" value="0.02" />
+  <parameter name="TIMING_BOARD_SKEW_CKDQS_DIMM_MAX" value="0.01" />
+  <parameter name="TIMING_BOARD_SKEW_CKDQS_DIMM_MIN" value="-0.01" />
+  <parameter name="TIMING_BOARD_SKEW_WITHIN_DQS" value="0.02" />
+  <parameter name="TIMING_BOARD_TDH" value="0.0" />
+  <parameter name="TIMING_BOARD_TDS" value="0.0" />
+  <parameter name="TIMING_BOARD_TIH" value="0.0" />
+  <parameter name="TIMING_BOARD_TIS" value="0.0" />
+  <parameter name="TIMING_TDH" value="150" />
+  <parameter name="TIMING_TDQSCK" value="400" />
+  <parameter name="TIMING_TDQSCKDL" value="1200" />
+  <parameter name="TIMING_TDQSCKDM" value="900" />
+  <parameter name="TIMING_TDQSCKDS" value="450" />
+  <parameter name="TIMING_TDQSQ" value="200" />
+  <parameter name="TIMING_TDQSS" value="0.25" />
+  <parameter name="TIMING_TDS" value="75" />
+  <parameter name="TIMING_TDSH" value="0.2" />
+  <parameter name="TIMING_TDSS" value="0.2" />
+  <parameter name="TIMING_TIH" value="275" />
+  <parameter name="TIMING_TIS" value="200" />
+  <parameter name="TIMING_TQH" value="0.38" />
+  <parameter name="TIMING_TQSH" value="0.38" />
+  <parameter name="TRACKING_ERROR_TEST" value="false" />
+  <parameter name="TRACKING_WATCH_TEST" value="false" />
+  <parameter name="TREFI" value="35100" />
+  <parameter name="TRFC" value="350" />
+  <parameter name="USER_DEBUG_LEVEL" value="0" />
+  <parameter name="USE_AXI_ADAPTOR" value="false" />
+  <parameter name="USE_FAKE_PHY" value="false" />
+  <parameter name="USE_MEM_CLK_FREQ" value="false" />
+  <parameter name="USE_MM_ADAPTOR" value="true" />
+  <parameter name="USE_SEQUENCER_BFM" value="false" />
+  <parameter name="WEIGHT_PORT" value="0,0,0,0,0,0" />
+  <parameter name="WRBUFFER_ADDR_WIDTH" value="6" />
+ </module>
+ <module name="niosv" kind="intel_niosv_g" version="1.0.0" enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="4" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="4" />
+  <parameter name="AUTO_DATA_MANAGER_ADDRESS_WIDTH" value="AddressWidth = 31" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6D6F31C8ES" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8_H6" />
+  <parameter
+     name="AUTO_INSTRUCTION_MANAGER_ADDRESS_WIDTH"
+     value="AddressWidth = 31" />
+  <parameter name="AUTO_PLATFORM_IRQ_RX_INTERRUPTS_USED" value="7" />
+  <parameter name="CUSTOM_OP" value="" />
+  <parameter name="SUB_OP" value="" />
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="dataCacheSize" value="4096" />
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='mem_if_ddr3_emif_fpga.avl' start='0x0' end='0x40000000' type='altera_mem_if_ddr3_emif.avl' /><slave name='niosv.dm_agent' start='0x40000000' end='0x40010000' type='intel_niosv_g.dm_agent' /><slave name='niosv.timer_sw_agent' start='0x40010000' end='0x40010040' type='intel_niosv_g.timer_sw_agent' /><slave name='adt7301.spi_control_port' start='0x40010040' end='0x40010060' type='altera_avalon_spi.spi_control_port' /><slave name='sys_clk.s1' start='0x40010060' end='0x40010080' type='altera_avalon_timer.s1' /><slave name='jtag_uart.avalon_jtag_slave' start='0x40010080' end='0x40010088' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="deviceFamily" value="Cyclone V" />
+  <parameter name="dtcm1Base" value="0" />
+  <parameter name="dtcm1InitFile" value="" />
+  <parameter name="dtcm1Size" value="0" />
+  <parameter name="dtcm2Base" value="0" />
+  <parameter name="dtcm2InitFile" value="" />
+  <parameter name="dtcm2Size" value="0" />
+  <parameter name="enableDebug" value="true" />
+  <parameter name="enableDebugReset" value="true" />
+  <parameter name="enableECCLite" value="false" />
+  <parameter name="enableFPU" value="false" />
+  <parameter name="enableMulDiv" value="true" />
+  <parameter name="funct3" value="" />
+  <parameter name="funct7_l" value="" />
+  <parameter name="funct7_u" value="" />
+  <parameter name="instCacheSize" value="4096" />
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='mem_if_ddr3_emif_fpga.avl' start='0x0' end='0x40000000' type='altera_mem_if_ddr3_emif.avl' /><slave name='niosv.dm_agent' start='0x40000000' end='0x40010000' type='intel_niosv_g.dm_agent' /></address-map>]]></parameter>
+  <parameter name="itcm1Base" value="0" />
+  <parameter name="itcm1InitFile" value="" />
+  <parameter name="itcm1Size" value="0" />
+  <parameter name="itcm2Base" value="0" />
+  <parameter name="itcm2InitFile" value="" />
+  <parameter name="itcm2Size" value="0" />
+  <parameter name="mnemonic" value="" />
+  <parameter name="opcode" value="" />
+  <parameter name="peripheralRegionABase" value="0" />
+  <parameter name="peripheralRegionASize" value="65536" />
+  <parameter name="peripheralRegionBBase" value="0" />
+  <parameter name="peripheralRegionBSize" value="0" />
+  <parameter name="resetOffset" value="0" />
+  <parameter name="resetSlave">mem_if_ddr3_emif_fpga.avl</parameter>
+  <parameter name="useResetReq" value="false" />
+ </module>
+ <module name="pll" kind="altera_pll" version="23.1" enabled="1">
+  <parameter name="debug_print_output" value="false" />
+  <parameter name="debug_use_rbc_taf_method" value="false" />
+  <parameter name="device" value="5CSXFC6D6F31C8ES" />
+  <parameter name="device_family" value="Cyclone V" />
+  <parameter name="gui_active_clk" value="false" />
+  <parameter name="gui_actual_output_clock_frequency0" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency1" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency10" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency11" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency12" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency13" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency14" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency15" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency16" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency17" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency2" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency3" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency4" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency5" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency6" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency7" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency8" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency9" value="0 MHz" />
+  <parameter name="gui_actual_phase_shift0" value="0" />
+  <parameter name="gui_actual_phase_shift1" value="0" />
+  <parameter name="gui_actual_phase_shift10" value="0" />
+  <parameter name="gui_actual_phase_shift11" value="0" />
+  <parameter name="gui_actual_phase_shift12" value="0" />
+  <parameter name="gui_actual_phase_shift13" value="0" />
+  <parameter name="gui_actual_phase_shift14" value="0" />
+  <parameter name="gui_actual_phase_shift15" value="0" />
+  <parameter name="gui_actual_phase_shift16" value="0" />
+  <parameter name="gui_actual_phase_shift17" value="0" />
+  <parameter name="gui_actual_phase_shift2" value="0" />
+  <parameter name="gui_actual_phase_shift3" value="0" />
+  <parameter name="gui_actual_phase_shift4" value="0" />
+  <parameter name="gui_actual_phase_shift5" value="0" />
+  <parameter name="gui_actual_phase_shift6" value="0" />
+  <parameter name="gui_actual_phase_shift7" value="0" />
+  <parameter name="gui_actual_phase_shift8" value="0" />
+  <parameter name="gui_actual_phase_shift9" value="0" />
+  <parameter name="gui_cascade_counter0" value="false" />
+  <parameter name="gui_cascade_counter1" value="false" />
+  <parameter name="gui_cascade_counter10" value="false" />
+  <parameter name="gui_cascade_counter11" value="false" />
+  <parameter name="gui_cascade_counter12" value="false" />
+  <parameter name="gui_cascade_counter13" value="false" />
+  <parameter name="gui_cascade_counter14" value="false" />
+  <parameter name="gui_cascade_counter15" value="false" />
+  <parameter name="gui_cascade_counter16" value="false" />
+  <parameter name="gui_cascade_counter17" value="false" />
+  <parameter name="gui_cascade_counter2" value="false" />
+  <parameter name="gui_cascade_counter3" value="false" />
+  <parameter name="gui_cascade_counter4" value="false" />
+  <parameter name="gui_cascade_counter5" value="false" />
+  <parameter name="gui_cascade_counter6" value="false" />
+  <parameter name="gui_cascade_counter7" value="false" />
+  <parameter name="gui_cascade_counter8" value="false" />
+  <parameter name="gui_cascade_counter9" value="false" />
+  <parameter name="gui_cascade_outclk_index" value="0" />
+  <parameter name="gui_channel_spacing" value="0.0" />
+  <parameter name="gui_clk_bad" value="false" />
+  <parameter name="gui_device_speed_grade" value="1" />
+  <parameter name="gui_divide_factor_c0" value="1" />
+  <parameter name="gui_divide_factor_c1" value="1" />
+  <parameter name="gui_divide_factor_c10" value="1" />
+  <parameter name="gui_divide_factor_c11" value="1" />
+  <parameter name="gui_divide_factor_c12" value="1" />
+  <parameter name="gui_divide_factor_c13" value="1" />
+  <parameter name="gui_divide_factor_c14" value="1" />
+  <parameter name="gui_divide_factor_c15" value="1" />
+  <parameter name="gui_divide_factor_c16" value="1" />
+  <parameter name="gui_divide_factor_c17" value="1" />
+  <parameter name="gui_divide_factor_c2" value="1" />
+  <parameter name="gui_divide_factor_c3" value="1" />
+  <parameter name="gui_divide_factor_c4" value="1" />
+  <parameter name="gui_divide_factor_c5" value="1" />
+  <parameter name="gui_divide_factor_c6" value="1" />
+  <parameter name="gui_divide_factor_c7" value="1" />
+  <parameter name="gui_divide_factor_c8" value="1" />
+  <parameter name="gui_divide_factor_c9" value="1" />
+  <parameter name="gui_divide_factor_n" value="1" />
+  <parameter name="gui_dps_cntr" value="C0" />
+  <parameter name="gui_dps_dir" value="Positive" />
+  <parameter name="gui_dps_num" value="1" />
+  <parameter name="gui_dsm_out_sel" value="1st_order" />
+  <parameter name="gui_duty_cycle0" value="50" />
+  <parameter name="gui_duty_cycle1" value="50" />
+  <parameter name="gui_duty_cycle10" value="50" />
+  <parameter name="gui_duty_cycle11" value="50" />
+  <parameter name="gui_duty_cycle12" value="50" />
+  <parameter name="gui_duty_cycle13" value="50" />
+  <parameter name="gui_duty_cycle14" value="50" />
+  <parameter name="gui_duty_cycle15" value="50" />
+  <parameter name="gui_duty_cycle16" value="50" />
+  <parameter name="gui_duty_cycle17" value="50" />
+  <parameter name="gui_duty_cycle2" value="50" />
+  <parameter name="gui_duty_cycle3" value="50" />
+  <parameter name="gui_duty_cycle4" value="50" />
+  <parameter name="gui_duty_cycle5" value="50" />
+  <parameter name="gui_duty_cycle6" value="50" />
+  <parameter name="gui_duty_cycle7" value="50" />
+  <parameter name="gui_duty_cycle8" value="50" />
+  <parameter name="gui_duty_cycle9" value="50" />
+  <parameter name="gui_en_adv_params" value="false" />
+  <parameter name="gui_en_dps_ports" value="false" />
+  <parameter name="gui_en_phout_ports" value="false" />
+  <parameter name="gui_en_reconf" value="false" />
+  <parameter name="gui_enable_cascade_in" value="false" />
+  <parameter name="gui_enable_cascade_out" value="false" />
+  <parameter name="gui_enable_mif_dps" value="false" />
+  <parameter name="gui_feedback_clock" value="Global Clock" />
+  <parameter name="gui_frac_multiply_factor" value="1" />
+  <parameter name="gui_fractional_cout" value="32" />
+  <parameter name="gui_mif_generate" value="false" />
+  <parameter name="gui_multiply_factor" value="1" />
+  <parameter name="gui_number_of_clocks" value="2" />
+  <parameter name="gui_operation_mode" value="direct" />
+  <parameter name="gui_output_clock_frequency0" value="50.0" />
+  <parameter name="gui_output_clock_frequency1" value="1.0" />
+  <parameter name="gui_output_clock_frequency10" value="100.0" />
+  <parameter name="gui_output_clock_frequency11" value="100.0" />
+  <parameter name="gui_output_clock_frequency12" value="100.0" />
+  <parameter name="gui_output_clock_frequency13" value="100.0" />
+  <parameter name="gui_output_clock_frequency14" value="100.0" />
+  <parameter name="gui_output_clock_frequency15" value="100.0" />
+  <parameter name="gui_output_clock_frequency16" value="100.0" />
+  <parameter name="gui_output_clock_frequency17" value="100.0" />
+  <parameter name="gui_output_clock_frequency2" value="100.0" />
+  <parameter name="gui_output_clock_frequency3" value="100.0" />
+  <parameter name="gui_output_clock_frequency4" value="100.0" />
+  <parameter name="gui_output_clock_frequency5" value="100.0" />
+  <parameter name="gui_output_clock_frequency6" value="100.0" />
+  <parameter name="gui_output_clock_frequency7" value="100.0" />
+  <parameter name="gui_output_clock_frequency8" value="100.0" />
+  <parameter name="gui_output_clock_frequency9" value="100.0" />
+  <parameter name="gui_phase_shift0" value="0" />
+  <parameter name="gui_phase_shift1" value="0" />
+  <parameter name="gui_phase_shift10" value="0" />
+  <parameter name="gui_phase_shift11" value="0" />
+  <parameter name="gui_phase_shift12" value="0" />
+  <parameter name="gui_phase_shift13" value="0" />
+  <parameter name="gui_phase_shift14" value="0" />
+  <parameter name="gui_phase_shift15" value="0" />
+  <parameter name="gui_phase_shift16" value="0" />
+  <parameter name="gui_phase_shift17" value="0" />
+  <parameter name="gui_phase_shift2" value="0" />
+  <parameter name="gui_phase_shift3" value="0" />
+  <parameter name="gui_phase_shift4" value="0" />
+  <parameter name="gui_phase_shift5" value="0" />
+  <parameter name="gui_phase_shift6" value="0" />
+  <parameter name="gui_phase_shift7" value="0" />
+  <parameter name="gui_phase_shift8" value="0" />
+  <parameter name="gui_phase_shift9" value="0" />
+  <parameter name="gui_phase_shift_deg0" value="0.0" />
+  <parameter name="gui_phase_shift_deg1" value="0.0" />
+  <parameter name="gui_phase_shift_deg10" value="0.0" />
+  <parameter name="gui_phase_shift_deg11" value="0.0" />
+  <parameter name="gui_phase_shift_deg12" value="0.0" />
+  <parameter name="gui_phase_shift_deg13" value="0.0" />
+  <parameter name="gui_phase_shift_deg14" value="0.0" />
+  <parameter name="gui_phase_shift_deg15" value="0.0" />
+  <parameter name="gui_phase_shift_deg16" value="0.0" />
+  <parameter name="gui_phase_shift_deg17" value="0.0" />
+  <parameter name="gui_phase_shift_deg2" value="0.0" />
+  <parameter name="gui_phase_shift_deg3" value="0.0" />
+  <parameter name="gui_phase_shift_deg4" value="0.0" />
+  <parameter name="gui_phase_shift_deg5" value="0.0" />
+  <parameter name="gui_phase_shift_deg6" value="0.0" />
+  <parameter name="gui_phase_shift_deg7" value="0.0" />
+  <parameter name="gui_phase_shift_deg8" value="0.0" />
+  <parameter name="gui_phase_shift_deg9" value="0.0" />
+  <parameter name="gui_phout_division" value="1" />
+  <parameter name="gui_pll_auto_reset" value="Off" />
+  <parameter name="gui_pll_bandwidth_preset" value="Auto" />
+  <parameter name="gui_pll_cascading_mode">Create an adjpllin signal to connect with an upstream PLL</parameter>
+  <parameter name="gui_pll_mode" value="Integer-N PLL" />
+  <parameter name="gui_ps_units0" value="ps" />
+  <parameter name="gui_ps_units1" value="ps" />
+  <parameter name="gui_ps_units10" value="ps" />
+  <parameter name="gui_ps_units11" value="ps" />
+  <parameter name="gui_ps_units12" value="ps" />
+  <parameter name="gui_ps_units13" value="ps" />
+  <parameter name="gui_ps_units14" value="ps" />
+  <parameter name="gui_ps_units15" value="ps" />
+  <parameter name="gui_ps_units16" value="ps" />
+  <parameter name="gui_ps_units17" value="ps" />
+  <parameter name="gui_ps_units2" value="ps" />
+  <parameter name="gui_ps_units3" value="ps" />
+  <parameter name="gui_ps_units4" value="ps" />
+  <parameter name="gui_ps_units5" value="ps" />
+  <parameter name="gui_ps_units6" value="ps" />
+  <parameter name="gui_ps_units7" value="ps" />
+  <parameter name="gui_ps_units8" value="ps" />
+  <parameter name="gui_ps_units9" value="ps" />
+  <parameter name="gui_refclk1_frequency" value="100.0" />
+  <parameter name="gui_refclk_switch" value="false" />
+  <parameter name="gui_reference_clock_frequency" value="50.0" />
+  <parameter name="gui_switchover_delay" value="0" />
+  <parameter name="gui_switchover_mode">Automatic Switchover</parameter>
+  <parameter name="gui_use_locked" value="true" />
+ </module>
+ <module name="sys_clk" kind="altera_avalon_timer" version="23.1" enabled="1">
+  <parameter name="alwaysRun" value="false" />
+  <parameter name="counterSize" value="32" />
+  <parameter name="fixedPeriod" value="false" />
+  <parameter name="period" value="1" />
+  <parameter name="periodUnits" value="MSEC" />
+  <parameter name="resetOutput" value="false" />
+  <parameter name="snapshot" value="true" />
+  <parameter name="systemFrequency" value="50000000" />
+  <parameter name="timeoutPulseOutput" value="false" />
+  <parameter name="watchdogPulse" value="2" />
+ </module>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.data_manager"
+   end="jtag_uart.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x40010080" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.data_manager"
+   end="mem_if_ddr3_emif_fpga.avl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.data_manager"
+   end="niosv.dm_agent">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x40000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.data_manager"
+   end="sys_clk.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x40010060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.data_manager"
+   end="adt7301.spi_control_port">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x40010040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.data_manager"
+   end="niosv.timer_sw_agent">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x40010000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.instruction_manager"
+   end="mem_if_ddr3_emif_fpga.avl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="niosv.instruction_manager"
+   end="niosv.dm_agent">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x40000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="23.1" start="clk_50m.clk" end="pll.refclk" />
+ <connection kind="clock" version="23.1" start="pll.outclk0" end="niosv.clk" />
+ <connection kind="clock" version="23.1" start="pll.outclk0" end="sys_clk.clk" />
+ <connection kind="clock" version="23.1" start="pll.outclk0" end="jtag_uart.clk" />
+ <connection kind="clock" version="23.1" start="pll.outclk0" end="adt7301.clk" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="pll.outclk0"
+   end="mem_if_ddr3_emif_fpga.pll_ref_clk" />
+ <connection
+   kind="interrupt"
+   version="23.1"
+   start="niosv.platform_irq_rx"
+   end="jtag_uart.irq">
+  <parameter name="irqNumber" value="1" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="23.1"
+   start="niosv.platform_irq_rx"
+   end="sys_clk.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="23.1"
+   start="niosv.platform_irq_rx"
+   end="adt7301.irq">
+  <parameter name="irqNumber" value="2" />
+ </connection>
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_50m.clk_reset"
+   end="mem_if_ddr3_emif_fpga.global_reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_50m.clk_reset"
+   end="niosv.ndm_reset_in" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_50m.clk_reset"
+   end="jtag_uart.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_50m.clk_reset"
+   end="sys_clk.reset" />
+ <connection kind="reset" version="23.1" start="clk_50m.clk_reset" end="pll.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_50m.clk_reset"
+   end="niosv.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_50m.clk_reset"
+   end="adt7301.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_50m.clk_reset"
+   end="mem_if_ddr3_emif_fpga.soft_reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="niosv.dbg_reset_out"
+   end="niosv.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

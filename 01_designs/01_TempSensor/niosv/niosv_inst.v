@@ -1,0 +1,39 @@
+	niosv u0 (
+		.adt7301_MISO                                                (<connected-to-adt7301_MISO>),                                                //                           adt7301.MISO
+		.adt7301_MOSI                                                (<connected-to-adt7301_MOSI>),                                                //                                  .MOSI
+		.adt7301_SCLK                                                (<connected-to-adt7301_SCLK>),                                                //                                  .SCLK
+		.adt7301_SS_n                                                (<connected-to-adt7301_SS_n>),                                                //                                  .SS_n
+		.clk_50m_clk                                                 (<connected-to-clk_50m_clk>),                                                 //                           clk_50m.clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_clk               (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_clk>),               // mem_if_ddr3_emif_fpga_pll_sharing.pll_mem_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk             (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk>),             //                                  .pll_write_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_locked                (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_locked>),                //                                  .pll_locked
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk_pre_phy_clk (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_write_clk_pre_phy_clk>), //                                  .pll_write_clk_pre_phy_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_addr_cmd_clk          (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_addr_cmd_clk>),          //                                  .pll_addr_cmd_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_clk               (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_clk>),               //                                  .pll_avl_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_config_clk            (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_config_clk>),            //                                  .pll_config_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_phy_clk           (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_mem_phy_clk>),           //                                  .pll_mem_phy_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_afi_phy_clk               (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_afi_phy_clk>),               //                                  .afi_phy_clk
+		.mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_phy_clk           (<connected-to-mem_if_ddr3_emif_fpga_pll_sharing_pll_avl_phy_clk>),           //                                  .pll_avl_phy_clk
+		.mem_if_ddr3_emif_fpga_status_local_init_done                (<connected-to-mem_if_ddr3_emif_fpga_status_local_init_done>),                //      mem_if_ddr3_emif_fpga_status.local_init_done
+		.mem_if_ddr3_emif_fpga_status_local_cal_success              (<connected-to-mem_if_ddr3_emif_fpga_status_local_cal_success>),              //                                  .local_cal_success
+		.mem_if_ddr3_emif_fpga_status_local_cal_fail                 (<connected-to-mem_if_ddr3_emif_fpga_status_local_cal_fail>),                 //                                  .local_cal_fail
+		.memory_mem_a                                                (<connected-to-memory_mem_a>),                                                //                            memory.mem_a
+		.memory_mem_ba                                               (<connected-to-memory_mem_ba>),                                               //                                  .mem_ba
+		.memory_mem_ck                                               (<connected-to-memory_mem_ck>),                                               //                                  .mem_ck
+		.memory_mem_ck_n                                             (<connected-to-memory_mem_ck_n>),                                             //                                  .mem_ck_n
+		.memory_mem_cke                                              (<connected-to-memory_mem_cke>),                                              //                                  .mem_cke
+		.memory_mem_cs_n                                             (<connected-to-memory_mem_cs_n>),                                             //                                  .mem_cs_n
+		.memory_mem_dm                                               (<connected-to-memory_mem_dm>),                                               //                                  .mem_dm
+		.memory_mem_ras_n                                            (<connected-to-memory_mem_ras_n>),                                            //                                  .mem_ras_n
+		.memory_mem_cas_n                                            (<connected-to-memory_mem_cas_n>),                                            //                                  .mem_cas_n
+		.memory_mem_we_n                                             (<connected-to-memory_mem_we_n>),                                             //                                  .mem_we_n
+		.memory_mem_reset_n                                          (<connected-to-memory_mem_reset_n>),                                          //                                  .mem_reset_n
+		.memory_mem_dq                                               (<connected-to-memory_mem_dq>),                                               //                                  .mem_dq
+		.memory_mem_dqs                                              (<connected-to-memory_mem_dqs>),                                              //                                  .mem_dqs
+		.memory_mem_dqs_n                                            (<connected-to-memory_mem_dqs_n>),                                            //                                  .mem_dqs_n
+		.memory_mem_odt                                              (<connected-to-memory_mem_odt>),                                              //                                  .mem_odt
+		.oct_rzqin                                                   (<connected-to-oct_rzqin>),                                                   //                               oct.rzqin
+		.pll_locked_export                                           (<connected-to-pll_locked_export>),                                           //                        pll_locked.export
+		.reset_50m_reset_n                                           (<connected-to-reset_50m_reset_n>)                                            //                         reset_50m.reset_n
+	);
+

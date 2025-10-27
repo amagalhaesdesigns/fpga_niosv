@@ -1,0 +1,54 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst niosv.mem_if_ddr3_emif_fpga.dll0 -pg 1
+preplace inst niosv.pll -pg 1 -lvl 2 -y 280
+preplace inst niosv.mem_if_ddr3_emif_fpga.soft_reset -pg 1
+preplace inst niosv.key -pg 1 -lvl 3 -y 120
+preplace inst niosv.mem_if_ddr3_emif_fpga.c0.a0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.m0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.afi_half_clk -pg 1
+preplace inst niosv.niosv.dbg_mod -pg 1
+preplace inst niosv.niosv.timer_module -pg 1
+preplace inst niosv.niosv.clock_bridge -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.afi_reset_export -pg 1
+preplace inst niosv.led -pg 1 -lvl 3 -y 220
+preplace inst niosv.mem_if_ddr3_emif_fpga.afi_clk -pg 1
+preplace inst niosv.sys_clk -pg 1 -lvl 3 -y 420
+preplace inst niosv.mem_if_ddr3_emif_fpga.s0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga -pg 1 -lvl 3 -y 550
+preplace inst niosv -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst niosv.mem_if_ddr3_emif_fpga.pll_bridge -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.c0.ng0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.as0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.p0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.pll0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.afi_reset -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.global_reset -pg 1
+preplace inst niosv.niosv.debug_reset_bridge -pg 1
+preplace inst niosv.niosv.reset_bridge -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.oct0 -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.c0.afi_half_clk -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.c0.afi_clk -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.c0 -pg 1
+preplace inst niosv.niosv -pg 1 -lvl 1 -y 50
+preplace inst niosv.niosv.hart -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.c0.afi_reset -pg 1
+preplace inst niosv.mem_if_ddr3_emif_fpga.pll_ref_clk -pg 1
+preplace inst niosv.jtag_uart -pg 1 -lvl 3 -y 320
+preplace inst niosv.clk_50m -pg 1 -lvl 1 -y 300
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.key,(SLAVE)key.external_connection) 1 0 3 NJ 230 NJ 150 NJ
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.pll_locked,(SLAVE)pll.locked) 1 0 2 NJ 290 NJ
+preplace netloc FAN_OUT<net_container>niosv</net_container>(SLAVE)jtag_uart.irq,(MASTER)niosv.platform_irq_rx,(SLAVE)sys_clk.irq) 1 1 2 NJ 120 780
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)clk_50m.clk_in,(SLAVE)niosv.clk_50m) 1 0 1 NJ
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)mem_if_ddr3_emif_fpga.oct,(SLAVE)niosv.oct) 1 0 3 NJ 620 NJ 620 NJ
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.led,(SLAVE)led.external_connection) 1 0 3 NJ 250 NJ 250 NJ
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)clk_50m.clk_in_reset,(SLAVE)niosv.reset_50m) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>niosv</net_container>(SLAVE)led.clk,(MASTER)pll.outclk0,(SLAVE)sys_clk.clk,(SLAVE)mem_if_ddr3_emif_fpga.pll_ref_clk,(SLAVE)niosv.clk,(SLAVE)jtag_uart.clk,(SLAVE)key.clk) 1 0 3 230 270 NJ 270 800
+preplace netloc INTERCONNECT<net_container>niosv</net_container>(MASTER)niosv.data_manager,(MASTER)niosv.instruction_manager,(SLAVE)sys_clk.s1,(SLAVE)led.s1,(SLAVE)key.s1,(SLAVE)mem_if_ddr3_emif_fpga.avl,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)niosv.dm_agent,(SLAVE)niosv.timer_sw_agent) 1 0 3 250 210 580 100 840
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.memory,(SLAVE)mem_if_ddr3_emif_fpga.memory) 1 0 3 NJ 600 NJ 600 NJ
+preplace netloc POINT_TO_POINT<net_container>niosv</net_container>(SLAVE)pll.refclk,(MASTER)clk_50m.clk) 1 1 1 N
+preplace netloc INTERCONNECT<net_container>niosv</net_container>(SLAVE)niosv.ndm_reset_in,(SLAVE)jtag_uart.reset,(SLAVE)mem_if_ddr3_emif_fpga.global_reset,(MASTER)clk_50m.clk_reset,(SLAVE)sys_clk.reset,(SLAVE)mem_if_ddr3_emif_fpga.soft_reset,(MASTER)niosv.dbg_reset_out,(SLAVE)niosv.reset,(SLAVE)led.reset,(SLAVE)pll.reset,(SLAVE)key.reset) 1 0 3 270 190 600 80 820
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.mem_if_ddr3_emif_fpga_status,(SLAVE)mem_if_ddr3_emif_fpga.status) 1 0 3 NJ 700 NJ 700 NJ
+preplace netloc EXPORT<net_container>niosv</net_container>(SLAVE)niosv.mem_if_ddr3_emif_fpga_pll_sharing,(SLAVE)mem_if_ddr3_emif_fpga.pll_sharing) 1 0 3 NJ 660 NJ 660 NJ
+levelinfo -pg 1 0 200 1130
+levelinfo -hier niosv 210 380 650 940 1120
