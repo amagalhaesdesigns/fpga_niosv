@@ -4,7 +4,7 @@
  * Machine generated for CPU 'niosv' in SOPC Builder design 'niosv'
  * SOPC Builder design path: ../../niosv.sopcinfo
  *
- * Generated: Mon Oct 27 15:28:53 BRT 2025
+ * Generated: Tue Oct 28 17:01:32 BRT 2025
  */
 
 /*
@@ -163,8 +163,8 @@
 
 #define ADT7301_BASE 0x40010040
 #define ADT7301_CLOCKMULT 1
-#define ADT7301_CLOCKPHASE 1
-#define ADT7301_CLOCKPOLARITY 1
+#define ADT7301_CLOCKPHASE 0
+#define ADT7301_CLOCKPOLARITY 0
 #define ADT7301_CLOCKUNITS "Hz"
 #define ADT7301_DATABITS 8
 #define ADT7301_DATAWIDTH 16
@@ -181,7 +181,7 @@
 #define ADT7301_PREFIX "spi_"
 #define ADT7301_SPAN 32
 #define ADT7301_SYNC_REG_DEPTH 2
-#define ADT7301_TARGETCLOCK 500000u
+#define ADT7301_TARGETCLOCK 200000u
 #define ADT7301_TARGETSSDELAY "0.0"
 #define ADT7301_TYPE "altera_avalon_spi"
 #define ALT_MODULE_CLASS_adt7301 altera_avalon_spi

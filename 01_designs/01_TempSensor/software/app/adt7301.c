@@ -11,18 +11,19 @@
 
 float adt7301_read_temp(void)
 {
-    uint8_t dataTx[1] = {0x00};
-    uint8_t dataRx[2] = {0x00, 0x00};
+	const uint32_t write_length = 0;
+	const uint8_t *write_data = NULL;
+	uint8_t dataRx[2];
     uint16_t adcCode = 0;
-    float temperature = 0.0f;
+    float fTemp = 0.0f;
 
-    (void)alt_avalon_spi_command(ADT7301_BASE, 0, 1, dataTx, 1, dataRx, 0);
+    (void)alt_avalon_spi_command(ADT7301_BASE, 0, write_length, write_data, sizeof(dataRx), dataRx, 0);
 
-    adcCode = (dataRx[1] << 8) | (dataRx[0]);
+    adcCode = (dataRx[0] << 8) | (dataRx[1]);
 
-    temperature = (adcCode & 0x2000) ?
+    fTemp = (adcCode & 0x2000) ?
         (adcCode - 16384) / 32.0f :
         (adcCode / 32.0f);
 
-    return temperature;
+    return (fTemp);
 }

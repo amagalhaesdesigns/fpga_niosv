@@ -564,8 +564,8 @@ set_location_assignment PIN_W22 -to PCIE_WAKE_n
 set_location_assignment PIN_AE26 -to SI5338_SCL
 set_location_assignment PIN_AJ29 -to SI5338_SDA
 set_location_assignment PIN_AF8 -to TEMP_CS_n
-set_location_assignment PIN_AG7 -to TEMP_DIN
-set_location_assignment PIN_AG1 -to TEMP_DOUT
+set_location_assignment PIN_AG1 -to TEMP_DIN
+set_location_assignment PIN_AG7 -to TEMP_DOUT
 set_location_assignment PIN_AF9 -to TEMP_SCLK
 set_location_assignment PIN_AF13 -to USB_B2_CLK
 set_location_assignment PIN_AK28 -to USB_B2_DATA[0]
@@ -1178,5 +1178,9 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TEMP_CS_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TEMP_DIN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TEMP_DOUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TEMP_SCLK
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

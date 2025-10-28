@@ -12,7 +12,7 @@ set ::GLOBAL_niosv_mem_if_ddr3_emif_fpga_p0_dqs_group_size 8
 set ::GLOBAL_niosv_mem_if_ddr3_emif_fpga_p0_number_of_ck_pins 1
 set ::GLOBAL_niosv_mem_if_ddr3_emif_fpga_p0_number_of_dm_pins 4
 set ::GLOBAL_niosv_mem_if_ddr3_emif_fpga_p0_dqs_delay_chain_length 0
-set ::GLOBAL_niosv_mem_if_ddr3_emif_fpga_p0_uniphy_temp_ver_code 568623179
+set ::GLOBAL_niosv_mem_if_ddr3_emif_fpga_p0_uniphy_temp_ver_code 443814330
 # PLL Parameters
 
 #USER W A R N I N G !

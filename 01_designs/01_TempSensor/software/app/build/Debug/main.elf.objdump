@@ -39,23 +39,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   9 .debug_aranges 00000900  00000000  00000000  00027b70  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_info   00013be1  00000000  00000000  00028470  2**0
+ 10 .debug_info   00013c06  00000000  00000000  00028470  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_abbrev 00005d4d  00000000  00000000  0003c051  2**0
+ 11 .debug_abbrev 00005d44  00000000  00000000  0003c076  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_line   000151f1  00000000  00000000  00041d9e  2**0
+ 12 .debug_line   000151f1  00000000  00000000  00041dba  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_frame  00002b98  00000000  00000000  00056f90  2**2
+ 13 .debug_frame  00002b98  00000000  00000000  00056fac  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_str    000040f9  00000000  00000000  00059b28  2**0
+ 14 .debug_str    000040f8  00000000  00000000  00059b44  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_line_str 00001ebc  00000000  00000000  0005dc21  2**0
+ 15 .debug_line_str 00001ebc  00000000  00000000  0005dc3c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000058  00000000  00000000  0005fae0  2**3
+ 16 .debug_ranges 00000058  00000000  00000000  0005faf8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_rnglists 0000219b  00000000  00000000  0005fb38  2**0
+ 17 .debug_rnglists 0000219b  00000000  00000000  0005fb50  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_loclists 0000f110  00000000  00000000  00061cd3  2**0
+ 18 .debug_loclists 0000f110  00000000  00000000  00061ceb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -1271,47 +1271,48 @@ float adt7301_read_temp(void)
      3c4:	7847a703          	lw	a4,1924(a5) # 28784 <__stack_chk_guard>
      3c8:	fee42623          	sw	a4,-20(s0)
      3cc:	00000713          	li	a4,0
-    uint8_t dataTx[1] = {0x00};
-     3d0:	fe040223          	sb	zero,-28(s0)
-    uint8_t dataRx[2] = {0x00, 0x00};
-     3d4:	fe041423          	sh	zero,-24(s0)
+	const uint32_t write_length = 0;
+     3d0:	fc042e23          	sw	zero,-36(s0)
+	const uint8_t *write_data = NULL;
+     3d4:	fe042023          	sw	zero,-32(s0)
+	uint8_t dataRx[2];
     uint16_t adcCode = 0;
-     3d8:	fc041f23          	sh	zero,-34(s0)
-    float temperature = 0.0f;
+     3d8:	fc041d23          	sh	zero,-38(s0)
+    float fTemp = 0.0f;
      3dc:	00000793          	li	a5,0
-     3e0:	fef42023          	sw	a5,-32(s0)
+     3e0:	fef42223          	sw	a5,-28(s0)
 
-    (void)alt_avalon_spi_command(ADT7301_BASE, 0, 1, dataTx, 1, dataRx, 0);
+    (void)alt_avalon_spi_command(ADT7301_BASE, 0, write_length, write_data, sizeof(dataRx), dataRx, 0);
      3e4:	fe840793          	addi	a5,s0,-24
-     3e8:	fe440693          	addi	a3,s0,-28
-     3ec:	00000813          	li	a6,0
-     3f0:	00100713          	li	a4,1
-     3f4:	00100613          	li	a2,1
+     3e8:	00000813          	li	a6,0
+     3ec:	00200713          	li	a4,2
+     3f0:	fe042683          	lw	a3,-32(s0)
+     3f4:	fdc42603          	lw	a2,-36(s0)
      3f8:	00000593          	li	a1,0
      3fc:	40010537          	lui	a0,0x40010
      400:	04050513          	addi	a0,a0,64 # 40010040 <__alt_data_end+0x10040>
      404:	311070ef          	jal	ra,7f14 <alt_avalon_spi_command>
 
-    adcCode = (dataRx[1] << 8) | (dataRx[0]);
-     408:	fe944783          	lbu	a5,-23(s0)
+    adcCode = (dataRx[0] << 8) | (dataRx[1]);
+     408:	fe844783          	lbu	a5,-24(s0)
      40c:	00879793          	slli	a5,a5,0x8
      410:	01079713          	slli	a4,a5,0x10
      414:	41075713          	srai	a4,a4,0x10
-     418:	fe844783          	lbu	a5,-24(s0)
+     418:	fe944783          	lbu	a5,-23(s0)
      41c:	01079793          	slli	a5,a5,0x10
      420:	4107d793          	srai	a5,a5,0x10
      424:	00f767b3          	or	a5,a4,a5
      428:	01079793          	slli	a5,a5,0x10
      42c:	4107d793          	srai	a5,a5,0x10
-     430:	fcf41f23          	sh	a5,-34(s0)
+     430:	fcf41d23          	sh	a5,-38(s0)
 
-    temperature = (adcCode & 0x2000) ?
-     434:	fde45703          	lhu	a4,-34(s0)
+    fTemp = (adcCode & 0x2000) ?
+     434:	fda45703          	lhu	a4,-38(s0)
      438:	000027b7          	lui	a5,0x2
      43c:	00f777b3          	and	a5,a4,a5
         (adcCode - 16384) / 32.0f :
      440:	02078a63          	beqz	a5,474 <adt7301_read_temp+0xc4>
-     444:	fde45703          	lhu	a4,-34(s0)
+     444:	fda45703          	lhu	a4,-38(s0)
      448:	ffffc7b7          	lui	a5,0xffffc
      44c:	00f707b3          	add	a5,a4,a5
      450:	00078513          	mv	a0,a5
@@ -1324,7 +1325,7 @@ float adt7301_read_temp(void)
      46c:	00050793          	mv	a5,a0
      470:	0280006f          	j	498 <adt7301_read_temp+0xe8>
         (adcCode / 32.0f);
-     474:	fde45783          	lhu	a5,-34(s0)
+     474:	fda45783          	lhu	a5,-38(s0)
      478:	00078513          	mv	a0,a5
      47c:	104220ef          	jal	ra,22580 <__floatsisf>
      480:	00050713          	mv	a4,a0
@@ -1334,11 +1335,11 @@ float adt7301_read_temp(void)
      48c:	00070513          	mv	a0,a4
      490:	4f5210ef          	jal	ra,22184 <__divsf3>
      494:	00050793          	mv	a5,a0
-    temperature = (adcCode & 0x2000) ?
-     498:	fef42023          	sw	a5,-32(s0)
+    fTemp = (adcCode & 0x2000) ?
+     498:	fef42223          	sw	a5,-28(s0)
 
-    return temperature;
-     49c:	fe042783          	lw	a5,-32(s0)
+    return (fTemp);
+     49c:	fe442783          	lw	a5,-28(s0)
      4a0:	00078713          	mv	a4,a5
 }
      4a4:	000287b7          	lui	a5,0x28

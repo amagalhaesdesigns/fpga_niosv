@@ -173,8 +173,8 @@
    dir="end" />
  <module name="adt7301" kind="altera_avalon_spi" version="23.1" enabled="1">
   <parameter name="avalonSpec" value="2.0" />
-  <parameter name="clockPhase" value="1" />
-  <parameter name="clockPolarity" value="1" />
+  <parameter name="clockPhase" value="0" />
+  <parameter name="clockPolarity" value="0" />
   <parameter name="dataWidth" value="8" />
   <parameter name="disableAvalonFlowControl" value="false" />
   <parameter name="inputClockRate" value="50000000" />
@@ -184,7 +184,7 @@
   <parameter name="masterSPI" value="true" />
   <parameter name="numberOfSlaves" value="1" />
   <parameter name="syncRegDepth" value="2" />
-  <parameter name="targetClockRate" value="500000" />
+  <parameter name="targetClockRate" value="200000" />
   <parameter name="targetSlaveSelectToSClkDelay" value="0.0" />
  </module>
  <module name="clk_50m" kind="clock_source" version="23.1" enabled="1">

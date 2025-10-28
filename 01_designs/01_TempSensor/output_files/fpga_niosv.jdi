@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="c9d023ee6ecf5cae2e0a"/>
+    <hash md5_digest_80b="f4d23882ad494e04bbe7"/>
   </project>
   <file_info>
     <file device="5CSXFC6D6F31C8ES" path="fpga_niosv.sof" usercode="0xFFFFFFFF"/>
@@ -214,7 +214,7 @@
   <sld_infos>
     <sld_info hpath="niosv:fpga_niosv_inst" name="fpga_niosv_inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME niosv HAS_SOPCINFO 1 GENERATION_ID 1761480083"/>
+        <assignment_value text="QSYS_NAME niosv HAS_SOPCINFO 1 GENERATION_ID 1761656852"/>
       </assignment_values>
       <parameters/>
     </sld_info>

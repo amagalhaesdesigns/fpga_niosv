@@ -2,7 +2,7 @@ set_global_assignment -entity "niosv" -library "niosv" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_TOOL_VERSION "23.1"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "niosv" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../niosv.sopcinfo"]
-set_global_assignment -entity "niosv" -library "niosv" -name SLD_INFO "QSYS_NAME niosv HAS_SOPCINFO 1 GENERATION_ID 1761480083"
+set_global_assignment -entity "niosv" -library "niosv" -name SLD_INFO "QSYS_NAME niosv HAS_SOPCINFO 1 GENERATION_ID 1761656852"
 set_global_assignment -library "niosv" -name MISC_FILE [file join $::quartus(qip_path) "../niosv.cmp"]
 set_global_assignment -library "niosv" -name SLD_FILE [file join $::quartus(qip_path) "niosv.regmap"]
 set_global_assignment -library "niosv" -name SLD_FILE [file join $::quartus(qip_path) "niosv.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_DISPLA
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc2MTQ4MDA4Mw==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc2MTY1Njg1Mg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTWEZDNkQ2RjMxQzhFUw==::QXV0byBERVZJQ0U="
 set_global_assignment -entity "niosv" -library "niosv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OF9INg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -6937,8 +6937,8 @@ set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONEN
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_VERSION "MjMuMQ=="
-set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "Y2xvY2tQaGFzZQ==::MQ==::Q2xvY2sgcGhhc2U="
-set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "Y2xvY2tQb2xhcml0eQ==::MQ==::Q2xvY2sgcG9sYXJpdHk="
+set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "Y2xvY2tQaGFzZQ==::MA==::Q2xvY2sgcGhhc2U="
+set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "Y2xvY2tQb2xhcml0eQ==::MA==::Q2xvY2sgcG9sYXJpdHk="
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "ZGF0YVdpZHRo::OA==::V2lkdGg="
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "ZGlzYWJsZUF2YWxvbkZsb3dDb250cm9s::ZmFsc2U=::RGlzYWJsZSBmbG93IGNvbnRyb2wgb24gQXZhbG9uIHNsYXZlIGludGVyZmFjZQ=="
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "aW5zZXJ0RGVsYXlCZXR3ZWVuU2xhdmVTZWxlY3RBbmRTQ2xr::ZmFsc2U=::U3BlY2lmeSBkZWxheQ=="
@@ -6946,10 +6946,10 @@ set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONEN
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "bHNiT3JkZXJlZEZpcnN0::ZmFsc2U=::U2hpZnQgZGlyZWN0aW9u"
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "bWFzdGVyU1BJ::dHJ1ZQ==::VHlwZQ=="
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "bnVtYmVyT2ZTbGF2ZXM=::MQ==::TnVtYmVyIG9mIHNlbGVjdCAoU1Nfbikgc2lnbmFscyAob25lIGZvciBlYWNoIHNsYXZlKQ=="
-set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "dGFyZ2V0Q2xvY2tSYXRl::NTAwMDAw::U1BJIGNsb2NrIChTQ0xLKSByYXRl"
+set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "dGFyZ2V0Q2xvY2tSYXRl::MjAwMDAw::U1BJIGNsb2NrIChTQ0xLKSByYXRl"
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "YXZhbG9uU3BlYw==::Mi4w::YXZhbG9uU3BlYw=="
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "aW5wdXRDbG9ja1JhdGU=::NTAwMDAwMDA=::aW5wdXRDbG9ja1JhdGU="
-set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "YWN0dWFsQ2xvY2tSYXRl::NTAwMDAwLjA=::QWN0dWFsIGNsb2NrIHJhdGU="
+set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "YWN0dWFsQ2xvY2tSYXRl::MjAwMDAwLjA=::QWN0dWFsIGNsb2NrIHJhdGU="
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "bGVnYWN5U2lnbmFsc0FsbG93::ZmFsc2U=::bGVnYWN5U2lnbmFsc0FsbG93"
 set_global_assignment -entity "niosv_adt7301" -library "niosv" -name IP_COMPONENT_PARAMETER "c2xhdmVEYXRhQnVzV2lkdGg=::MTY=::c2xhdmVEYXRhQnVzV2lkdGg="
 
