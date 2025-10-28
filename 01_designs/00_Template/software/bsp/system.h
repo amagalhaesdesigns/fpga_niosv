@@ -4,7 +4,7 @@
  * Machine generated for CPU 'niosv' in SOPC Builder design 'niosv'
  * SOPC Builder design path: ../../niosv.sopcinfo
  *
- * Generated: Wed Sep 24 07:48:51 BRT 2025
+ * Generated: Tue Oct 21 13:01:58 BRT 2025
  */
 
 /*
@@ -73,7 +73,7 @@
 #define ALT_CPU_ICACHE_LINE_SIZE_LOG2 5
 #define ALT_CPU_ICACHE_SIZE 4096
 #define ALT_CPU_INST_ADDR_WIDTH 0x20
-#define ALT_CPU_MTIME_OFFSET 0x00050000
+#define ALT_CPU_MTIME_OFFSET 0x40010000
 #define ALT_CPU_NAME "niosv"
 #define ALT_CPU_NIOSV_CORE_VARIANT 3
 #define ALT_CPU_NUM_GPR 32
@@ -98,7 +98,7 @@
 #define BANTAMLAKE_ICACHE_LINE_SIZE_LOG2 5
 #define BANTAMLAKE_ICACHE_SIZE 4096
 #define BANTAMLAKE_INST_ADDR_WIDTH 0x20
-#define BANTAMLAKE_MTIME_OFFSET 0x00050000
+#define BANTAMLAKE_MTIME_OFFSET 0x40010000
 #define BANTAMLAKE_NIOSV_CORE_VARIANT 3
 #define BANTAMLAKE_NUM_GPR 32
 #define BANTAMLAKE_RESET_ADDR 0x00000000
@@ -112,9 +112,9 @@
  */
 
 #define __ALTERA_AVALON_JTAG_UART
-#define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_TIMER
+#define __ALTERA_MEM_IF_DDR3_EMIF
 #define __INTEL_NIOSV_G
 
 
@@ -134,19 +134,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x50090
+#define ALT_STDERR_BASE 0x40010090
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x50090
+#define ALT_STDIN_BASE 0x40010090
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x50090
+#define ALT_STDOUT_BASE 0x40010090
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -227,7 +227,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x50090
+#define JTAG_UART_BASE 0x40010090
 #define JTAG_UART_IRQ 1
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -245,7 +245,7 @@
  */
 
 #define ALT_MODULE_CLASS_key altera_avalon_pio
-#define KEY_BASE 0x50080
+#define KEY_BASE 0x40010080
 #define KEY_BIT_CLEARING_EDGE_REGISTER 0
 #define KEY_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEY_CAPTURE 0
@@ -272,7 +272,7 @@
  */
 
 #define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x50060
+#define LED_BASE 0x40010060
 #define LED_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_BIT_MODIFYING_OUTPUT_REGISTER 1
 #define LED_CAPTURE 0
@@ -294,32 +294,17 @@
 
 
 /*
- * onchip_memory2 configuration
+ * mem_if_ddr3_emif_fpga configuration
  *
  */
 
-#define ALT_MODULE_CLASS_onchip_memory2 altera_avalon_onchip_memory2
-#define ONCHIP_MEMORY2_ALLOW_IN_SYSTEM_MEMORY_CONTENT_EDITOR 0
-#define ONCHIP_MEMORY2_ALLOW_MRAM_SIM_CONTENTS_ONLY_FILE 0
-#define ONCHIP_MEMORY2_BASE 0x0
-#define ONCHIP_MEMORY2_CONTENTS_INFO ""
-#define ONCHIP_MEMORY2_DUAL_PORT 0
-#define ONCHIP_MEMORY2_GUI_RAM_BLOCK_TYPE "AUTO"
-#define ONCHIP_MEMORY2_INIT_CONTENTS_FILE "hello"
-#define ONCHIP_MEMORY2_INIT_MEM_CONTENT 1
-#define ONCHIP_MEMORY2_INSTANCE_ID "NONE"
-#define ONCHIP_MEMORY2_IRQ -1
-#define ONCHIP_MEMORY2_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define ONCHIP_MEMORY2_NAME "/dev/onchip_memory2"
-#define ONCHIP_MEMORY2_NON_DEFAULT_INIT_FILE_ENABLED 1
-#define ONCHIP_MEMORY2_RAM_BLOCK_TYPE "AUTO"
-#define ONCHIP_MEMORY2_READ_DURING_WRITE_MODE "DONT_CARE"
-#define ONCHIP_MEMORY2_SINGLE_CLOCK_OP 0
-#define ONCHIP_MEMORY2_SIZE_MULTIPLE 1
-#define ONCHIP_MEMORY2_SIZE_VALUE 262144
-#define ONCHIP_MEMORY2_SPAN 262144
-#define ONCHIP_MEMORY2_TYPE "altera_avalon_onchip_memory2"
-#define ONCHIP_MEMORY2_WRITABLE 1
+#define ALT_MODULE_CLASS_mem_if_ddr3_emif_fpga altera_mem_if_ddr3_emif
+#define MEM_IF_DDR3_EMIF_FPGA_BASE 0x0
+#define MEM_IF_DDR3_EMIF_FPGA_IRQ -1
+#define MEM_IF_DDR3_EMIF_FPGA_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MEM_IF_DDR3_EMIF_FPGA_NAME "/dev/mem_if_ddr3_emif_fpga"
+#define MEM_IF_DDR3_EMIF_FPGA_SPAN 1073741824
+#define MEM_IF_DDR3_EMIF_FPGA_TYPE "altera_mem_if_ddr3_emif"
 
 
 /*
@@ -329,7 +314,7 @@
 
 #define ALT_MODULE_CLASS_sys_clk altera_avalon_timer
 #define SYS_CLK_ALWAYS_RUN 0
-#define SYS_CLK_BASE 0x50040
+#define SYS_CLK_BASE 0x40010040
 #define SYS_CLK_COUNTER_SIZE 32
 #define SYS_CLK_FIXED_PERIOD 0
 #define SYS_CLK_FREQ 50000000

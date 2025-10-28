@@ -7,7 +7,7 @@ quartus_pgm -c 1 -m jtag -o "p;./output_files/fpga_niosv.sof@1"
 
 # Load the elf file in NIOS V memory
 echo "******** Program NIOS ********"
-niosv-download -c 1 ./software/app/build/debug/main.elf
+niosv-download -c 1 ./software/app/build/Debug/main.elf
 
 
 # Run the loaded file

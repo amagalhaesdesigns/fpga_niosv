@@ -16,10 +16,10 @@ niosv-app --bsp-dir=./software/bsp --app-dir=software/app --srcs=software/app/ma
  
 # Run cmake to build the make file
 echo "******** cmake to build the make file ********"
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -B software/app/build/debug -S software/app
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -B software/app/build/Debug -S software/app
 
  
 # Run make to build the .elf file (File to run on NIOS V)
 echo "******** Run make to build the .elf file ********"
-make -C software/app/build/debug
+make -C software/app/build/Debug
 

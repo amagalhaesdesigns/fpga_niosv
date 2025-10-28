@@ -4,21 +4,21 @@ add_subdirectory(../bsp bsp)
 
 include(../bsp/toolchain.cmake)
 
-project(app)
+project(main)
 
-add_executable(app.elf)
+add_executable(main.elf)
 
-target_sources(app.elf
+target_sources(main.elf
     PRIVATE
         main.c
 )
 
-target_include_directories(app.elf
+target_include_directories(main.elf
     PRIVATE
     PUBLIC
 )
 
-target_link_libraries(app.elf
+target_link_libraries(main.elf
     PRIVATE
         -T "${BspLinkerScript}" -nostdlib
         "${ExtraArchiveLibraries}"
@@ -26,11 +26,11 @@ target_link_libraries(app.elf
 )
 
 # Create objdump from ELF.
-set(objdump app.elf.objdump)
+set(objdump main.elf.objdump)
 add_custom_command(
     OUTPUT "${objdump}"
-    DEPENDS app.elf
-    COMMAND "${ToolchainObjdump}" "${ToolchainObjdumpFlags}" app.elf >
+    DEPENDS main.elf
+    COMMAND "${ToolchainObjdump}" "${ToolchainObjdumpFlags}" main.elf >
             "${objdump}"
     COMMENT "Creating ${objdump}."
     VERBATIM
@@ -39,12 +39,12 @@ add_custom_target(create-objdump ALL DEPENDS "${objdump}")
 
 # Report space free for stack + heap. Note that the file below is never created
 # so the report is always output on build.
-set(stack_report_file app.elf.stack_report)
+set(stack_report_file main.elf.stack_report)
 add_custom_command(
     OUTPUT "${stack_report_file}"
-    DEPENDS app.elf
-    COMMAND niosv-stack-report -p "${ToolchainPrefix}" app.elf
-    COMMENT "Reporting memory available for stack + heap in app.elf."
+    DEPENDS main.elf
+    COMMAND niosv-stack-report -p "${ToolchainPrefix}" main.elf
+    COMMENT "Reporting memory available for stack + heap in main.elf."
     VERBATIM
 )
 add_custom_target(niosv-stack-report ALL DEPENDS "${stack_report_file}")

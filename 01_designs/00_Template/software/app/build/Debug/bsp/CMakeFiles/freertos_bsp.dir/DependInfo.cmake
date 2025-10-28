@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S.obj"
-  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_log_macro.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_macro.S.obj"
-  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_mcount.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_mcount.S.obj"
-  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/crt0.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/crt0.S.obj"
-  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/machine_trap.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/machine_trap.S.obj"
+  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/bsp/CMakeFiles/freertos_bsp.dir/FreeRTOS-Kernel/portable/GCC/RISC-V/portASM.S.obj"
+  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_log_macro.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_log_macro.S.obj"
+  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/alt_mcount.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/alt_mcount.S.obj"
+  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/crt0.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/crt0.S.obj"
+  "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/bsp/HAL/src/machine_trap.S" "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/bsp/CMakeFiles/freertos_bsp.dir/HAL/src/machine_trap.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 

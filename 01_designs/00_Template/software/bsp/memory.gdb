@@ -3,7 +3,7 @@
 # Machine generated for CPU 'niosv' in SOPC Builder design 'niosv'
 # SOPC Builder design path: ../../niosv.sopcinfo
 #
-# Generated: Wed Sep 24 07:48:51 BRT 2025
+# Generated: Tue Oct 21 13:01:58 BRT 2025
 
 # DO NOT MODIFY THIS FILE
 #
@@ -46,5 +46,5 @@
 # The cache attribute is specified which improves GDB performance
 # by allowing GDB to cache memory contents on the host.
 
-# onchip_memory2
-memory 0x0 0x40000 cache
+# mem_if_ddr3_emif_fpga
+memory 0x0 0x40000000 cache

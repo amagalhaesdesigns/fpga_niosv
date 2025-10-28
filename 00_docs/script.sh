@@ -25,7 +25,8 @@ make -C software/app/build/debug
  
 
 # Configure FPGA fabric with .sof file.
-quartus_pgm -c 1 -m JTAG -o p;./output_files/fpga_niosv.sof@1
+quartus_pgm -c 1 -m jtag -o "p;./output_files/fpga_niosv.sof@1"
+
 
 
 # Load the elf file in NIOS V memory

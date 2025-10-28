@@ -4,7 +4,7 @@
  * Machine generated for CPU 'niosv' in SOPC Builder design 'niosv'
  * SOPC Builder design path: ../../niosv.sopcinfo
  *
- * Generated: Tue Oct 21 13:01:58 BRT 2025
+ * Generated: Mon Oct 27 15:28:53 BRT 2025
  */
 
 /*
@@ -60,6 +60,7 @@
 
 #include "intel_niosv_g_irq.h"
 #include "altera_avalon_jtag_uart.h"
+#include "altera_avalon_spi.h"
 #include "altera_avalon_timer.h"
 #include "intel_niosv_g.h"
 
@@ -69,6 +70,7 @@
 
 INTEL_NIOSV_G_IRQ_INSTANCE ( NIOSV, niosv);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
+ALTERA_AVALON_SPI_INSTANCE ( ADT7301, adt7301);
 ALTERA_AVALON_TIMER_INSTANCE ( SYS_CLK, sys_clk);
 INTEL_NIOSV_G_INSTANCE ( NIOSV, niosv);
 
@@ -95,5 +97,6 @@ void alt_sys_init( void )
 {
     ALTERA_AVALON_TIMER_INIT ( SYS_CLK, sys_clk);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
+    ALTERA_AVALON_SPI_INIT ( ADT7301, adt7301);
     INTEL_NIOSV_G_INIT ( NIOSV, niosv);
 }

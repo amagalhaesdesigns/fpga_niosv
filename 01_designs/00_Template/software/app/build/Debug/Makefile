@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug
+CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named app.elf
+# Target rules for targets named main.elf
 
 # Build rule for target.
-app.elf: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app.elf
-.PHONY : app.elf
+main.elf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main.elf
+.PHONY : main.elf
 
 # fast build rule for target.
-app.elf/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.elf.dir/build.make CMakeFiles/app.elf.dir/build
-.PHONY : app.elf/fast
+main.elf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.elf.dir/build.make CMakeFiles/main.elf.dir/build
+.PHONY : main.elf/fast
 
 #=============================================================================
 # Target rules for targets named create-objdump
@@ -173,7 +173,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.elf.dir/build.make CMakeFiles/app.elf.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.elf.dir/build.make CMakeFiles/main.elf.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -181,7 +181,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.elf.dir/build.make CMakeFiles/app.elf.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.elf.dir/build.make CMakeFiles/main.elf.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -189,7 +189,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.elf.dir/build.make CMakeFiles/app.elf.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.elf.dir/build.make CMakeFiles/main.elf.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -202,8 +202,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... create-objdump"
 	@echo "... niosv-stack-report"
-	@echo "... app.elf"
 	@echo "... freertos_bsp"
+	@echo "... main.elf"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

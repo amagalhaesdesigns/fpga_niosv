@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/create-objdump"
-  "app.elf.objdump"
+  "main.elf.objdump"
 )
 
 # Per-language clean rules from dependency scanning.

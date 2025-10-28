@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

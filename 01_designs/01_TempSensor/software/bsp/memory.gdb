@@ -3,7 +3,7 @@
 # Machine generated for CPU 'niosv' in SOPC Builder design 'niosv'
 # SOPC Builder design path: ../../niosv.sopcinfo
 #
-# Generated: Tue Oct 21 13:01:58 BRT 2025
+# Generated: Mon Oct 27 15:28:52 BRT 2025
 
 # DO NOT MODIFY THIS FILE
 #

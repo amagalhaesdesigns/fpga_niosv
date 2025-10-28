@@ -57,13 +57,13 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug
+CMAKE_BINARY_DIR = C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/app.elf.dir/all
+all: CMakeFiles/main.elf.dir/all
 all: CMakeFiles/create-objdump.dir/all
 all: CMakeFiles/niosv-stack-report.dir/all
 all: bsp/all
@@ -74,7 +74,7 @@ preinstall: bsp/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/app.elf.dir/clean
+clean: CMakeFiles/main.elf.dir/clean
 clean: CMakeFiles/create-objdump.dir/clean
 clean: CMakeFiles/niosv-stack-report.dir/clean
 clean: bsp/clean
@@ -96,46 +96,46 @@ bsp/clean: bsp/CMakeFiles/freertos_bsp.dir/clean
 .PHONY : bsp/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/app.elf.dir
+# Target rules for target CMakeFiles/main.elf.dir
 
 # All Build rule for target.
-CMakeFiles/app.elf.dir/all: bsp/CMakeFiles/freertos_bsp.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.elf.dir/build.make CMakeFiles/app.elf.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.elf.dir/build.make CMakeFiles/app.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles --progress-num=1 "Built target app.elf"
-.PHONY : CMakeFiles/app.elf.dir/all
+CMakeFiles/main.elf.dir/all: bsp/CMakeFiles/freertos_bsp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.elf.dir/build.make CMakeFiles/main.elf.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.elf.dir/build.make CMakeFiles/main.elf.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles --progress-num=98,99 "Built target main.elf"
+.PHONY : CMakeFiles/main.elf.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/app.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 98
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/app.elf.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 0
-.PHONY : CMakeFiles/app.elf.dir/rule
+CMakeFiles/main.elf.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.elf.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 0
+.PHONY : CMakeFiles/main.elf.dir/rule
 
 # Convenience name for target.
-app.elf: CMakeFiles/app.elf.dir/rule
-.PHONY : app.elf
+main.elf: CMakeFiles/main.elf.dir/rule
+.PHONY : main.elf
 
 # clean rule for target.
-CMakeFiles/app.elf.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.elf.dir/build.make CMakeFiles/app.elf.dir/clean
-.PHONY : CMakeFiles/app.elf.dir/clean
+CMakeFiles/main.elf.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.elf.dir/build.make CMakeFiles/main.elf.dir/clean
+.PHONY : CMakeFiles/main.elf.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/create-objdump.dir
 
 # All Build rule for target.
-CMakeFiles/create-objdump.dir/all: CMakeFiles/app.elf.dir/all
+CMakeFiles/create-objdump.dir/all: CMakeFiles/main.elf.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/create-objdump.dir/build.make CMakeFiles/create-objdump.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/create-objdump.dir/build.make CMakeFiles/create-objdump.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles --progress-num=2 "Built target create-objdump"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles --progress-num= "Built target create-objdump"
 .PHONY : CMakeFiles/create-objdump.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/create-objdump.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 99
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 99
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/create-objdump.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 0
 .PHONY : CMakeFiles/create-objdump.dir/rule
 
 # Convenience name for target.
@@ -151,17 +151,17 @@ CMakeFiles/create-objdump.dir/clean:
 # Target rules for target CMakeFiles/niosv-stack-report.dir
 
 # All Build rule for target.
-CMakeFiles/niosv-stack-report.dir/all: CMakeFiles/app.elf.dir/all
+CMakeFiles/niosv-stack-report.dir/all: CMakeFiles/main.elf.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/niosv-stack-report.dir/build.make CMakeFiles/niosv-stack-report.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/niosv-stack-report.dir/build.make CMakeFiles/niosv-stack-report.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles --progress-num=100 "Built target niosv-stack-report"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles --progress-num=100 "Built target niosv-stack-report"
 .PHONY : CMakeFiles/niosv-stack-report.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/niosv-stack-report.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 99
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 100
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/niosv-stack-report.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 0
 .PHONY : CMakeFiles/niosv-stack-report.dir/rule
 
 # Convenience name for target.
@@ -180,14 +180,14 @@ CMakeFiles/niosv-stack-report.dir/clean:
 bsp/CMakeFiles/freertos_bsp.dir/all:
 	$(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/depend
 	$(MAKE) $(MAKESILENT) -f bsp/CMakeFiles/freertos_bsp.dir/build.make bsp/CMakeFiles/freertos_bsp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99 "Built target freertos_bsp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97 "Built target freertos_bsp"
 .PHONY : bsp/CMakeFiles/freertos_bsp.dir/all
 
 # Build rule for subdir invocation for target.
 bsp/CMakeFiles/freertos_bsp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 97
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 97
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bsp/CMakeFiles/freertos_bsp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Projetos/Estudos/NIOSV/01_designs/00_Template/software/app/build/debug/CMakeFiles 0
 .PHONY : bsp/CMakeFiles/freertos_bsp.dir/rule
 
 # Convenience name for target.

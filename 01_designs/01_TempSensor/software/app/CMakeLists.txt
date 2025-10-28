@@ -11,6 +11,7 @@ add_executable(main.elf)
 target_sources(main.elf
     PRIVATE
         main.c
+        adt7301.c
 )
 
 target_include_directories(main.elf

@@ -128,7 +128,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/app.elf.dir/DependInfo.cmake"
+  "CMakeFiles/main.elf.dir/DependInfo.cmake"
   "CMakeFiles/create-objdump.dir/DependInfo.cmake"
   "CMakeFiles/niosv-stack-report.dir/DependInfo.cmake"
   "bsp/CMakeFiles/freertos_bsp.dir/DependInfo.cmake"

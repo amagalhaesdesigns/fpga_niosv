@@ -4,7 +4,7 @@
  * Machine generated for CPU 'niosv' in SOPC Builder design 'niosv'
  * SOPC Builder design path: ../../niosv.sopcinfo
  *
- * Generated: Tue Oct 21 13:01:58 BRT 2025
+ * Generated: Mon Oct 27 15:28:53 BRT 2025
  */
 
 /*
@@ -112,7 +112,7 @@
  */
 
 #define __ALTERA_AVALON_JTAG_UART
-#define __ALTERA_AVALON_PIO
+#define __ALTERA_AVALON_SPI
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_MEM_IF_DDR3_EMIF
 #define __INTEL_NIOSV_G
@@ -134,19 +134,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x40010090
+#define ALT_STDERR_BASE 0x40010080
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x40010090
+#define ALT_STDIN_BASE 0x40010080
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x40010090
+#define ALT_STDOUT_BASE 0x40010080
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -154,6 +154,37 @@
 #define ALT_SYSTEM_NAME "niosv"
 #define ALT_SYS_CLK_TICKS_PER_SEC ALT_CPU_TICKS_PER_SEC
 #define ALT_TIMESTAMP_CLK_TIMER_DEVICE_TYPE ALT_CPU_TIMER_DEVICE_TYPE
+
+
+/*
+ * adt7301 configuration
+ *
+ */
+
+#define ADT7301_BASE 0x40010040
+#define ADT7301_CLOCKMULT 1
+#define ADT7301_CLOCKPHASE 1
+#define ADT7301_CLOCKPOLARITY 1
+#define ADT7301_CLOCKUNITS "Hz"
+#define ADT7301_DATABITS 8
+#define ADT7301_DATAWIDTH 16
+#define ADT7301_DELAYMULT "1.0E-9"
+#define ADT7301_DELAYUNITS "ns"
+#define ADT7301_EXTRADELAY 0
+#define ADT7301_INSERT_SYNC 0
+#define ADT7301_IRQ 2
+#define ADT7301_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define ADT7301_ISMASTER 1
+#define ADT7301_LSBFIRST 0
+#define ADT7301_NAME "/dev/adt7301"
+#define ADT7301_NUMSLAVES 1
+#define ADT7301_PREFIX "spi_"
+#define ADT7301_SPAN 32
+#define ADT7301_SYNC_REG_DEPTH 2
+#define ADT7301_TARGETCLOCK 500000u
+#define ADT7301_TARGETSSDELAY "0.0"
+#define ADT7301_TYPE "altera_avalon_spi"
+#define ALT_MODULE_CLASS_adt7301 altera_avalon_spi
 
 
 /*
@@ -227,7 +258,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x40010090
+#define JTAG_UART_BASE 0x40010080
 #define JTAG_UART_IRQ 1
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -237,60 +268,6 @@
 #define JTAG_UART_TYPE "altera_avalon_jtag_uart"
 #define JTAG_UART_WRITE_DEPTH 64
 #define JTAG_UART_WRITE_THRESHOLD 8
-
-
-/*
- * key configuration
- *
- */
-
-#define ALT_MODULE_CLASS_key altera_avalon_pio
-#define KEY_BASE 0x40010080
-#define KEY_BIT_CLEARING_EDGE_REGISTER 0
-#define KEY_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define KEY_CAPTURE 0
-#define KEY_DATA_WIDTH 1
-#define KEY_DO_TEST_BENCH_WIRING 0
-#define KEY_DRIVEN_SIM_VALUE 0
-#define KEY_EDGE_TYPE "NONE"
-#define KEY_FREQ 50000000
-#define KEY_HAS_IN 1
-#define KEY_HAS_OUT 0
-#define KEY_HAS_TRI 0
-#define KEY_IRQ -1
-#define KEY_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define KEY_IRQ_TYPE "NONE"
-#define KEY_NAME "/dev/key"
-#define KEY_RESET_VALUE 0
-#define KEY_SPAN 16
-#define KEY_TYPE "altera_avalon_pio"
-
-
-/*
- * led configuration
- *
- */
-
-#define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x40010060
-#define LED_BIT_CLEARING_EDGE_REGISTER 0
-#define LED_BIT_MODIFYING_OUTPUT_REGISTER 1
-#define LED_CAPTURE 0
-#define LED_DATA_WIDTH 1
-#define LED_DO_TEST_BENCH_WIRING 0
-#define LED_DRIVEN_SIM_VALUE 0
-#define LED_EDGE_TYPE "NONE"
-#define LED_FREQ 50000000
-#define LED_HAS_IN 0
-#define LED_HAS_OUT 1
-#define LED_HAS_TRI 0
-#define LED_IRQ -1
-#define LED_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define LED_IRQ_TYPE "NONE"
-#define LED_NAME "/dev/led"
-#define LED_RESET_VALUE 0
-#define LED_SPAN 32
-#define LED_TYPE "altera_avalon_pio"
 
 
 /*
@@ -314,7 +291,7 @@
 
 #define ALT_MODULE_CLASS_sys_clk altera_avalon_timer
 #define SYS_CLK_ALWAYS_RUN 0
-#define SYS_CLK_BASE 0x40010040
+#define SYS_CLK_BASE 0x40010060
 #define SYS_CLK_COUNTER_SIZE 32
 #define SYS_CLK_FIXED_PERIOD 0
 #define SYS_CLK_FREQ 50000000

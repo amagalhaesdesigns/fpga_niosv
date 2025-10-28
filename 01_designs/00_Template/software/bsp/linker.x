@@ -4,7 +4,7 @@
  * Machine generated for CPU 'niosv' in SOPC Builder design 'niosv'
  * SOPC Builder design path: ../../niosv.sopcinfo
  *
- * Generated: Wed Sep 24 07:48:51 BRT 2025
+ * Generated: Tue Oct 21 13:01:58 BRT 2025
  */
 
 /*
@@ -51,11 +51,11 @@
 MEMORY
 {
     reset : ORIGIN = 0x0, LENGTH = 32
-    onchip_memory2 : ORIGIN = 0x20, LENGTH = 262112
+    mem_if_ddr3_emif_fpga : ORIGIN = 0x20, LENGTH = 1073741792
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_onchip_memory2 = 0x0;
+__alt_mem_mem_if_ddr3_emif_fpga = 0x0;
 
 OUTPUT_FORMAT( "elf32-littleriscv",
                "elf32-littleriscv",
@@ -111,7 +111,7 @@ SECTIONS
         KEEP (*(.exceptions.exit));
         KEEP (*(.exceptions));
         PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
-    } > onchip_memory2
+    } > mem_if_ddr3_emif_fpga
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
@@ -208,7 +208,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > onchip_memory2 = 0x13000000 /* NOP instruction (always in big-endian byte ordering) */
+    } > mem_if_ddr3_emif_fpga = 0x13000000 /* NOP instruction (always in big-endian byte ordering) */
 
     .rodata :
     {
@@ -219,7 +219,7 @@ SECTIONS
         *(.srodata .srodata.*)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > onchip_memory2
+    } > mem_if_ddr3_emif_fpga
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -271,7 +271,7 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > onchip_memory2
+    } > mem_if_ddr3_emif_fpga
 
     PROVIDE(__tdata_size = (__tdata_end - __tdata_start));
     PROVIDE(__tbss_size = (__tbss_end - __tbss_start));
@@ -306,7 +306,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > onchip_memory2
+    } > mem_if_ddr3_emif_fpga
 
     /*
      *
@@ -331,18 +331,18 @@ SECTIONS
      *
      */
 
-    .onchip_memory2 LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
+    .mem_if_ddr3_emif_fpga LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
-        PROVIDE (_alt_partition_onchip_memory2_start = ABSOLUTE(.));
-        *(.onchip_memory2 .onchip_memory2. onchip_memory2.*)
+        PROVIDE (_alt_partition_mem_if_ddr3_emif_fpga_start = ABSOLUTE(.));
+        *(.mem_if_ddr3_emif_fpga .mem_if_ddr3_emif_fpga. mem_if_ddr3_emif_fpga.*)
         . = ALIGN(4);
-        PROVIDE (_alt_partition_onchip_memory2_end = ABSOLUTE(.));
+        PROVIDE (_alt_partition_mem_if_ddr3_emif_fpga_end = ABSOLUTE(.));
         _end = ABSOLUTE(.);
         end = ABSOLUTE(.);
         __alt_stack_base = ABSOLUTE(.);
-    } > onchip_memory2
+    } > mem_if_ddr3_emif_fpga
 
-    PROVIDE (_alt_partition_onchip_memory2_load_addr = LOADADDR(.onchip_memory2));
+    PROVIDE (_alt_partition_mem_if_ddr3_emif_fpga_load_addr = LOADADDR(.mem_if_ddr3_emif_fpga));
 
     /*
      * Stabs debugging sections.
@@ -391,7 +391,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x40000;
+__alt_data_end = 0x40000000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -407,4 +407,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x40000 );
+PROVIDE( __alt_heap_limit    = 0x40000000 );

@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>freertos</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>21/10/2025 13:01:58</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1761062518592</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Projetos\Estudos\NIOSV\01_designs\00_Template\software\bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>27/10/2025 15:28:49</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1761589729809</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Projetos\Estudos\NIOSV\01_designs\01_TempSensor\software\bsp</BspGeneratedLocation>
         <BspSettingsFile>.\software\bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\niosv.sopcinfo</SopcDesignFile>
-        <SystemFileHash>d0d430d5c29c85def64482d641771447251864b449c27688ca453ce3b49</SystemFileHash>
+        <SystemFileHash>629fc69f1a77d6a05fa62288ba7ab99bf845a5c2a051b1c5ccf0aa3ab6ed</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>niosv</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -1050,26 +1050,20 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sys_clk</slaveDescriptor>
+                <slaveDescriptor>adt7301</slaveDescriptor>
                 <addressRange>0x40010040 - 0x4001005F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sys_clk</slaveDescriptor>
+                <addressRange>0x40010060 - 0x4001007F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>led</slaveDescriptor>
-                <addressRange>0x40010060 - 0x4001007F</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>key</slaveDescriptor>
-                <addressRange>0x40010080 - 0x4001008F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x40010090 - 0x40010097</addressRange>
+                <addressRange>0x40010080 - 0x40010087</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

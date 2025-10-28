@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/niosv-stack-report"
-  "app.elf.stack_report"
+  "main.elf.stack_report"
 )
 
 # Per-language clean rules from dependency scanning.

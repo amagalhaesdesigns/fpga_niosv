@@ -121,6 +121,7 @@ target_sources("${BspLibraryName}"
         drivers/src/altera_avalon_jtag_uart_ioctl.c
         drivers/src/altera_avalon_jtag_uart_read.c
         drivers/src/altera_avalon_jtag_uart_write.c
+        drivers/src/altera_avalon_spi.c
         drivers/src/altera_avalon_timer_sc.c
         drivers/src/altera_avalon_timer_ts.c
         drivers/src/altera_avalon_timer_vars.c
@@ -208,7 +209,8 @@ target_sources("${BspLibraryName}"
         drivers/inc/altera_avalon_jtag_uart.h
         drivers/inc/altera_avalon_jtag_uart_fd.h
         drivers/inc/altera_avalon_jtag_uart_regs.h
-        drivers/inc/altera_avalon_pio_regs.h
+        drivers/inc/altera_avalon_spi.h
+        drivers/inc/altera_avalon_spi_regs.h
         drivers/inc/altera_avalon_timer.h
         drivers/inc/altera_avalon_timer_regs.h
         system.h
