@@ -25,6 +25,7 @@ CMakeFiles/main.elf.dir/main.c.obj: C:/Projetos/Estudos/NIOSV/01_designs/01_Temp
   C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/mpu_wrappers.h \
   C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/portable.h \
   C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/projdefs.h \
+  C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/queue.h \
   C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/task.h \
   C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/portable/GCC/RISC-V/portmacro.h \
   C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/HAL/inc/alt_types.h \
@@ -86,6 +87,10 @@ C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/
 C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/sys/_timeval.h:
 
 C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/machine/_endian.h:
+
+C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/sys/timespec.h:
+
+C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/_ansi.h:
 
 C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/machine/ieeefp.h:
 
@@ -153,11 +158,7 @@ C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/system.h:
 
 C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/HAL/inc/sys/alt_tls.h:
 
-C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/task.h:
-
-C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/linker.h:
-
-C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/portable/GCC/RISC-V/portmacro.h:
+C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/queue.h:
 
 C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/sys/cdefs.h:
 
@@ -165,6 +166,8 @@ C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/
 
 C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/lib/gcc/riscv32-unknown-elf/12.1.0/include/stdarg.h:
 
-C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/sys/timespec.h:
+C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/task.h:
 
-C:/intelFPGA/23.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/_ansi.h:
+C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/linker.h:
+
+C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/portable/GCC/RISC-V/portmacro.h:

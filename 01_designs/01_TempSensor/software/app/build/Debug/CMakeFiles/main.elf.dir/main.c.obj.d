@@ -47,5 +47,7 @@ CMakeFiles/main.elf.dir/main.c.obj: \
  C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/mpu_wrappers.h \
  C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/task.h \
  C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/list.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/queue.h \
+ C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/FreeRTOS-Kernel/include/task.h \
  C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/bsp/HAL/inc/io.h \
  C:/Projetos/Estudos/NIOSV/01_designs/01_TempSensor/software/app/adt7301.h
